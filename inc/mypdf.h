@@ -9,7 +9,6 @@
 
 typedef struct mypdf_s mypdf_t;
 
-enum { ARROW, HAND, WAIT };
 
 
 struct mypdf_s
@@ -17,9 +16,7 @@ struct mypdf_s
 	/* current document params */
 	char *doctitle;
 	pdf_xref *xref;
-	pdf_outline *outline;
 	int pagecount;
-	fz_glyphcache *cache;
 
 
 	/* current page params */
@@ -27,8 +24,6 @@ struct mypdf_s
 	pdf_page *page;
 
 
-	/* client context storage */
-	void *userdata;
 };
 
 void mypdf_init(mypdf_t *app);

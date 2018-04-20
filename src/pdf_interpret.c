@@ -13,11 +13,10 @@ pdf_newcsi(pdf_xref *xref)
     csi->array = nil;
 
 
-    csi->text = nil;
-    csi->textmode = 0;
-    csi->accumulate = 1;
-
+	pdf_initgstate(&csi->gstate[0]);
     csi->gtop = 0;
+
+	csi->BTflag = 0;
 
     return csi;
 }
@@ -40,6 +39,7 @@ pdf_runkeyword(pdf_csi *csi, fz_obj *rdb, char *buf)
 	fz_error error;
 	int what;
 	int i;
+	int m;
 
 	switch (buf[0])
 	{
@@ -51,6 +51,7 @@ pdf_runkeyword(pdf_csi *csi, fz_obj *rdb, char *buf)
 				goto defaultcase;
 			if (csi->top < 0)
 				goto syntaxerror;
+			csi->BTflag = 1;
 			break;
 		default:
 			goto defaultcase;
@@ -66,7 +67,8 @@ pdf_runkeyword(pdf_csi *csi, fz_obj *rdb, char *buf)
 			if (csi->top < 0)
 				goto syntaxerror;
 		//	pdf_flushtext(csi);
-			csi->accumulate = 1;
+
+			csi->BTflag = 0;
 			break;
 		default:
 			goto defaultcase;
@@ -113,17 +115,47 @@ pdf_runkeyword(pdf_csi *csi, fz_obj *rdb, char *buf)
 				goto defaultcase;
 			if (csi->top < 1)
 				goto syntaxerror;
-	    	pdf_showtext(csi, csi->stack[0]);
-            write(csi->fw," ",1);
-
+			if(csi->BTflag)
+			{
+				pdf_showtext(csi, csi->stack[0]);
+			}
 			break;
 		case 'J': /* "TJ" */
 			if (buf[2] != 0)
 				goto defaultcase;
 			if (csi->top < 1)
 				goto syntaxerror;
-	    	pdf_showtext(csi, csi->stack[0]);
-            write(csi->fw," ",1);
+			if(csi->BTflag)
+				pdf_showtext(csi, csi->stack[0]);
+			break;
+		case 'd': /* "Td" */
+			/*TODO:tm6 = ltm6 +td2*ltm4;
+			 * |tm6 - ltms| >=1 newline
+			 */
+			if (buf[2] != 0)
+				goto defaultcase;
+			if (csi->top < 2)
+				goto syntaxerror;
+			m = abs(fz_toreal(csi->stack[1]));
+			if(m > 0.001)
+			{
+				error = write(csi->fw_code,"\n",1);
+				if(error < 0)
+					fz_throw("write error");
+			}
+			break;
+		case 'D': /* "TD" */
+			if (buf[2] != 0)
+				goto defaultcase;
+			if (csi->top < 2)
+				goto syntaxerror;
+			m = abs(fz_toreal(csi->stack[1]));
+			if(m > 0.001)
+			{
+				error = write(csi->fw_code,"\n",1);
+				if(error < 0)
+					fz_throw("write error");
+			}
 			break;
 		default:
 			goto defaultcase;
@@ -154,7 +186,7 @@ defaultcase:
 syntaxerror:
 	return fz_throw("syntax error near '%s' with %d items on the stack", buf, csi->top);
 }
-static fz_error
+	static fz_error
 pdf_runcsifile(pdf_csi *csi, fz_obj *rdb, fz_stream *file, char *buf, int buflen)
 {
 	fz_error error;
@@ -216,125 +248,119 @@ pdf_runcsifile(pdf_csi *csi, fz_obj *rdb, fz_stream *file, char *buf, int buflen
 
 		else switch (tok)
 		{
-		case PDF_TENDSTREAM:
-		case PDF_TEOF:
-			return fz_okay;
+			case PDF_TENDSTREAM:
+			case PDF_TEOF:
+				return fz_okay;
 
-			/* optimize text-object array parsing */
-		case PDF_TOARRAY:
-			csi->array = fz_newarray(8);
-			break;
+				/* optimize text-object array parsing */
+			case PDF_TOARRAY:
+				csi->array = fz_newarray(8);
+				break;
 
-		case PDF_TODICT:
-			error = pdf_parsedict(&csi->stack[csi->top], csi->xref, file, buf, buflen);
-			if (error)
-				return fz_rethrow(error, "cannot parse dictionary");
-			csi->top ++;
-			break;
+			case PDF_TODICT:
+				error = pdf_parsedict(&csi->stack[csi->top], csi->xref, file, buf, buflen);
+				if (error)
+					return fz_rethrow(error, "cannot parse dictionary");
+				csi->top ++;
+				break;
 
-		case PDF_TNAME:
-			csi->stack[csi->top] = fz_newname(buf);
-			csi->top ++;
-			break;
+			case PDF_TNAME:
+				csi->stack[csi->top] = fz_newname(buf);
+				csi->top ++;
+				break;
 
-		case PDF_TINT:
-			csi->stack[csi->top] = fz_newint(atoi(buf));
-			csi->top ++;
-			break;
+			case PDF_TINT:
+				csi->stack[csi->top] = fz_newint(atoi(buf));
+				csi->top ++;
+				break;
 
-		case PDF_TREAL:
-			csi->stack[csi->top] = fz_newreal(atof(buf));
-			csi->top ++;
-			break;
+			case PDF_TREAL:
+				csi->stack[csi->top] = fz_newreal(atof(buf));
+				csi->top ++;
+				break;
 
-		case PDF_TSTRING:
-			csi->stack[csi->top] = fz_newstring(buf, len);
-			csi->top ++;
-			break;
+			case PDF_TSTRING:
+				csi->stack[csi->top] = fz_newstring(buf, len);
+				csi->top ++;
+				break;
 
-		case PDF_TTRUE:
-			csi->stack[csi->top] = fz_newbool(1);
-			csi->top ++;
-			break;
+			case PDF_TTRUE:
+				csi->stack[csi->top] = fz_newbool(1);
+				csi->top ++;
+				break;
 
-		case PDF_TFALSE:
-			csi->stack[csi->top] = fz_newbool(0);
-			csi->top ++;
-			break;
+			case PDF_TFALSE:
+				csi->stack[csi->top] = fz_newbool(0);
+				csi->top ++;
+				break;
 
-		case PDF_TNULL:
-			csi->stack[csi->top] = fz_newnull();
-			csi->top ++;
-			break;
+			case PDF_TNULL:
+				csi->stack[csi->top] = fz_newnull();
+				csi->top ++;
+				break;
 
-        case PDF_TKEYWORD:
-            error = pdf_runkeyword(csi, rdb, buf);
-            if (error)
-                fz_catch(error, "cannot run keyword '%s'", buf);
-            pdf_clearstack(csi);
-            break;
+			case PDF_TKEYWORD:
+				error = pdf_runkeyword(csi, rdb, buf);
+				if (error)
+					fz_catch(error, "cannot run keyword '%s'", buf);
+				pdf_clearstack(csi);
+				break;
 
-        default:
-            pdf_clearstack(csi);
-            return fz_throw("syntaxerror in content stream");
-        }
-    }
+			default:
+				pdf_clearstack(csi);
+				return fz_throw("syntaxerror in content stream");
+		}
+	}
 }
 
-static void
+	static void
 pdf_freecsi(pdf_csi *csi)
 {
 	while (csi->gtop)
-//		pdf_grestore(csi);
+		//		pdf_grestore(csi);
 
-//	pdf_dropmaterial(&csi->gstate[0].fill);
-//	pdf_dropmaterial(&csi->gstate[0].stroke);
-	if (csi->gstate[0].font)
-//		pdf_dropfont(csi->gstate[0].font);
-	if (csi->gstate[0].softmask)
-//		pdf_dropxobject(csi->gstate[0].softmask);
+		//	pdf_dropmaterial(&csi->gstate[0].fill);
+		//	pdf_dropmaterial(&csi->gstate[0].stroke);
+		if (csi->gstate[0].font)
+			//		pdf_dropfont(csi->gstate[0].font);
 
-	while (csi->gstate[0].clipdepth--)
-		csi->dev->popclip(csi->dev->user);
-
-//	if (csi->path) fz_freepath(csi->path);
-//	if (csi->text) fz_freetext(csi->text);
-	if (csi->array) fz_dropobj(csi->array);
+			if (csi->array) fz_dropobj(csi->array);
 
 	pdf_clearstack(csi);
 
 	fz_free(csi);
 }
 
-    fz_error
+	fz_error
 pdf_runcsibuffer(pdf_csi *csi, fz_obj *rdb, fz_buffer *contents)
 {
-    fz_stream *file;
-    fz_error error;
-    file = fz_openbuffer(contents);
-    error = pdf_runcsifile(csi, rdb, file, csi->xref->scratch, sizeof csi->xref->scratch);
-    fz_close(file);
-    if (error)
-        return fz_rethrow(error, "cannot parse content stream");
-    return fz_okay;
+	fz_stream *file;
+	fz_error error;
+	file = fz_openbuffer(contents);
+	error = pdf_runcsifile(csi, rdb, file, csi->xref->scratch, sizeof csi->xref->scratch);
+	fz_close(file);
+	if (error)
+		return fz_rethrow(error, "cannot parse content stream");
+	return fz_okay;
 }
 
-    fz_error
+	fz_error
 pdf_runpage(pdf_xref *xref,pdf_page *page)
 {
 
-    pdf_csi *csi;
-    fz_error error;
-    int flags;
+	pdf_csi *csi;
+	fz_error error;
+	int flags;
 
-    csi = pdf_newcsi(xref);
+	csi = pdf_newcsi(xref);
 
-    csi->fw = page->fw;
+	csi->fw = page->fw;
+	csi->fw_code = page->fw_code;
 
-    error = pdf_runcsibuffer(csi, page->resources, page->contents);
-    pdf_freecsi(csi);
-    if (error)
-        return fz_rethrow(error, "cannot parse page content stream");
-    return fz_okay;
+	error = pdf_runcsibuffer(csi, page->resources, page->contents);
+	pdf_freecsi(csi);
+	if (error)
+		return fz_rethrow(error, "cannot parse page content stream");
+	return fz_okay;
 
 }

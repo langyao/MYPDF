@@ -48,8 +48,8 @@ pdf_loadembeddedcmap(pdf_cmap **cmapp, pdf_xref *xref, fz_obj *stmobj)
 	obj = fz_dictgets(stmobj, "UseCMap");
 	if (fz_isname(obj))
 	{
-	//	pdf_logfont("usecmap /%s\n", fz_toname(obj));
-	//	error = pdf_loadsystemcmap(&usecmap, fz_toname(obj));
+		pdf_logfont("usecmap /%s\n", fz_toname(obj));
+		error = pdf_loadsystemcmap(&usecmap, fz_toname(obj));
 		if (error)
 		{
 			error = fz_rethrow(error, "cannot load system usecmap '%s'", fz_toname(obj));
@@ -104,32 +104,32 @@ pdf_newidentitycmap(int wmode, int bytes)
 /*
  * Load predefined CMap from system.
  */
-//fz_error
-//pdf_loadsystemcmap(pdf_cmap **cmapp, char *cmapname)
-//{
-//	fz_error error;
-//	pdf_cmap *usecmap;
-//	pdf_cmap *cmap;
-//	int i;
-//
-//	pdf_logfont("loading system cmap %s\n", cmapname);
-//
-//	for (i = 0; pdf_cmaptable[i]; i++)
-//	{
-//		if (!strcmp(cmapname, pdf_cmaptable[i]->cmapname))
-//		{
-//			cmap = pdf_cmaptable[i];
-//			if (cmap->usecmapname[0] && !cmap->usecmap)
-//			{
-//				error = pdf_loadsystemcmap(&usecmap, cmap->usecmapname);
-//				if (error)
-//					return fz_rethrow(error, "cannot load usecmap: %s", cmap->usecmapname);
-//				pdf_setusecmap(cmap, usecmap);
-//			}
-//			*cmapp = cmap;
-//			return fz_okay;
-//		}
-//	}
-//
-//	return fz_throw("no builtin cmap file: %s", cmapname);
-//}
+fz_error
+pdf_loadsystemcmap(pdf_cmap **cmapp, char *cmapname)
+{
+	fz_error error;
+	pdf_cmap *usecmap;
+	pdf_cmap *cmap;
+	int i;
+
+	pdf_logfont("loading system cmap %s\n", cmapname);
+
+	for (i = 0; pdf_cmaptable[i]; i++)
+	{
+		if (!strcmp(cmapname, pdf_cmaptable[i]->cmapname))
+		{
+			cmap = pdf_cmaptable[i];
+			if (cmap->usecmapname[0] && !cmap->usecmap)
+			{
+				error = pdf_loadsystemcmap(&usecmap, cmap->usecmapname);
+				if (error)
+					return fz_rethrow(error, "cannot load usecmap: %s", cmap->usecmapname);
+				pdf_setusecmap(cmap, usecmap);
+			}
+			*cmapp = cmap;
+			return fz_okay;
+		}
+	}
+
+	return fz_throw("no builtin cmap file: %s", cmapname);
+}

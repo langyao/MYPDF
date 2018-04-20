@@ -2,180 +2,94 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <dirent.h>
 
-#include "../inc/fitz.h"
-#include "../inc/mypdf.h"
-#include "../inc/pdf.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
-#include "base_error.c"
-#include "base_memory.c"
-#include "base_string.c"
-#include "stm_buffer.c"
-#include "stm_open.c"
-#include "stm_read.c"
+#include "fitz.h"
+#include "mypdf.h"
+#include "pdf.h"
 
-#include "pdf_lex.c"
-#include "pdf_cmap.c"
-#include "pdf_cmap_parse.c"
+char *path  = "cmaps";
+pdf_cmap *pdf_cmaptable[120]; //注意超过限制
+int csize = 0;
 
-static char *
-flagtoname(int flag)
+
+
+
+static int parse_cmap_prefile(char *filename)
 {
-	switch (flag)
-	{
-	case PDF_CMAP_SINGLE: return "PDF_CMAP_SINGLE,";
-	case PDF_CMAP_RANGE: return "PDF_CMAP_RANGE,";
-	case PDF_CMAP_TABLE: return "PDF_CMAP_TABLE,";
-	case PDF_CMAP_MULTI: return "PDF_CMAP_MULTI,";
-	}
-	return "-1,";
-}
 
-static void
-clean(char *p)
-{
-	while (*p)
-	{
-		if ((*p == '/') || (*p == '.') || (*p == '\\') || (*p == '-'))
-			*p = '_';
-		p ++;
-	}
-}
-
-int
-main(int argc, char **argv)
-{
 	pdf_cmap *cmap;
 	fz_error error;
 	fz_stream *fi;
-	FILE *fo;
-	char name[256];
-	char *realname;
-	int i, k;
 	int fd;
 
-	if (argc < 3)
+	fd = open(filename, O_BINARY | O_RDONLY);
+	if (fd < 0)
 	{
-		fprintf(stderr, "usage: cmapdump output.c lots of cmap files\n");
-		return 1;
+		perror("open failed");
+		return fz_throw("cmapdump: could not open input file '%s'\n", filename);
 	}
 
-	fo = fopen(argv[1], "wb");
-	if (!fo)
+	fi = fz_openfile(fd);
+
+	error = pdf_parsecmap(&cmap, fi);
+	if (error)
 	{
-		fprintf(stderr, "cmapdump: could not open output file '%s'\n", argv[1]);
-		return 1;
+		fz_catch(error, "cmapdump: could not parse input cmap '%s'\n", filename);
+		return -1;
 	}
 
-	fprintf(fo, "#include \"fitz.h\"\n");
-	fprintf(fo, "#include \"mupdf.h\"\n");
-	fprintf(fo, "\n");
+	pdf_cmaptable[csize++] =  cmap; 
 
-	for (i = 2; i < argc; i++)
+	return 1;
+}
+
+int precmap_init()
+{
+
+	struct stat statbuf;
+	struct dirent *dirp;
+	DIR *dp;
+	char name[256];
+
+	if(lstat(path,&statbuf) < 0)
 	{
-		realname = strrchr(argv[i], '/');
-		if (!realname)
-			realname = strrchr(argv[i], '\\');
-		if (realname)
-			realname ++;
-		else
-			realname = argv[i];
+		printf("error path=%s\n",path);
+		perror("lstat error");
+		return fz_throw("lstat error");
 
-		if (strlen(realname) > (sizeof name - 1))
-		{
-			fprintf(stderr, "cmapdump: file name too long\n");
-			return 1;
-		}
-
-		strcpy(name, realname);
-		clean(name);
-
-		fd = open(argv[i], O_BINARY | O_RDONLY, 0666);
-		if (fd < 0)
-		{
-			fz_throw("cmapdump: could not open input file '%s'\n", argv[i]);
-			return 1;
-		}
-
-		fi = fz_openfile(fd);
-
-		error = pdf_parsecmap(&cmap, fi);
-		if (error)
-		{
-			fz_catch(error, "cmapdump: could not parse input cmap '%s'\n", argv[i]);
-			return 1;
-		}
-
-		fprintf(fo, "/* %s */\n\n", cmap->cmapname);
-
-		fprintf(fo, "static const pdf_range pdf_cmap_%s_ranges[] =\n{\n", name);
-		if (cmap->rlen == 0)
-		{
-			fprintf(fo, "\t/* dummy entry for non-c99 compilers */\n");
-			fprintf(fo, "\t{ 0x0, %d, 0 }\n", PDF_CMAP_RANGE);
-		}
-		for (k = 0; k < cmap->rlen; k++)
-		{
-			fprintf(fo, "\t{ 0x%04x, 0x%04x, %d },\n",
-				cmap->ranges[k].low, cmap->ranges[k].extentflags, cmap->ranges[k].offset);
-		}
-		fprintf(fo, "};\n\n");
-
-		if (cmap->tlen == 0)
-		{
-			fprintf(fo, "static const unsigned short pdf_cmap_%s_table[1] = { 0 };\n\n", name);
-		}
-		else
-		{
-			fprintf(fo, "static const unsigned short pdf_cmap_%s_table[%d] =\n{",
-				name, cmap->tlen);
-			for (k = 0; k < cmap->tlen; k++)
-			{
-				if (k % 8 == 0)
-					fprintf(fo, "\n\t");
-				fprintf(fo, "%d,", cmap->table[k]);
-			}
-			fprintf(fo, "\n};\n\n");
-		}
-
-		fprintf(fo, "pdf_cmap pdf_cmap_%s =\n", name);
-		fprintf(fo, "{\n");
-		fprintf(fo, "\t-1, ");
-		fprintf(fo, "\"%s\", ", cmap->cmapname);
-		fprintf(fo, "\"%s\", nil, ", cmap->usecmapname);
-		fprintf(fo, "%d,\n", cmap->wmode);
-
-		fprintf(fo, "\t%d, /* codespace table */\n", cmap->ncspace);
-		fprintf(fo, "\t{\n");
-
-		if (cmap->ncspace == 0)
-		{
-			fprintf(fo, "\t/* dummy entry for non-c99 compilers */\n");
-			fprintf(fo, "\t{ 0, 0x0, 0x0 },\n");
-		}
-		for (k = 0; k < cmap->ncspace; k++)
-		{
-			fprintf(fo, "\t\t{ %d, 0x%04x, 0x%04x },\n",
-				cmap->cspace[k].n, cmap->cspace[k].low, cmap->cspace[k].high);
-		}
-		fprintf(fo, "\t},\n");
-
-		fprintf(fo, "\t%d, %d, (pdf_range*) pdf_cmap_%s_ranges,\n",
-			cmap->rlen, cmap->rlen, name);
-
-		fprintf(fo, "\t%d, %d, (unsigned short*) pdf_cmap_%s_table,\n",
-			cmap->tlen, cmap->tlen, name);
-
-		fprintf(fo, "};\n\n");
-
-		fz_close(fi);
 	}
 
-	if (fclose(fo))
+	if(S_ISDIR(statbuf.st_mode) == 0) //is not a directory
+		fz_throw("expected a directory");
+
+	if((dp = opendir(path)) == NULL) //cannot read directory
+		return fz_throw("opendir error");
+
+	int error;
+	while((dirp = readdir(dp)) != NULL )
 	{
-		fprintf(stderr, "cmapdump: could not close output file '%s'\n", argv[1]);
-		return 1;
+		if(strcmp(dirp->d_name,".") == 0|| strcmp(dirp->d_name,"..") == 0)
+			continue;
+		strcpy(name,path);
+		strcat(name,"/");
+		strcat(name,dirp->d_name);
+
+		if(lstat(name,&statbuf) < 0)
+		{
+			return fz_throw("lstat error");
+
+		}
+
+		if(S_ISDIR(statbuf.st_mode) == 0) //is not a directory
+			parse_cmap_prefile(name);
+
 	}
 
-	return 0;
+	closedir(dp);
+	return 1;
 }

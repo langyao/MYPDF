@@ -196,29 +196,3 @@ pdf_freestore(pdf_store *store)
 	fz_free(store);
 }
 
-void
-pdf_debugstore(pdf_store *store)
-{
-	pdf_item *item;
-	pdf_item *next;
-	struct refkey *refkey;
-	int i;
-
-	printf("-- resource store contents --\n");
-
-	for (i = 0; i < fz_hashlen(store->hash); i++)
-	{
-		refkey = fz_hashgetkey(store->hash, i);
-		item = fz_hashgetval(store->hash, i);
-		if (item)
-			printf("store[%d] (%d %d R) = %p\n", i, refkey->num, refkey->gen, item->val);
-	}
-
-	for (item = store->root; item; item = next)
-	{
-		next = item->next;
-		printf("store[*] ");
-		fz_debugobj(item->key);
-		printf(" = %p\n", item->val);
-	}
-}

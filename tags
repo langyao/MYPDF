@@ -4,9 +4,9 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ABS	inc/fitz.h	131;"	d
-AES_DECRYPT	inc/fitz.h	324;"	d
-AES_ENCRYPT	inc/fitz.h	325;"	d
+ABS	inc/fitz.h	124;"	d
+AES_DECRYPT	inc/fitz.h	226;"	d
+AES_ENCRYPT	inc/fitz.h	227;"	d
 AFM_FontInfo	freetype/internal/t1types.h	/^  } AFM_FontInfoRec, *AFM_FontInfo;$/;"	t	typeref:struct:AFM_FontInfoRec_
 AFM_FontInfoRec	freetype/internal/t1types.h	/^  } AFM_FontInfoRec, *AFM_FontInfo;$/;"	t	typeref:struct:AFM_FontInfoRec_
 AFM_FontInfoRec_	freetype/internal/t1types.h	/^  typedef struct  AFM_FontInfoRec_$/;"	s
@@ -25,7 +25,6 @@ AFM_TrackKernRec_	freetype/internal/t1types.h	/^  typedef struct  AFM_TrackKernR
 AF_CONFIG_OPTION_CJK	freetype/config/ftoption.h	885;"	d
 AF_CONFIG_OPTION_INDIC	freetype/config/ftoption.h	893;"	d
 AF_CONFIG_OPTION_USE_WARPER	freetype/config/ftoption.h	908;"	d
-ARROW	inc/mypdf.h	/^enum { ARROW, HAND, WAIT };$/;"	e	enum:__anon17
 AUTOHINT_H_	freetype/internal/autohint.h	28;"	d
 A_space	freetype/ftwinfnt.h	/^    FT_UShort  A_space;$/;"	m	struct:FT_WinFNT_HeaderRec_
 Ascender	freetype/internal/t1types.h	/^    FT_Fixed       Ascender;$/;"	m	struct:AFM_FontInfoRec_
@@ -40,14 +39,15 @@ BDF_PropertyRec	freetype/ftbdf.h	/^  } BDF_PropertyRec;$/;"	t	typeref:struct:BDF
 BDF_PropertyRec_	freetype/ftbdf.h	/^  typedef struct  BDF_PropertyRec_$/;"	s
 BDF_PropertyType	freetype/ftbdf.h	/^  } BDF_PropertyType;$/;"	t	typeref:enum:BDF_PropertyType_
 BDF_PropertyType_	freetype/ftbdf.h	/^  typedef enum  BDF_PropertyType_$/;"	g
+BTflag	inc/pdf.h	/^	int BTflag; $/;"	m	struct:pdf_csi_s
 B_space	freetype/ftwinfnt.h	/^    FT_UShort  B_space;$/;"	m	struct:FT_WinFNT_HeaderRec_
-Bad	src/base_string.c	/^	Bad = Runeerror,$/;"	e	enum:__anon2	file:
-Bit1	src/base_string.c	/^	Bit1 = 7,$/;"	e	enum:__anon2	file:
-Bit2	src/base_string.c	/^	Bit2 = 5,$/;"	e	enum:__anon2	file:
-Bit3	src/base_string.c	/^	Bit3 = 4,$/;"	e	enum:__anon2	file:
-Bit4	src/base_string.c	/^	Bit4 = 3,$/;"	e	enum:__anon2	file:
-Bit5	src/base_string.c	/^	Bit5 = 2,$/;"	e	enum:__anon2	file:
-Bitx	src/base_string.c	/^	Bitx = 6,$/;"	e	enum:__anon2	file:
+Bad	src/base_string.c	/^	Bad = Runeerror,$/;"	e	enum:__anon9	file:
+Bit1	src/base_string.c	/^	Bit1 = 7,$/;"	e	enum:__anon9	file:
+Bit2	src/base_string.c	/^	Bit2 = 5,$/;"	e	enum:__anon9	file:
+Bit3	src/base_string.c	/^	Bit3 = 4,$/;"	e	enum:__anon9	file:
+Bit4	src/base_string.c	/^	Bit4 = 3,$/;"	e	enum:__anon9	file:
+Bit5	src/base_string.c	/^	Bit5 = 2,$/;"	e	enum:__anon9	file:
+Bitx	src/base_string.c	/^	Bitx = 6,$/;"	e	enum:__anon9	file:
 CC	Makefile	/^CC      = gcc$/;"	m
 CFF_CONFIG_OPTION_DARKENING_PARAMETER_X1	freetype/config/ftoption.h	821;"	d
 CFF_CONFIG_OPTION_DARKENING_PARAMETER_X2	freetype/config/ftoption.h	824;"	d
@@ -72,8 +72,7 @@ CID_Info	freetype/t1tables.h	/^  typedef CID_FaceInfoRec  CID_Info;$/;"	t
 CID_Subrs	freetype/internal/t1types.h	/^  } CID_SubrsRec, *CID_Subrs;$/;"	t	typeref:struct:CID_SubrsRec_
 CID_SubrsRec	freetype/internal/t1types.h	/^  } CID_SubrsRec, *CID_Subrs;$/;"	t	typeref:struct:CID_SubrsRec_
 CID_SubrsRec_	freetype/internal/t1types.h	/^  typedef struct  CID_SubrsRec_$/;"	s
-CLAMP	inc/fitz.h	134;"	d
-CNS	src/pdf_fontfile.c	/^enum { CNS, GB, Japan, Korea };$/;"	e	enum:__anon8	file:
+CLAMP	inc/fitz.h	127;"	d
 CONST_FT_RFORK_RULE_ARRAY_BEGIN	freetype/internal/ftrfork.h	86;"	d
 CONST_FT_RFORK_RULE_ARRAY_BEGIN	freetype/internal/ftrfork.h	96;"	d
 CONST_FT_RFORK_RULE_ARRAY_END	freetype/internal/ftrfork.h	108;"	d
@@ -88,22 +87,13 @@ CheckSum	freetype/internal/tttypes.h	/^    FT_ULong  CheckSum;   \/*    table ch
 CheckSum_Adjust	freetype/tttables.h	/^    FT_Long    CheckSum_Adjust;$/;"	m	struct:TT_Header_
 CompLength	freetype/internal/tttypes.h	/^    FT_ULong  CompLength;    \/* compressed table length   *\/$/;"	m	struct:WOFF_TableRec_
 Created	freetype/tttables.h	/^    FT_Long    Created [2];$/;"	m	struct:TT_Header_
-DEBUG	src/mypdf.c	8;"	d	file:
+DEBUG	src/mypdf.c	7;"	d	file:
 Descender	freetype/internal/t1types.h	/^    FT_Fixed       Descender;$/;"	m	struct:AFM_FontInfoRec_
 Descender	freetype/tttables.h	/^    FT_Short   Descender;$/;"	m	struct:TT_HoriHeader_
 Descender	freetype/tttables.h	/^    FT_Short   Descender;$/;"	m	struct:TT_VertHeader_
-ERROR	src/filt_faxd.c	/^	ERROR = -1,$/;"	e	enum:__anon4	file:
+ERROR	src/filt_faxd.c	/^	ERROR = -1,$/;"	e	enum:__anon5	file:
 F2DOT14_TO_FIXED	freetype/internal/ftcalc.h	405;"	d
 FALSE	freetype/internal/ftobjs.h	57;"	d
-FD_ALLCAP	src/pdf_fontfile.c	/^	FD_ALLCAP = 1 << 16,$/;"	e	enum:__anon7	file:
-FD_FIXED	src/pdf_fontfile.c	/^	FD_FIXED = 1 << 0,$/;"	e	enum:__anon7	file:
-FD_FORCEBOLD	src/pdf_fontfile.c	/^	FD_FORCEBOLD = 1 << 18$/;"	e	enum:__anon7	file:
-FD_ITALIC	src/pdf_fontfile.c	/^	FD_ITALIC = 1 << 6,$/;"	e	enum:__anon7	file:
-FD_NONSYMBOLIC	src/pdf_fontfile.c	/^	FD_NONSYMBOLIC = 1 << 5,$/;"	e	enum:__anon7	file:
-FD_SCRIPT	src/pdf_fontfile.c	/^	FD_SCRIPT = 1 << 3,$/;"	e	enum:__anon7	file:
-FD_SERIF	src/pdf_fontfile.c	/^	FD_SERIF = 1 << 1,$/;"	e	enum:__anon7	file:
-FD_SMALLCAP	src/pdf_fontfile.c	/^	FD_SMALLCAP = 1 << 17,$/;"	e	enum:__anon7	file:
-FD_SYMBOLIC	src/pdf_fontfile.c	/^	FD_SYMBOLIC = 1 << 2,$/;"	e	enum:__anon7	file:
 FIXED_TO_INT	freetype/internal/ftcalc.h	407;"	d
 FLOAT_TO_FIXED	freetype/internal/ftcalc.h	406;"	d
 FREETYPE_H_	freetype/freetype.h	20;"	d
@@ -474,7 +464,7 @@ FT_ERROR	freetype/internal/ftdebug.h	177;"	d
 FT_ERROR	freetype/internal/ftdebug.h	181;"	d
 FT_ERRORDEF	freetype/fterrors.h	161;"	d
 FT_ERRORDEF	freetype/fterrors.h	211;"	d
-FT_ERRORDEF	src/res_font.c	107;"	d	file:
+FT_ERRORDEF	src/res_font.c	92;"	d	file:
 FT_ERRORDEF_	freetype/fterrors.h	174;"	d
 FT_ERRORDEF_	freetype/fterrors.h	212;"	d
 FT_ERRORS_H	freetype/config/ftheader.h	188;"	d
@@ -482,11 +472,11 @@ FT_ERROR_BASE	freetype/fttypes.h	588;"	d
 FT_ERROR_DEFINITIONS_H	freetype/config/ftheader.h	812;"	d
 FT_ERROR_END_LIST	freetype/fterrors.h	163;"	d
 FT_ERROR_END_LIST	freetype/fterrors.h	209;"	d
-FT_ERROR_END_LIST	src/res_font.c	109;"	d	file:
+FT_ERROR_END_LIST	src/res_font.c	94;"	d	file:
 FT_ERROR_MODULE	freetype/fttypes.h	589;"	d
 FT_ERROR_START_LIST	freetype/fterrors.h	162;"	d
 FT_ERROR_START_LIST	freetype/fterrors.h	208;"	d
-FT_ERROR_START_LIST	src/res_font.c	108;"	d	file:
+FT_ERROR_START_LIST	src/res_font.c	93;"	d	file:
 FT_ERR_BASE	freetype/fterrors.h	145;"	d
 FT_ERR_BASE	freetype/fterrors.h	150;"	d
 FT_ERR_BASE	freetype/fterrors.h	151;"	d
@@ -1452,60 +1442,13 @@ FT_WinFnt_GetHeaderFunc	freetype/internal/services/svwinfnt.h	/^  (*FT_WinFnt_Ge
 FT_XFREE86_H	freetype/config/ftheader.h	735;"	d
 FT_ZERO	freetype/internal/ftmemory.h	237;"	d
 FZ_ARRAY	inc/fitz.h	/^	FZ_ARRAY,$/;"	e	enum:fz_objkind_e
-FZ_BCOLOR	inc/fitz.h	/^	FZ_BCOLOR,$/;"	e	enum:fz_blendmode_e
-FZ_BCOLORBURN	inc/fitz.h	/^	FZ_BCOLORBURN,$/;"	e	enum:fz_blendmode_e
-FZ_BCOLORDODGE	inc/fitz.h	/^	FZ_BCOLORDODGE,$/;"	e	enum:fz_blendmode_e
-FZ_BDARKEN	inc/fitz.h	/^	FZ_BDARKEN,$/;"	e	enum:fz_blendmode_e
-FZ_BDIFFERENCE	inc/fitz.h	/^	FZ_BDIFFERENCE,$/;"	e	enum:fz_blendmode_e
-FZ_BEXCLUSION	inc/fitz.h	/^	FZ_BEXCLUSION,$/;"	e	enum:fz_blendmode_e
-FZ_BHARDLIGHT	inc/fitz.h	/^	FZ_BHARDLIGHT,$/;"	e	enum:fz_blendmode_e
-FZ_BHUE	inc/fitz.h	/^	FZ_BHUE,$/;"	e	enum:fz_blendmode_e
-FZ_BLEND	inc/fitz.h	206;"	d
-FZ_BLIGHTEN	inc/fitz.h	/^	FZ_BLIGHTEN,$/;"	e	enum:fz_blendmode_e
-FZ_BLUMINOSITY	inc/fitz.h	/^	FZ_BLUMINOSITY,$/;"	e	enum:fz_blendmode_e
-FZ_BMULTIPLY	inc/fitz.h	/^	FZ_BMULTIPLY,$/;"	e	enum:fz_blendmode_e
-FZ_BNORMAL	inc/fitz.h	/^	FZ_BNORMAL,$/;"	e	enum:fz_blendmode_e
 FZ_BOOL	inc/fitz.h	/^	FZ_BOOL,$/;"	e	enum:fz_objkind_e
-FZ_BOVERLAY	inc/fitz.h	/^	FZ_BOVERLAY,$/;"	e	enum:fz_blendmode_e
-FZ_BSATURATION	inc/fitz.h	/^	FZ_BSATURATION,$/;"	e	enum:fz_blendmode_e
-FZ_BSCREEN	inc/fitz.h	/^	FZ_BSCREEN,$/;"	e	enum:fz_blendmode_e
-FZ_BSOFTLIGHT	inc/fitz.h	/^	FZ_BSOFTLIGHT,$/;"	e	enum:fz_blendmode_e
-FZ_CLOSEPATH	inc/fitz.h	/^	FZ_CLOSEPATH$/;"	e	enum:fz_pathelkind_e
-FZ_CMDBEGINGROUP	inc/fitz.h	/^	FZ_CMDBEGINGROUP,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDBEGINMASK	inc/fitz.h	/^	FZ_CMDBEGINMASK,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDCLIPIMAGEMASK	inc/fitz.h	/^	FZ_CMDCLIPIMAGEMASK,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDCLIPPATH	inc/fitz.h	/^	FZ_CMDCLIPPATH,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDCLIPSTROKEPATH	inc/fitz.h	/^	FZ_CMDCLIPSTROKEPATH,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDCLIPSTROKETEXT	inc/fitz.h	/^	FZ_CMDCLIPSTROKETEXT,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDCLIPTEXT	inc/fitz.h	/^	FZ_CMDCLIPTEXT,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDENDGROUP	inc/fitz.h	/^	FZ_CMDENDGROUP,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDENDMASK	inc/fitz.h	/^	FZ_CMDENDMASK,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDFILLIMAGE	inc/fitz.h	/^	FZ_CMDFILLIMAGE,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDFILLIMAGEMASK	inc/fitz.h	/^	FZ_CMDFILLIMAGEMASK,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDFILLPATH	inc/fitz.h	/^	FZ_CMDFILLPATH,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDFILLSHADE	inc/fitz.h	/^	FZ_CMDFILLSHADE,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDFILLTEXT	inc/fitz.h	/^	FZ_CMDFILLTEXT,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDIGNORETEXT	inc/fitz.h	/^	FZ_CMDIGNORETEXT,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDPOPCLIP	inc/fitz.h	/^	FZ_CMDPOPCLIP,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDSTROKEPATH	inc/fitz.h	/^	FZ_CMDSTROKEPATH,$/;"	e	enum:fz_displaycommand_e
-FZ_CMDSTROKETEXT	inc/fitz.h	/^	FZ_CMDSTROKETEXT,$/;"	e	enum:fz_displaycommand_e
-FZ_COMBINE	inc/fitz.h	198;"	d
-FZ_COMBINE2	inc/fitz.h	202;"	d
-FZ_CURVETO	inc/fitz.h	/^	FZ_CURVETO,$/;"	e	enum:fz_pathelkind_e
 FZ_DICT	inc/fitz.h	/^	FZ_DICT,$/;"	e	enum:fz_objkind_e
-FZ_EXPAND	inc/fitz.h	194;"	d
-FZ_IGNOREIMAGE	inc/fitz.h	/^	FZ_IGNOREIMAGE = 1,$/;"	e	enum:__anon26
-FZ_IGNORESHADE	inc/fitz.h	/^	FZ_IGNORESHADE = 2,$/;"	e	enum:__anon26
 FZ_INDIRECT	inc/fitz.h	/^	FZ_INDIRECT$/;"	e	enum:fz_objkind_e
 FZ_INT	inc/fitz.h	/^	FZ_INT,$/;"	e	enum:fz_objkind_e
-FZ_LINEAR	inc/fitz.h	/^	FZ_LINEAR,$/;"	e	enum:__anon25
-FZ_LINETO	inc/fitz.h	/^	FZ_LINETO,$/;"	e	enum:fz_pathelkind_e
-FZ_MAXCOLORS	inc/fitz.h	/^enum { FZ_MAXCOLORS = 32 };$/;"	e	enum:__anon24
-FZ_MESH	inc/fitz.h	/^	FZ_MESH,$/;"	e	enum:__anon25
-FZ_MOVETO	inc/fitz.h	/^	FZ_MOVETO,$/;"	e	enum:fz_pathelkind_e
+FZ_MAXCOLORS	inc/fitz.h	/^enum { FZ_MAXCOLORS = 32 };$/;"	e	enum:__anon23
 FZ_NAME	inc/fitz.h	/^	FZ_NAME,$/;"	e	enum:fz_objkind_e
 FZ_NULL	inc/fitz.h	/^	FZ_NULL,$/;"	e	enum:fz_objkind_e
-FZ_RADIAL	inc/fitz.h	/^	FZ_RADIAL,$/;"	e	enum:__anon25
 FZ_REAL	inc/fitz.h	/^	FZ_REAL,$/;"	e	enum:fz_objkind_e
 FZ_STRING	inc/fitz.h	/^	FZ_STRING,$/;"	e	enum:fz_objkind_e
 FileName	freetype/tttables.h	/^    FT_Char    FileName[6];$/;"	m	struct:TT_PCLT_
@@ -1516,12 +1459,9 @@ FontNumber	freetype/tttables.h	/^    FT_ULong   FontNumber;$/;"	m	struct:TT_PCLT
 Font_Direction	freetype/tttables.h	/^    FT_Short   Font_Direction;$/;"	m	struct:TT_Header_
 Font_Revision	freetype/tttables.h	/^    FT_Fixed   Font_Revision;$/;"	m	struct:TT_Header_
 FormatType	freetype/tttables.h	/^    FT_Fixed  FormatType;$/;"	m	struct:TT_Postscript_
-GB	src/pdf_fontfile.c	/^enum { CNS, GB, Japan, Korea };$/;"	e	enum:__anon8	file:
-GOTHIC	src/pdf_fontfile.c	/^enum { MINCHO, GOTHIC };$/;"	e	enum:__anon9	file:
 GX_Blend	freetype/internal/tttypes.h	/^  typedef struct GX_BlendRec_  *GX_Blend;$/;"	t	typeref:struct:GX_BlendRec_
 Glyph_Data_Format	freetype/tttables.h	/^    FT_Short   Glyph_Data_Format;$/;"	m	struct:TT_Header_
-H	src/filt_faxd.c	/^	H = -5,$/;"	e	enum:__anon5	file:
-HAND	inc/mypdf.h	/^enum { ARROW, HAND, WAIT };$/;"	e	enum:__anon17
+H	src/filt_faxd.c	/^	H = -5,$/;"	e	enum:__anon6	file:
 INT_TO_F26DOT6	freetype/internal/ftcalc.h	402;"	d
 INT_TO_F2DOT14	freetype/internal/ftcalc.h	403;"	d
 INT_TO_FIXED	freetype/internal/ftcalc.h	404;"	d
@@ -1539,34 +1479,31 @@ IS_PS_TOKEN	freetype/internal/psaux.h	866;"	d
 IS_PS_XDIGIT	freetype/internal/psaux.h	858;"	d
 Index_To_Loc_Format	freetype/tttables.h	/^    FT_Short   Index_To_Loc_Format;$/;"	m	struct:TT_Header_
 IsCIDFont	freetype/internal/t1types.h	/^    FT_Bool        IsCIDFont;$/;"	m	struct:AFM_FontInfoRec_
-Japan	src/pdf_fontfile.c	/^enum { CNS, GB, Japan, Korea };$/;"	e	enum:__anon8	file:
 KernPairs	freetype/internal/t1types.h	/^    AFM_KernPair   KernPairs;    \/* free if non-NULL *\/$/;"	m	struct:AFM_FontInfoRec_
-Korea	src/pdf_fontfile.c	/^enum { CNS, GB, Japan, Korea };$/;"	e	enum:__anon8	file:
-LZW_CLEAR	src/filt_lzwd.c	/^	LZW_CLEAR = 256,$/;"	e	enum:__anon12	file:
-LZW_EOD	src/filt_lzwd.c	/^	LZW_EOD = 257,$/;"	e	enum:__anon12	file:
-LZW_FIRST	src/filt_lzwd.c	/^	LZW_FIRST = 258,$/;"	e	enum:__anon12	file:
+LOG	src/map.c	14;"	d	file:
+LZW_CLEAR	src/filt_lzwd.c	/^	LZW_CLEAR = 256,$/;"	e	enum:__anon2	file:
+LZW_EOD	src/filt_lzwd.c	/^	LZW_EOD = 257,$/;"	e	enum:__anon2	file:
+LZW_FIRST	src/filt_lzwd.c	/^	LZW_FIRST = 258,$/;"	e	enum:__anon2	file:
 Length	freetype/internal/tttypes.h	/^    FT_ULong  Length;     \/*      table length *\/$/;"	m	struct:TT_TableRec_
 Line_Gap	freetype/tttables.h	/^    FT_Short   Line_Gap;$/;"	m	struct:TT_HoriHeader_
 Line_Gap	freetype/tttables.h	/^    FT_Short   Line_Gap;$/;"	m	struct:TT_VertHeader_
 Lowest_Rec_PPEM	freetype/tttables.h	/^    FT_UShort  Lowest_Rec_PPEM;$/;"	m	struct:TT_Header_
-MAX	inc/fitz.h	133;"	d
-MAXBITS	src/filt_lzwd.c	/^	MAXBITS = 12,$/;"	e	enum:__anon12	file:
-MAXC	src/filt_predict.c	/^enum { MAXC = 32 };$/;"	e	enum:__anon11	file:
-MAXKEYLEN	src/base_hash.c	/^enum { MAXKEYLEN = 48 };$/;"	e	enum:__anon13	file:
-MAXLENGTH	src/filt_lzwd.c	/^	MAXLENGTH = 4097$/;"	e	enum:__anon12	file:
+MAX	inc/fitz.h	126;"	d
+MAXBITS	src/filt_lzwd.c	/^	MAXBITS = 12,$/;"	e	enum:__anon2	file:
+MAXC	src/filt_predict.c	/^enum { MAXC = 32 };$/;"	e	enum:__anon1	file:
+MAXKEYLEN	src/base_hash.c	/^enum { MAXKEYLEN = 48 };$/;"	e	enum:__anon3	file:
+MAXLENGTH	src/filt_lzwd.c	/^	MAXLENGTH = 4097$/;"	e	enum:__anon2	file:
 MAXRES	inc/mypdf.h	8;"	d
-MIN	inc/fitz.h	132;"	d
-MINBITS	src/filt_lzwd.c	/^	MINBITS = 9,$/;"	e	enum:__anon12	file:
-MINCHO	src/pdf_fontfile.c	/^enum { MINCHO, GOTHIC };$/;"	e	enum:__anon9	file:
+MIN	inc/fitz.h	125;"	d
+MINBITS	src/filt_lzwd.c	/^	MINBITS = 9,$/;"	e	enum:__anon2	file:
 MINRES	inc/mypdf.h	7;"	d
-M_PI	inc/fitz.h	53;"	d
-M_SQRT2	inc/fitz.h	57;"	d
+MYPDF_H	inc/mypdf.h	2;"	d
 Mac_Style	freetype/tttables.h	/^    FT_UShort  Mac_Style;$/;"	m	struct:TT_Header_
 Magic_Number	freetype/tttables.h	/^    FT_Long    Magic_Number;$/;"	m	struct:TT_Header_
-Maskx	src/base_string.c	/^	Maskx = (1<<Bitx)-1,	\/* 0011 1111 *\/$/;"	e	enum:__anon2	file:
+Maskx	src/base_string.c	/^	Maskx = (1<<Bitx)-1,	\/* 0011 1111 *\/$/;"	e	enum:__anon9	file:
 Modified	freetype/tttables.h	/^    FT_Long    Modified[2];$/;"	m	struct:TT_Header_
 NULL	freetype/internal/ftobjs.h	61;"	d
-NUMCODES	src/filt_lzwd.c	/^	NUMCODES = (1 << MAXBITS),$/;"	e	enum:__anon12	file:
+NUMCODES	src/filt_lzwd.c	/^	NUMCODES = (1 << MAXBITS),$/;"	e	enum:__anon2	file:
 NumKernPair	freetype/internal/t1types.h	/^    FT_UInt        NumKernPair;$/;"	m	struct:AFM_FontInfoRec_
 NumTrackKern	freetype/internal/t1types.h	/^    FT_UInt        NumTrackKern;$/;"	m	struct:AFM_FontInfoRec_
 O_BINARY	inc/fitz.h	47;"	d
@@ -1574,67 +1511,42 @@ Offset	freetype/internal/tttypes.h	/^    FT_ULong  Offset;        \/* table file
 Offset	freetype/internal/tttypes.h	/^    FT_ULong  Offset;     \/* table file offset *\/$/;"	m	struct:TT_TableRec_
 OrigLength	freetype/internal/tttypes.h	/^    FT_ULong  OrigLength;    \/* uncompressed table length *\/$/;"	m	struct:WOFF_TableRec_
 OrigOffset	freetype/internal/tttypes.h	/^    FT_ULong  OrigOffset;    \/* uncompressed table file offset *\/$/;"	m	struct:WOFF_TableRec_
-P	src/filt_faxd.c	/^	P = -4,$/;"	e	enum:__anon5	file:
-PDF_CMAP_MULTI	inc/pdf.h	/^enum { PDF_CMAP_SINGLE, PDF_CMAP_RANGE, PDF_CMAP_TABLE, PDF_CMAP_MULTI };$/;"	e	enum:__anon30
-PDF_CMAP_RANGE	inc/pdf.h	/^enum { PDF_CMAP_SINGLE, PDF_CMAP_RANGE, PDF_CMAP_TABLE, PDF_CMAP_MULTI };$/;"	e	enum:__anon30
-PDF_CMAP_SINGLE	inc/pdf.h	/^enum { PDF_CMAP_SINGLE, PDF_CMAP_RANGE, PDF_CMAP_TABLE, PDF_CMAP_MULTI };$/;"	e	enum:__anon30
-PDF_CMAP_TABLE	inc/pdf.h	/^enum { PDF_CMAP_SINGLE, PDF_CMAP_RANGE, PDF_CMAP_TABLE, PDF_CMAP_MULTI };$/;"	e	enum:__anon30
-PDF_CRYPT_AESV2	inc/pdf.h	/^	PDF_CRYPT_AESV2,$/;"	e	enum:__anon29
-PDF_CRYPT_AESV3	inc/pdf.h	/^	PDF_CRYPT_AESV3,$/;"	e	enum:__anon29
-PDF_CRYPT_NONE	inc/pdf.h	/^	PDF_CRYPT_NONE,$/;"	e	enum:__anon29
-PDF_CRYPT_RC4	inc/pdf.h	/^	PDF_CRYPT_RC4,$/;"	e	enum:__anon29
-PDF_CRYPT_UNKNOWN	inc/pdf.h	/^	PDF_CRYPT_UNKNOWN,$/;"	e	enum:__anon29
-PDF_DEFAULT_PERM_FLAGS	inc/pdf.h	63;"	d
-PDF_LACTION	inc/pdf.h	/^	PDF_LACTION,$/;"	e	enum:pdf_linkkind_e
-PDF_LFONT	src/pdf_debug.c	/^	PDF_LFONT = 4,$/;"	e	enum:__anon14	file:
-PDF_LGOTO	inc/pdf.h	/^	PDF_LGOTO = 0,$/;"	e	enum:pdf_linkkind_e
-PDF_LIMAGE	src/pdf_debug.c	/^	PDF_LIMAGE = 8,$/;"	e	enum:__anon14	file:
-PDF_LLAUNCH	inc/pdf.h	/^	PDF_LLAUNCH,$/;"	e	enum:pdf_linkkind_e
-PDF_LNAMED	inc/pdf.h	/^	PDF_LNAMED,$/;"	e	enum:pdf_linkkind_e
-PDF_LPAGE	src/pdf_debug.c	/^	PDF_LPAGE = 32$/;"	e	enum:__anon14	file:
-PDF_LRSRC	src/pdf_debug.c	/^	PDF_LRSRC = 2,$/;"	e	enum:__anon14	file:
-PDF_LSHADE	src/pdf_debug.c	/^	PDF_LSHADE = 16,$/;"	e	enum:__anon14	file:
-PDF_LURI	inc/pdf.h	/^	PDF_LURI,$/;"	e	enum:pdf_linkkind_e
-PDF_LXREF	src/pdf_debug.c	/^	PDF_LXREF = 1,$/;"	e	enum:__anon14	file:
-PDF_MCOLOR	inc/pdf.h	/^	PDF_MCOLOR,$/;"	e	enum:__anon33
-PDF_MFILL	inc/pdf.h	/^	PDF_MFILL,$/;"	e	enum:__anon32
-PDF_MNONE	inc/pdf.h	/^	PDF_MNONE,$/;"	e	enum:__anon33
-PDF_MPATTERN	inc/pdf.h	/^	PDF_MPATTERN,$/;"	e	enum:__anon33
-PDF_MSHADE	inc/pdf.h	/^	PDF_MSHADE,$/;"	e	enum:__anon33
-PDF_MSTROKE	inc/pdf.h	/^	PDF_MSTROKE,$/;"	e	enum:__anon32
-PDF_NTOKENS	inc/pdf.h	/^	PDF_NTOKENS$/;"	e	enum:__anon28
-PDF_PERM_ACCESSIBILITY	inc/pdf.h	60;"	d
-PDF_PERM_ASSEMBLE	inc/pdf.h	61;"	d
-PDF_PERM_CHANGE	inc/pdf.h	56;"	d
-PDF_PERM_COPY	inc/pdf.h	57;"	d
-PDF_PERM_FILL_FORM	inc/pdf.h	59;"	d
-PDF_PERM_HIGH_RES_PRINT	inc/pdf.h	62;"	d
-PDF_PERM_NOTES	inc/pdf.h	58;"	d
-PDF_PERM_PRINT	inc/pdf.h	55;"	d
-PDF_TCARRAY	inc/pdf.h	/^	PDF_TOARRAY, PDF_TCARRAY,$/;"	e	enum:__anon28
-PDF_TCBRACE	inc/pdf.h	/^	PDF_TOBRACE, PDF_TCBRACE,$/;"	e	enum:__anon28
-PDF_TCDICT	inc/pdf.h	/^	PDF_TODICT, PDF_TCDICT,$/;"	e	enum:__anon28
-PDF_TENDOBJ	inc/pdf.h	/^	PDF_TOBJ, PDF_TENDOBJ,$/;"	e	enum:__anon28
-PDF_TENDSTREAM	inc/pdf.h	/^	PDF_TSTREAM, PDF_TENDSTREAM,$/;"	e	enum:__anon28
-PDF_TEOF	inc/pdf.h	/^	PDF_TERROR, PDF_TEOF,$/;"	e	enum:__anon28
-PDF_TERROR	inc/pdf.h	/^	PDF_TERROR, PDF_TEOF,$/;"	e	enum:__anon28
-PDF_TFALSE	inc/pdf.h	/^	PDF_TR, PDF_TTRUE, PDF_TFALSE, PDF_TNULL,$/;"	e	enum:__anon28
-PDF_TINT	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon28
-PDF_TKEYWORD	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon28
-PDF_TNAME	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon28
-PDF_TNULL	inc/pdf.h	/^	PDF_TR, PDF_TTRUE, PDF_TFALSE, PDF_TNULL,$/;"	e	enum:__anon28
-PDF_TOARRAY	inc/pdf.h	/^	PDF_TOARRAY, PDF_TCARRAY,$/;"	e	enum:__anon28
-PDF_TOBJ	inc/pdf.h	/^	PDF_TOBJ, PDF_TENDOBJ,$/;"	e	enum:__anon28
-PDF_TOBRACE	inc/pdf.h	/^	PDF_TOBRACE, PDF_TCBRACE,$/;"	e	enum:__anon28
-PDF_TODICT	inc/pdf.h	/^	PDF_TODICT, PDF_TCDICT,$/;"	e	enum:__anon28
-PDF_TR	inc/pdf.h	/^	PDF_TR, PDF_TTRUE, PDF_TFALSE, PDF_TNULL,$/;"	e	enum:__anon28
-PDF_TREAL	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon28
-PDF_TSTARTXREF	inc/pdf.h	/^	PDF_TXREF, PDF_TTRAILER, PDF_TSTARTXREF,$/;"	e	enum:__anon28
-PDF_TSTREAM	inc/pdf.h	/^	PDF_TSTREAM, PDF_TENDSTREAM,$/;"	e	enum:__anon28
-PDF_TSTRING	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon28
-PDF_TTRAILER	inc/pdf.h	/^	PDF_TXREF, PDF_TTRAILER, PDF_TSTARTXREF,$/;"	e	enum:__anon28
-PDF_TTRUE	inc/pdf.h	/^	PDF_TR, PDF_TTRUE, PDF_TFALSE, PDF_TNULL,$/;"	e	enum:__anon28
-PDF_TXREF	inc/pdf.h	/^	PDF_TXREF, PDF_TTRAILER, PDF_TSTARTXREF,$/;"	e	enum:__anon28
+P	src/filt_faxd.c	/^	P = -4,$/;"	e	enum:__anon6	file:
+PDF_CMAP_MULTI	inc/pdf.h	/^enum { PDF_CMAP_SINGLE, PDF_CMAP_RANGE, PDF_CMAP_TABLE, PDF_CMAP_MULTI };$/;"	e	enum:__anon15
+PDF_CMAP_RANGE	inc/pdf.h	/^enum { PDF_CMAP_SINGLE, PDF_CMAP_RANGE, PDF_CMAP_TABLE, PDF_CMAP_MULTI };$/;"	e	enum:__anon15
+PDF_CMAP_SINGLE	inc/pdf.h	/^enum { PDF_CMAP_SINGLE, PDF_CMAP_RANGE, PDF_CMAP_TABLE, PDF_CMAP_MULTI };$/;"	e	enum:__anon15
+PDF_CMAP_TABLE	inc/pdf.h	/^enum { PDF_CMAP_SINGLE, PDF_CMAP_RANGE, PDF_CMAP_TABLE, PDF_CMAP_MULTI };$/;"	e	enum:__anon15
+PDF_LFONT	src/pdf_debug.c	/^	PDF_LFONT = 4,$/;"	e	enum:__anon12	file:
+PDF_LIMAGE	src/pdf_debug.c	/^	PDF_LIMAGE = 8,$/;"	e	enum:__anon12	file:
+PDF_LPAGE	src/pdf_debug.c	/^	PDF_LPAGE = 32$/;"	e	enum:__anon12	file:
+PDF_LRSRC	src/pdf_debug.c	/^	PDF_LRSRC = 2,$/;"	e	enum:__anon12	file:
+PDF_LSHADE	src/pdf_debug.c	/^	PDF_LSHADE = 16,$/;"	e	enum:__anon12	file:
+PDF_LXREF	src/pdf_debug.c	/^	PDF_LXREF = 1,$/;"	e	enum:__anon12	file:
+PDF_NTOKENS	inc/pdf.h	/^	PDF_NTOKENS$/;"	e	enum:__anon14
+PDF_TCARRAY	inc/pdf.h	/^	PDF_TOARRAY, PDF_TCARRAY,$/;"	e	enum:__anon14
+PDF_TCBRACE	inc/pdf.h	/^	PDF_TOBRACE, PDF_TCBRACE,$/;"	e	enum:__anon14
+PDF_TCDICT	inc/pdf.h	/^	PDF_TODICT, PDF_TCDICT,$/;"	e	enum:__anon14
+PDF_TENDOBJ	inc/pdf.h	/^	PDF_TOBJ, PDF_TENDOBJ,$/;"	e	enum:__anon14
+PDF_TENDSTREAM	inc/pdf.h	/^	PDF_TSTREAM, PDF_TENDSTREAM,$/;"	e	enum:__anon14
+PDF_TEOF	inc/pdf.h	/^	PDF_TERROR, PDF_TEOF,$/;"	e	enum:__anon14
+PDF_TERROR	inc/pdf.h	/^	PDF_TERROR, PDF_TEOF,$/;"	e	enum:__anon14
+PDF_TFALSE	inc/pdf.h	/^	PDF_TR, PDF_TTRUE, PDF_TFALSE, PDF_TNULL,$/;"	e	enum:__anon14
+PDF_TINT	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon14
+PDF_TKEYWORD	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon14
+PDF_TNAME	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon14
+PDF_TNULL	inc/pdf.h	/^	PDF_TR, PDF_TTRUE, PDF_TFALSE, PDF_TNULL,$/;"	e	enum:__anon14
+PDF_TOARRAY	inc/pdf.h	/^	PDF_TOARRAY, PDF_TCARRAY,$/;"	e	enum:__anon14
+PDF_TOBJ	inc/pdf.h	/^	PDF_TOBJ, PDF_TENDOBJ,$/;"	e	enum:__anon14
+PDF_TOBRACE	inc/pdf.h	/^	PDF_TOBRACE, PDF_TCBRACE,$/;"	e	enum:__anon14
+PDF_TODICT	inc/pdf.h	/^	PDF_TODICT, PDF_TCDICT,$/;"	e	enum:__anon14
+PDF_TR	inc/pdf.h	/^	PDF_TR, PDF_TTRUE, PDF_TFALSE, PDF_TNULL,$/;"	e	enum:__anon14
+PDF_TREAL	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon14
+PDF_TSTARTXREF	inc/pdf.h	/^	PDF_TXREF, PDF_TTRAILER, PDF_TSTARTXREF,$/;"	e	enum:__anon14
+PDF_TSTREAM	inc/pdf.h	/^	PDF_TSTREAM, PDF_TENDSTREAM,$/;"	e	enum:__anon14
+PDF_TSTRING	inc/pdf.h	/^	PDF_TNAME, PDF_TINT, PDF_TREAL, PDF_TSTRING, PDF_TKEYWORD,$/;"	e	enum:__anon14
+PDF_TTRAILER	inc/pdf.h	/^	PDF_TXREF, PDF_TTRAILER, PDF_TSTARTXREF,$/;"	e	enum:__anon14
+PDF_TTRUE	inc/pdf.h	/^	PDF_TR, PDF_TTRUE, PDF_TFALSE, PDF_TNULL,$/;"	e	enum:__anon14
+PDF_TXREF	inc/pdf.h	/^	PDF_TXREF, PDF_TTRAILER, PDF_TSTARTXREF,$/;"	e	enum:__anon14
 PSAUX_H_	freetype/internal/psaux.h	21;"	d
 PSAux_Interface	freetype/internal/psaux.h	/^  typedef PSAux_ServiceRec   PSAux_Interface;$/;"	t
 PSAux_Service	freetype/internal/psaux.h	/^  } PSAux_ServiceRec, *PSAux_Service;$/;"	t	typeref:struct:PSAux_ServiceRec_
@@ -1752,16 +1664,16 @@ ROUND_F26DOT6	freetype/internal/ftcalc.h	409;"	d
 Reserved	freetype/tttables.h	/^    FT_Byte    Reserved;$/;"	m	struct:TT_PCLT_
 Reserved	freetype/tttables.h	/^    FT_Short   Reserved[4];$/;"	m	struct:TT_HoriHeader_
 Reserved	freetype/tttables.h	/^    FT_Short   Reserved[4];$/;"	m	struct:TT_VertHeader_
-Rune1	src/base_string.c	/^	Rune1 = (1<<(Bit1+0*Bitx))-1, \/* 0000 0000 0111 1111 *\/$/;"	e	enum:__anon2	file:
-Rune2	src/base_string.c	/^	Rune2 = (1<<(Bit2+1*Bitx))-1, \/* 0000 0111 1111 1111 *\/$/;"	e	enum:__anon2	file:
-Rune3	src/base_string.c	/^	Rune3 = (1<<(Bit3+2*Bitx))-1, \/* 1111 1111 1111 1111 *\/$/;"	e	enum:__anon2	file:
-Rune4	src/base_string.c	/^	Rune4 = (1<<(Bit4+3*Bitx))-1, \/* 0001 1111 1111 1111 1111 1111 *\/$/;"	e	enum:__anon2	file:
-Runeerror	src/base_string.c	/^	Runeerror = 0xFFFD, \/* decoding error in UTF *\/$/;"	e	enum:__anon1	file:
-Runemax	src/base_string.c	/^	Runemax = 0x10FFFF, \/* maximum rune value *\/$/;"	e	enum:__anon1	file:
-Runeself	src/base_string.c	/^	Runeself = 0x80, \/* rune and UTF sequences are the same (<) *\/$/;"	e	enum:__anon1	file:
-Runesync	src/base_string.c	/^	Runesync = 0x80, \/* cannot represent part of a UTF sequence (<) *\/$/;"	e	enum:__anon1	file:
-SDONE	src/filt_faxd.c	/^	SDONE		\/* all done *\/$/;"	e	enum:__anon6	file:
-SEOL	src/filt_faxd.c	/^	SEOL,		\/* at eol, needs output buffer space *\/$/;"	e	enum:__anon6	file:
+Rune1	src/base_string.c	/^	Rune1 = (1<<(Bit1+0*Bitx))-1, \/* 0000 0000 0111 1111 *\/$/;"	e	enum:__anon9	file:
+Rune2	src/base_string.c	/^	Rune2 = (1<<(Bit2+1*Bitx))-1, \/* 0000 0111 1111 1111 *\/$/;"	e	enum:__anon9	file:
+Rune3	src/base_string.c	/^	Rune3 = (1<<(Bit3+2*Bitx))-1, \/* 1111 1111 1111 1111 *\/$/;"	e	enum:__anon9	file:
+Rune4	src/base_string.c	/^	Rune4 = (1<<(Bit4+3*Bitx))-1, \/* 0001 1111 1111 1111 1111 1111 *\/$/;"	e	enum:__anon9	file:
+Runeerror	src/base_string.c	/^	Runeerror = 0xFFFD, \/* decoding error in UTF *\/$/;"	e	enum:__anon8	file:
+Runemax	src/base_string.c	/^	Runemax = 0x10FFFF, \/* maximum rune value *\/$/;"	e	enum:__anon8	file:
+Runeself	src/base_string.c	/^	Runeself = 0x80, \/* rune and UTF sequences are the same (<) *\/$/;"	e	enum:__anon8	file:
+Runesync	src/base_string.c	/^	Runesync = 0x80, \/* cannot represent part of a UTF sequence (<) *\/$/;"	e	enum:__anon8	file:
+SDONE	src/filt_faxd.c	/^	SDONE		\/* all done *\/$/;"	e	enum:__anon7	file:
+SEOL	src/filt_faxd.c	/^	SEOL,		\/* at eol, needs output buffer space *\/$/;"	e	enum:__anon7	file:
 SFNT_H_	freetype/internal/sfnt.h	20;"	d
 SFNT_Header	freetype/internal/tttypes.h	/^  } SFNT_HeaderRec, *SFNT_Header;$/;"	t	typeref:struct:SFNT_HeaderRec_
 SFNT_HeaderRec	freetype/internal/tttypes.h	/^  } SFNT_HeaderRec, *SFNT_Header;$/;"	t	typeref:struct:SFNT_HeaderRec_
@@ -1769,10 +1681,10 @@ SFNT_HeaderRec_	freetype/internal/tttypes.h	/^  typedef struct  SFNT_HeaderRec_$
 SFNT_Interface	freetype/internal/sfnt.h	/^  } SFNT_Interface;$/;"	t	typeref:struct:SFNT_Interface_
 SFNT_Interface_	freetype/internal/sfnt.h	/^  typedef struct  SFNT_Interface_$/;"	s
 SFNT_Service	freetype/internal/sfnt.h	/^  typedef SFNT_Interface*   SFNT_Service;$/;"	t
-SH1	src/filt_faxd.c	/^	SH1, SH2,	\/* in H part 1 and 2 (both makeup and terminating codes) *\/$/;"	e	enum:__anon6	file:
-SH2	src/filt_faxd.c	/^	SH1, SH2,	\/* in H part 1 and 2 (both makeup and terminating codes) *\/$/;"	e	enum:__anon6	file:
-SMAKEUP	src/filt_faxd.c	/^	SMAKEUP,	\/* got a 1d makeup code, waiting for terminating code *\/$/;"	e	enum:__anon6	file:
-SNORMAL	src/filt_faxd.c	/^	SNORMAL,	\/* neutral state, waiting for any code *\/$/;"	e	enum:__anon6	file:
+SH1	src/filt_faxd.c	/^	SH1, SH2,	\/* in H part 1 and 2 (both makeup and terminating codes) *\/$/;"	e	enum:__anon7	file:
+SH2	src/filt_faxd.c	/^	SH1, SH2,	\/* in H part 1 and 2 (both makeup and terminating codes) *\/$/;"	e	enum:__anon7	file:
+SMAKEUP	src/filt_faxd.c	/^	SMAKEUP,	\/* got a 1d makeup code, waiting for terminating code *\/$/;"	e	enum:__anon7	file:
+SNORMAL	src/filt_faxd.c	/^	SNORMAL,	\/* neutral state, waiting for any code *\/$/;"	e	enum:__anon7	file:
 SOURCE	Makefile	/^SOURCE = $(wildcard src\/*.c) $(wildcard utils\/*.c) $(wildcard src\/*.cpp) $(wildcard utils\/*.cpp)  $/;"	m
 SVBDF_H_	freetype/internal/services/svbdf.h	20;"	d
 SVCID_H_	freetype/internal/services/svcid.h	20;"	d
@@ -1797,7 +1709,7 @@ SerifStyle	freetype/tttables.h	/^    FT_Byte    SerifStyle;$/;"	m	struct:TT_PCLT
 StrokeWeight	freetype/tttables.h	/^    FT_Char    StrokeWeight;$/;"	m	struct:TT_PCLT_
 Style	freetype/tttables.h	/^    FT_UShort  Style;$/;"	m	struct:TT_PCLT_
 SymbolSet	freetype/tttables.h	/^    FT_UShort  SymbolSet;$/;"	m	struct:TT_PCLT_
-T1	src/base_string.c	/^	T1 = ((1<<(Bit1+1))-1) ^ 0xFF, \/* 0000 0000 *\/$/;"	e	enum:__anon2	file:
+T1	src/base_string.c	/^	T1 = ((1<<(Bit1+1))-1) ^ 0xFF, \/* 0000 0000 *\/$/;"	e	enum:__anon9	file:
 T1TABLES_H_	freetype/t1tables.h	21;"	d
 T1TYPES_H_	freetype/internal/t1types.h	21;"	d
 T1_BLEND_BLUE_SCALE	freetype/t1tables.h	/^    T1_BLEND_BLUE_SCALE,$/;"	e	enum:T1_Blend_Flags_
@@ -1946,7 +1858,7 @@ T1_TokenRec	freetype/internal/psaux.h	/^  } T1_TokenRec;$/;"	t	typeref:struct:T1
 T1_TokenRec_	freetype/internal/psaux.h	/^  typedef struct  T1_TokenRec_$/;"	s
 T1_TokenType	freetype/internal/psaux.h	/^  } T1_TokenType;$/;"	t	typeref:enum:T1_TokenType_
 T1_TokenType_	freetype/internal/psaux.h	/^  typedef enum  T1_TokenType_$/;"	g
-T2	src/base_string.c	/^	T2 = ((1<<(Bit2+1))-1) ^ 0xFF, \/* 1100 0000 *\/$/;"	e	enum:__anon2	file:
+T2	src/base_string.c	/^	T2 = ((1<<(Bit2+1))-1) ^ 0xFF, \/* 1100 0000 *\/$/;"	e	enum:__anon9	file:
 T2_Hints	freetype/internal/pshints.h	/^  typedef struct T2_HintsRec_*  T2_Hints;$/;"	t	typeref:struct:T2_HintsRec_
 T2_Hints_ApplyFunc	freetype/internal/pshints.h	/^  (*T2_Hints_ApplyFunc)( T2_Hints        hints,$/;"	t
 T2_Hints_CloseFunc	freetype/internal/pshints.h	/^  (*T2_Hints_CloseFunc)( T2_Hints  hints,$/;"	t
@@ -1957,23 +1869,22 @@ T2_Hints_FuncsRec_	freetype/internal/pshints.h	/^  typedef struct  T2_Hints_Func
 T2_Hints_MaskFunc	freetype/internal/pshints.h	/^  (*T2_Hints_MaskFunc)( T2_Hints        hints,$/;"	t
 T2_Hints_OpenFunc	freetype/internal/pshints.h	/^  (*T2_Hints_OpenFunc)( T2_Hints  hints );$/;"	t
 T2_Hints_StemsFunc	freetype/internal/pshints.h	/^  (*T2_Hints_StemsFunc)( T2_Hints   hints,$/;"	t
-T3	src/base_string.c	/^	T3 = ((1<<(Bit3+1))-1) ^ 0xFF, \/* 1110 0000 *\/$/;"	e	enum:__anon2	file:
-T4	src/base_string.c	/^	T4 = ((1<<(Bit4+1))-1) ^ 0xFF, \/* 1111 0000 *\/$/;"	e	enum:__anon2	file:
-T5	src/base_string.c	/^	T5 = ((1<<(Bit5+1))-1) ^ 0xFF, \/* 1111 1000 *\/$/;"	e	enum:__anon2	file:
+T3	src/base_string.c	/^	T3 = ((1<<(Bit3+1))-1) ^ 0xFF, \/* 1110 0000 *\/$/;"	e	enum:__anon9	file:
+T4	src/base_string.c	/^	T4 = ((1<<(Bit4+1))-1) ^ 0xFF, \/* 1111 0000 *\/$/;"	e	enum:__anon9	file:
+T5	src/base_string.c	/^	T5 = ((1<<(Bit5+1))-1) ^ 0xFF, \/* 1111 1000 *\/$/;"	e	enum:__anon9	file:
 TARGET	Makefile	/^TARGET = main$/;"	m
-TBEGINBFCHAR	src/pdf_cmap_parse.c	/^	TBEGINBFCHAR,$/;"	e	enum:__anon15	file:
-TBEGINBFRANGE	src/pdf_cmap_parse.c	/^	TBEGINBFRANGE,$/;"	e	enum:__anon15	file:
-TBEGINCIDCHAR	src/pdf_cmap_parse.c	/^	TBEGINCIDCHAR,$/;"	e	enum:__anon15	file:
-TBEGINCIDRANGE	src/pdf_cmap_parse.c	/^	TBEGINCIDRANGE,$/;"	e	enum:__anon15	file:
-TBEGINCODESPACERANGE	src/pdf_cmap_parse.c	/^	TBEGINCODESPACERANGE,$/;"	e	enum:__anon15	file:
-TENDBFCHAR	src/pdf_cmap_parse.c	/^	TENDBFCHAR,$/;"	e	enum:__anon15	file:
-TENDBFRANGE	src/pdf_cmap_parse.c	/^	TENDBFRANGE,$/;"	e	enum:__anon15	file:
-TENDCIDCHAR	src/pdf_cmap_parse.c	/^	TENDCIDCHAR,$/;"	e	enum:__anon15	file:
-TENDCIDRANGE	src/pdf_cmap_parse.c	/^	TENDCIDRANGE,$/;"	e	enum:__anon15	file:
-TENDCMAP	src/pdf_cmap_parse.c	/^	TENDCMAP$/;"	e	enum:__anon15	file:
-TENDCODESPACERANGE	src/pdf_cmap_parse.c	/^	TENDCODESPACERANGE,$/;"	e	enum:__anon15	file:
+TBEGINBFCHAR	src/pdf_cmap_parse.c	/^	TBEGINBFCHAR,$/;"	e	enum:__anon13	file:
+TBEGINBFRANGE	src/pdf_cmap_parse.c	/^	TBEGINBFRANGE,$/;"	e	enum:__anon13	file:
+TBEGINCIDCHAR	src/pdf_cmap_parse.c	/^	TBEGINCIDCHAR,$/;"	e	enum:__anon13	file:
+TBEGINCIDRANGE	src/pdf_cmap_parse.c	/^	TBEGINCIDRANGE,$/;"	e	enum:__anon13	file:
+TBEGINCODESPACERANGE	src/pdf_cmap_parse.c	/^	TBEGINCODESPACERANGE,$/;"	e	enum:__anon13	file:
+TENDBFCHAR	src/pdf_cmap_parse.c	/^	TENDBFCHAR,$/;"	e	enum:__anon13	file:
+TENDBFRANGE	src/pdf_cmap_parse.c	/^	TENDBFRANGE,$/;"	e	enum:__anon13	file:
+TENDCIDCHAR	src/pdf_cmap_parse.c	/^	TENDCIDCHAR,$/;"	e	enum:__anon13	file:
+TENDCIDRANGE	src/pdf_cmap_parse.c	/^	TENDCIDRANGE,$/;"	e	enum:__anon13	file:
+TENDCMAP	src/pdf_cmap_parse.c	/^	TENDCMAP$/;"	e	enum:__anon13	file:
+TENDCODESPACERANGE	src/pdf_cmap_parse.c	/^	TENDCODESPACERANGE,$/;"	e	enum:__anon13	file:
 TRUE	freetype/internal/ftobjs.h	53;"	d
-TRUETYPE	src/pdf_font.c	/^enum { UNKNOWN, TYPE1, TRUETYPE };$/;"	e	enum:__anon16	file:
 TTAGS_H_	freetype/tttags.h	20;"	d
 TTAG_BASE	freetype/tttags.h	37;"	d
 TTAG_BDF	freetype/tttags.h	39;"	d
@@ -2830,31 +2741,28 @@ TT_UCR_YIJING	freetype/ttnameid.h	1156;"	d
 TT_USE_BYTECODE_INTERPRETER	freetype/config/ftoption.h	945;"	d
 TT_VertHeader	freetype/tttables.h	/^  } TT_VertHeader;$/;"	t	typeref:struct:TT_VertHeader_
 TT_VertHeader_	freetype/tttables.h	/^  typedef struct  TT_VertHeader_$/;"	s
-TUSECMAP	src/pdf_cmap_parse.c	/^	TUSECMAP = PDF_NTOKENS,$/;"	e	enum:__anon15	file:
-TYPE1	src/pdf_font.c	/^enum { UNKNOWN, TYPE1, TRUETYPE };$/;"	e	enum:__anon16	file:
+TUSECMAP	src/pdf_cmap_parse.c	/^	TUSECMAP = PDF_NTOKENS,$/;"	e	enum:__anon13	file:
 Table_Version	freetype/tttables.h	/^    FT_Fixed   Table_Version;$/;"	m	struct:TT_Header_
 Tag	freetype/internal/tttypes.h	/^    FT_ULong  Tag;           \/* table ID                  *\/$/;"	m	struct:WOFF_TableRec_
 Tag	freetype/internal/tttypes.h	/^    FT_ULong  Tag;        \/*        table type *\/$/;"	m	struct:TT_TableRec_
-Testx	src/base_string.c	/^	Testx = Maskx ^ 0xFF,	\/* 1100 0000 *\/$/;"	e	enum:__anon2	file:
+Testx	src/base_string.c	/^	Testx = Maskx ^ 0xFF,	\/* 1100 0000 *\/$/;"	e	enum:__anon9	file:
 TrackKerns	freetype/internal/t1types.h	/^    AFM_TrackKern  TrackKerns;   \/* free if non-NULL *\/$/;"	m	struct:AFM_FontInfoRec_
-Tx	src/base_string.c	/^	Tx = ((1<<(Bitx+1))-1) ^ 0xFF, \/* 1000 0000 *\/$/;"	e	enum:__anon2	file:
+Tx	src/base_string.c	/^	Tx = ((1<<(Bitx+1))-1) ^ 0xFF, \/* 1000 0000 *\/$/;"	e	enum:__anon9	file:
 TypeFace	freetype/tttables.h	/^    FT_Char    TypeFace[16];$/;"	m	struct:TT_PCLT_
 TypeFamily	freetype/tttables.h	/^    FT_UShort  TypeFamily;$/;"	m	struct:TT_PCLT_
-UNCOMPRESSED	src/filt_faxd.c	/^	UNCOMPRESSED = -3$/;"	e	enum:__anon4	file:
-UNKNOWN	src/pdf_font.c	/^enum { UNKNOWN, TYPE1, TRUETYPE };$/;"	e	enum:__anon16	file:
-UTFmax	src/base_string.c	/^	UTFmax = 4, \/* maximum bytes per rune *\/$/;"	e	enum:__anon1	file:
+UNCOMPRESSED	src/filt_faxd.c	/^	UNCOMPRESSED = -3$/;"	e	enum:__anon5	file:
+UTFmax	src/base_string.c	/^	UTFmax = 4, \/* maximum bytes per rune *\/$/;"	e	enum:__anon8	file:
 Units_Per_EM	freetype/tttables.h	/^    FT_UShort  Units_Per_EM;$/;"	m	struct:TT_Header_
-V0	src/filt_faxd.c	/^	V0 = 3,$/;"	e	enum:__anon5	file:
-VL1	src/filt_faxd.c	/^	VL1 = 4,$/;"	e	enum:__anon5	file:
-VL2	src/filt_faxd.c	/^	VL2 = 5,$/;"	e	enum:__anon5	file:
-VL3	src/filt_faxd.c	/^	VL3 = 6$/;"	e	enum:__anon5	file:
-VR1	src/filt_faxd.c	/^	VR1 = 2,$/;"	e	enum:__anon5	file:
-VR2	src/filt_faxd.c	/^	VR2 = 1,$/;"	e	enum:__anon5	file:
-VR3	src/filt_faxd.c	/^	VR3 = 0,$/;"	e	enum:__anon5	file:
+V0	src/filt_faxd.c	/^	V0 = 3,$/;"	e	enum:__anon6	file:
+VL1	src/filt_faxd.c	/^	VL1 = 4,$/;"	e	enum:__anon6	file:
+VL2	src/filt_faxd.c	/^	VL2 = 5,$/;"	e	enum:__anon6	file:
+VL3	src/filt_faxd.c	/^	VL3 = 6$/;"	e	enum:__anon6	file:
+VR1	src/filt_faxd.c	/^	VR1 = 2,$/;"	e	enum:__anon6	file:
+VR2	src/filt_faxd.c	/^	VR2 = 1,$/;"	e	enum:__anon6	file:
+VR3	src/filt_faxd.c	/^	VR3 = 0,$/;"	e	enum:__anon6	file:
 Version	freetype/tttables.h	/^    FT_Fixed   Version;$/;"	m	struct:TT_HoriHeader_
 Version	freetype/tttables.h	/^    FT_Fixed   Version;$/;"	m	struct:TT_PCLT_
 Version	freetype/tttables.h	/^    FT_Fixed   Version;$/;"	m	struct:TT_VertHeader_
-WAIT	inc/mypdf.h	/^enum { ARROW, HAND, WAIT };$/;"	e	enum:__anon17
 WOFF_Header	freetype/internal/tttypes.h	/^  } WOFF_HeaderRec, *WOFF_Header;$/;"	t	typeref:struct:WOFF_HeaderRec_
 WOFF_HeaderRec	freetype/internal/tttypes.h	/^  } WOFF_HeaderRec, *WOFF_Header;$/;"	t	typeref:struct:WOFF_HeaderRec_
 WOFF_HeaderRec_	freetype/internal/tttypes.h	/^  typedef struct  WOFF_HeaderRec_$/;"	s
@@ -2862,24 +2770,22 @@ WOFF_Table	freetype/internal/tttypes.h	/^  } WOFF_TableRec, *WOFF_Table;$/;"	t	t
 WOFF_TableRec	freetype/internal/tttypes.h	/^  } WOFF_TableRec, *WOFF_Table;$/;"	t	typeref:struct:WOFF_TableRec_
 WOFF_TableRec_	freetype/internal/tttypes.h	/^  typedef struct  WOFF_TableRec_$/;"	s
 WidthType	freetype/tttables.h	/^    FT_Char    WidthType;$/;"	m	struct:TT_PCLT_
-ZEROS	src/filt_faxd.c	/^	ZEROS = -2, \/* EOL follows, possibly with more padding first *\/$/;"	e	enum:__anon4	file:
+ZEROS	src/filt_faxd.c	/^	ZEROS = -2, \/* EOL follows, possibly with more padding first *\/$/;"	e	enum:__anon5	file:
 _FITZ_H_	inc/fitz.h	2;"	d
 _MUPDF_H_	inc/pdf.h	2;"	d
 __FTERRORS_H__	freetype/fterrors.h	113;"	d
-__FTERRORS_H__	src/res_font.c	106;"	d	file:
-__printflike	inc/fitz.h	102;"	d
-__printflike	inc/fitz.h	105;"	d
+__FTERRORS_H__	src/res_font.c	91;"	d	file:
+__printflike	inc/fitz.h	96;"	d
+__printflike	inc/fitz.h	99;"	d
 _notdef	src/pdf_fontenc.c	4;"	d	file:
 a	freetype/freetype.h	/^  FT_CeilFix( FT_Fixed  a );$/;"	v
 a	freetype/freetype.h	/^  FT_FloorFix( FT_Fixed  a );$/;"	v
 a	freetype/freetype.h	/^  FT_RoundFix( FT_Fixed  a );$/;"	v
-a	inc/fitz.h	/^		} a;$/;"	m	union:fz_obj_s::__anon19	typeref:struct:fz_obj_s::__anon19::__anon21
-a	inc/fitz.h	/^	float a, b, c, d, e, f;$/;"	m	struct:fz_matrix_s
+a	inc/fitz.h	/^		} a;$/;"	m	union:fz_obj_s::__anon18	typeref:struct:fz_obj_s::__anon18::__anon20
 a	src/filt_faxd.c	/^	int a, c, dim, eolc;$/;"	m	struct:fz_faxd_s	file:
 abitmap	freetype/ftbitmap.h	/^  FT_Bitmap_Init( FT_Bitmap  *abitmap );$/;"	v
 abitmap	freetype/ftbitmap.h	/^  FT_Bitmap_New( FT_Bitmap  *abitmap );$/;"	v
 access_glyph_frame	freetype/internal/tttypes.h	/^    TT_Loader_StartGlyphFunc  access_glyph_frame;$/;"	m	struct:TT_FaceRec_
-accumulate	inc/pdf.h	/^	int accumulate;$/;"	m	struct:pdf_csi_s
 achVendID	freetype/tttables.h	/^    FT_Char    achVendID[4];$/;"	m	struct:TT_OS2_
 add	freetype/internal/psaux.h	/^    (*add)( PS_Table  table,$/;"	m	struct:PS_Table_FuncsRec_
 add_contour	freetype/internal/psaux.h	/^    T1_Builder_Add_Contour_Func    add_contour;$/;"	m	struct:T1_Builder_FuncsRec_
@@ -2887,8 +2793,6 @@ add_point	freetype/internal/psaux.h	/^    T1_Builder_Add_Point_Func      add_poi
 add_point1	freetype/internal/psaux.h	/^    T1_Builder_Add_Point1_Func     add_point1;$/;"	m	struct:T1_Builder_FuncsRec_
 addrange	src/pdf_cmap.c	/^addrange(pdf_cmap *cmap, int low, int high, int flag, int offset)$/;"	f	file:
 addtable	src/pdf_cmap.c	/^addtable(pdf_cmap *cmap, int value)$/;"	f	file:
-adjdown	inc/fitz.h	/^	int adjup, adjdown;$/;"	m	struct:fz_edge_s
-adjup	inc/fitz.h	/^	int adjup, adjdown;$/;"	m	struct:fz_edge_s
 advance	freetype/freetype.h	/^    FT_Vector         advance;$/;"	m	struct:FT_GlyphSlotRec_
 advance	freetype/ftglyph.h	/^    FT_Vector              advance;$/;"	m	struct:FT_GlyphRec_
 advance	freetype/ftincrem.h	/^    FT_Long  advance;$/;"	m	struct:FT_Incremental_MetricsRec_
@@ -2902,15 +2806,15 @@ advance_v	freetype/ftincrem.h	/^    FT_Long  advance_v;     \/* since 2.3.12 *\/
 afm_data	freetype/internal/t1types.h	/^    const void*     afm_data;$/;"	m	struct:T1_FaceRec_
 afm_parser_funcs	freetype/internal/psaux.h	/^    const AFM_Parser_FuncsRec*  afm_parser_funcs;$/;"	m	struct:PSAux_ServiceRec_
 age	src/pdf_store.c	/^	int age;$/;"	m	struct:pdf_item_s	file:
+aglcodes	src/pdf_fontagl.c	/^aglcodes[] = {$/;"	v	typeref:struct:__anon10	file:
+agldupcodes	src/pdf_fontagl.c	/^agldupcodes[] = {$/;"	v	typeref:struct:__anon11	file:
+agldupnames	src/pdf_fontagl.c	/^static char *agldupnames[] = {$/;"	v	file:
+aglnoname	src/pdf_fontagl.c	/^static char *aglnoname[1] = { 0 };$/;"	v	file:
 alibrary	freetype/freetype.h	/^  FT_Init_FreeType( FT_Library  *alibrary );$/;"	v
 alloc	freetype/ftsystem.h	/^    FT_Alloc_Func    alloc;$/;"	m	struct:FT_MemoryRec_
-alpha	inc/fitz.h	/^	float alpha;$/;"	m	struct:fz_displaynode_s
-alpha	inc/pdf.h	/^	float alpha;$/;"	m	struct:pdf_material_s
 angle	freetype/fttrigon.h	/^  FT_Cos( FT_Angle  angle );$/;"	v
 angle	freetype/fttrigon.h	/^  FT_Sin( FT_Angle  angle );$/;"	v
 angle	freetype/fttrigon.h	/^  FT_Tan( FT_Angle  angle );$/;"	v
-annots	inc/pdf.h	/^	pdf_annot *annots;$/;"	m	struct:pdf_page_s
-ap	inc/pdf.h	/^	pdf_xobject *ap;$/;"	m	struct:pdf_annot_s
 apply	freetype/internal/pshints.h	/^    T1_Hints_ApplyFunc     apply;$/;"	m	struct:T1_Hints_FuncsRec_
 apply	freetype/internal/pshints.h	/^    T2_Hints_ApplyFunc    apply;$/;"	m	struct:T2_Hints_FuncsRec_
 arg1	freetype/internal/ftgloadr.h	/^    FT_Int     arg1;$/;"	m	struct:FT_SubGlyphRec_
@@ -2921,8 +2825,7 @@ ascender	freetype/freetype.h	/^    FT_Pos     ascender;    \/* ascender in 26.6 
 ascender	freetype/freetype.h	/^    FT_Short          ascender;$/;"	m	struct:FT_FaceRec_
 ascender	freetype/internal/tttypes.h	/^    FT_Char  ascender;$/;"	m	struct:TT_SBit_LineMetricsRec_
 ascent	freetype/ftwinfnt.h	/^    FT_UShort  ascent;$/;"	m	struct:FT_WinFNT_HeaderRec_
-ascent	inc/pdf.h	/^	float ascent;$/;"	m	struct:pdf_fontdesc_s
-atom	freetype/ftbdf.h	/^      const char*     atom;$/;"	m	union:BDF_PropertyRec_::__anon35
+atom	freetype/ftbdf.h	/^      const char*     atom;$/;"	m	union:BDF_PropertyRec_::__anon24
 attach_file	freetype/internal/ftdriver.h	/^    FT_Face_AttachFunc       attach_file;$/;"	m	struct:FT_Driver_ClassRec_
 auto_hinter	freetype/internal/ftobjs.h	/^    FT_Module          auto_hinter;$/;"	m	struct:FT_LibraryRec_
 autofit	freetype/internal/ftpic.h	/^    void*  autofit;$/;"	m	struct:FT_PIC_Container_
@@ -2935,9 +2838,7 @@ avg_width	freetype/ftwinfnt.h	/^    FT_UShort  avg_width;$/;"	m	struct:FT_WinFNT
 axis	freetype/ftmm.h	/^    FT_MM_Axis  axis[T1_MAX_MM_AXIS];$/;"	m	struct:FT_Multi_Master_
 axis	freetype/ftmm.h	/^    FT_Var_Axis*         axis;$/;"	m	struct:FT_MM_Var_
 axis_names	freetype/t1tables.h	/^    FT_String*       axis_names[T1_MAX_MM_AXIS];$/;"	m	struct:PS_BlendRec_
-b	inc/fitz.h	/^		int b;$/;"	m	union:fz_obj_s::__anon19
-b	inc/fitz.h	/^	float a, b, c, d, e, f;$/;"	m	struct:fz_matrix_s
-background	inc/fitz.h	/^	float background[FZ_MAXCOLORS];$/;"	m	struct:fz_shade_s
+b	inc/fitz.h	/^		int b;$/;"	m	union:fz_obj_s::__anon18
 base	freetype/ftsystem.h	/^    unsigned char*       base;$/;"	m	struct:FT_StreamRec_
 base	freetype/internal/ftgloadr.h	/^    FT_GlyphLoadRec  base;$/;"	m	struct:FT_GlyphLoaderRec_
 base	freetype/internal/ftpic.h	/^    void*  base;$/;"	m	struct:FT_PIC_Container_
@@ -2946,17 +2847,9 @@ base	freetype/internal/psaux.h	/^    FT_Byte*   base;$/;"	m	struct:PS_ParserRec_
 base	freetype/internal/psaux.h	/^    FT_Byte*  base;$/;"	m	struct:T1_Decoder_ZoneRec_
 base	freetype/internal/psaux.h	/^    FT_Outline*     base;$/;"	m	struct:T1_BuilderRec_
 base	freetype/internal/tttypes.h	/^    TT_GlyphZoneRec  base;$/;"	m	struct:TT_LoaderRec_
-basefontnames	src/pdf_font.c	/^static char *basefontnames[14][7] =$/;"	v	file:
-basefonts	src/pdf_fontfile.c	/^} basefonts[] = {$/;"	v	typeref:struct:__anon10	file:
 bbox	freetype/freetype.h	/^    FT_BBox           bbox;$/;"	m	struct:FT_FaceRec_
 bbox	freetype/internal/psaux.h	/^    FT_BBox         bbox;          \/* bounding box *\/$/;"	m	struct:T1_BuilderRec_
 bbox	freetype/internal/tttypes.h	/^    FT_BBox          bbox;$/;"	m	struct:TT_LoaderRec_
-bbox	inc/fitz.h	/^	fz_bbox bbox;$/;"	m	struct:fz_gel_s
-bbox	inc/fitz.h	/^	fz_bbox bbox;$/;"	m	struct:fz_textchar_s
-bbox	inc/fitz.h	/^	fz_rect bbox;		\/* can be fz_infiniterect *\/$/;"	m	struct:fz_shade_s
-bbox	inc/fitz.h	/^	fz_rect bbox;$/;"	m	struct:fz_font_s
-bbox	inc/pdf.h	/^	fz_rect bbox;$/;"	m	struct:pdf_pattern_s
-bbox	inc/pdf.h	/^	fz_rect bbox;$/;"	m	struct:pdf_xobject_s
 bboxes	freetype/t1tables.h	/^    FT_BBox*         bboxes    [T1_MAX_MM_DESIGNS + 1];$/;"	m	struct:PS_BlendRec_
 bdf	freetype/internal/tttypes.h	/^    TT_BDFRec             bdf;$/;"	m	struct:TT_FaceRec_
 bearing	freetype/internal/tttypes.h	/^    FT_Short   bearing;$/;"	m	struct:TT_LongMetricsRec_
@@ -2964,8 +2857,6 @@ bearingX	freetype/internal/tttypes.h	/^    FT_Char  bearingX;$/;"	m	struct:TT_SB
 bearingY	freetype/internal/tttypes.h	/^    FT_Char  bearingY;$/;"	m	struct:TT_SBit_Small_Metrics_
 bearing_x	freetype/ftincrem.h	/^    FT_Long  bearing_x;$/;"	m	struct:FT_Incremental_MetricsRec_
 bearing_y	freetype/ftincrem.h	/^    FT_Long  bearing_y;$/;"	m	struct:FT_Incremental_MetricsRec_
-begingroup	inc/fitz.h	/^	void (*begingroup)(void *, fz_rect, int isolated, int knockout, fz_blendmode blendmode, float alpha);$/;"	m	struct:fz_device_s
-beginmask	inc/fitz.h	/^	void (*beginmask)(void *, fz_rect, int luminosity, fz_colorspace *cs, float *bc);$/;"	m	struct:fz_device_s
 bidx	src/filt_faxd.c	/^	int bidx;$/;"	m	struct:fz_faxd_s	file:
 binary_data	freetype/internal/t1types.h	/^    FT_Byte*         binary_data; \/* used if hex data has been converted *\/$/;"	m	struct:CID_FaceRec_
 bit_depth	freetype/internal/tttypes.h	/^    FT_Byte                 bit_depth;$/;"	m	struct:TT_SBit_StrikeRec_
@@ -2985,8 +2876,6 @@ blend	freetype/internal/t1types.h	/^    PS_Blend        blend;$/;"	m	struct:T1_F
 blend	freetype/internal/tttypes.h	/^    GX_Blend              blend;$/;"	m	struct:TT_FaceRec_
 blend_bitflags	freetype/t1tables.h	/^    FT_ULong         blend_bitflags;$/;"	m	struct:PS_BlendRec_
 blend_points	freetype/t1tables.h	/^    FT_Fixed*  blend_points;$/;"	m	struct:PS_DesignMap_
-blendmode	inc/fitz.h	/^		fz_blendmode blendmode;$/;"	m	union:fz_displaynode_s::__anon27
-blendmode	inc/pdf.h	/^	fz_blendmode blendmode;$/;"	m	struct:pdf_gstate_s
 block	freetype/internal/psaux.h	/^    FT_Byte*           block;          \/* current memory block           *\/$/;"	m	struct:PS_TableRec_
 blue_fuzz	freetype/t1tables.h	/^    FT_Int     blue_fuzz;$/;"	m	struct:PS_PrivateRec_
 blue_scale	freetype/t1tables.h	/^    FT_Fixed   blue_scale;$/;"	m	struct:PS_PrivateRec_
@@ -2998,14 +2887,14 @@ bp	src/filt_lzwd.c	/^	unsigned char bp[MAXLENGTH];$/;"	m	struct:fz_lzwd_s	file:
 bpc	src/filt_predict.c	/^	int bpc;$/;"	m	struct:fz_predict_s	file:
 bpp	src/filt_predict.c	/^	int bpp;$/;"	m	struct:fz_predict_s	file:
 break_char	freetype/ftwinfnt.h	/^    FT_Byte    break_char;$/;"	m	struct:FT_WinFNT_HeaderRec_
-buf	inc/fitz.h	/^			char buf[1];$/;"	m	struct:fz_obj_s::__anon19::__anon20
+buf	inc/fitz.h	/^			char buf[1];$/;"	m	struct:fz_obj_s::__anon18::__anon19
 buf	inc/fitz.h	/^	unsigned char buf[4096];$/;"	m	struct:fz_stream_s
 buf	inc/fitz.h	/^	unsigned long buf[68]; \/* unaligned data *\/$/;"	m	struct:fz_aes_s
 buf	src/obj_print.c	/^	char *buf;$/;"	m	struct:fmt	file:
 buffer	freetype/ftcache.h	/^    FT_Byte*  buffer;$/;"	m	struct:FTC_SBitRec_
 buffer	freetype/ftimage.h	/^    unsigned char*  buffer;$/;"	m	struct:FT_Bitmap_
 buffer	inc/fitz.h	/^	unsigned char buffer[64];$/;"	m	struct:fz_md5_s
-buffer	inc/fitz.h	/^	} buffer;$/;"	m	struct:fz_sha256_s	typeref:union:fz_sha256_s::__anon18
+buffer	inc/fitz.h	/^	} buffer;$/;"	m	struct:fz_sha256_s	typeref:union:fz_sha256_s::__anon17
 buildchar	freetype/internal/psaux.h	/^    FT_Long*             buildchar;$/;"	m	struct:T1_DecoderRec_
 buildchar	freetype/internal/t1types.h	/^    FT_Long*         buildchar;$/;"	m	struct:T1_FaceRec_
 builder	freetype/internal/psaux.h	/^    T1_BuilderRec        builder;$/;"	m	struct:T1_DecoderRec_
@@ -3013,23 +2902,14 @@ buildfilter	src/pdf_stream.c	/^buildfilter(fz_stream *chain, pdf_xref * xref, fz
 buildfilterchain	src/pdf_stream.c	/^buildfilterchain(fz_stream *chain, pdf_xref *xref, fz_obj *fs, fz_obj *ps, int num, int gen)$/;"	f	file:
 byte_len	freetype/internal/tttypes.h	/^    FT_Int           byte_len;$/;"	m	struct:TT_LoaderRec_
 bytes_per_row	freetype/ftwinfnt.h	/^    FT_UShort  bytes_per_row;$/;"	m	struct:FT_WinFNT_HeaderRec_
-c	inc/fitz.h	/^	float a, b, c, d, e, f;$/;"	m	struct:fz_matrix_s
-c	inc/fitz.h	/^	int c;$/;"	m	struct:fz_textchar_s
 c	src/filt_basic.c	/^	int run, n, c;$/;"	m	struct:fz_rld_s	file:
 c	src/filt_faxd.c	/^	int a, c, dim, eolc;$/;"	m	struct:fz_faxd_s	file:
-cache	inc/mypdf.h	/^	fz_glyphcache *cache;$/;"	m	struct:mypdf_s
-cap	inc/fitz.h	/^			int cap;$/;"	m	struct:fz_obj_s::__anon19::__anon21
-cap	inc/fitz.h	/^			int cap;$/;"	m	struct:fz_obj_s::__anon19::__anon22
+cap	inc/fitz.h	/^			int cap;$/;"	m	struct:fz_obj_s::__anon18::__anon20
+cap	inc/fitz.h	/^			int cap;$/;"	m	struct:fz_obj_s::__anon18::__anon21
 cap	inc/fitz.h	/^	int cap, len;$/;"	m	struct:fz_buffer_s
-cap	inc/fitz.h	/^	int cap;$/;"	m	struct:fz_ael_s
-cap	inc/fitz.h	/^	int cap;$/;"	m	struct:fz_gel_s
-cap	inc/fitz.h	/^	int len, cap;$/;"	m	struct:fz_path_s
-cap	inc/fitz.h	/^	int len, cap;$/;"	m	struct:fz_text_s
-cap	inc/fitz.h	/^	int len, cap;$/;"	m	struct:fz_textspan_s
 cap	src/obj_print.c	/^	int cap;$/;"	m	struct:fmt	file:
 capacity	freetype/internal/psaux.h	/^    FT_Offset          capacity;       \/* current size of memory block   *\/$/;"	m	struct:PS_TableRec_
-capheight	inc/pdf.h	/^	float capheight;$/;"	m	struct:pdf_fontdesc_s
-cardinal	freetype/ftbdf.h	/^      FT_UInt32       cardinal;$/;"	m	union:BDF_PropertyRec_::__anon35
+cardinal	freetype/ftbdf.h	/^      FT_UInt32       cardinal;$/;"	m	union:BDF_PropertyRec_::__anon24
 caret_Offset	freetype/tttables.h	/^    FT_Short   caret_Offset;$/;"	m	struct:TT_HoriHeader_
 caret_Offset	freetype/tttables.h	/^    FT_Short   caret_Offset;$/;"	m	struct:TT_VertHeader_
 caret_Slope_Rise	freetype/tttables.h	/^    FT_Short   caret_Slope_Rise;$/;"	m	struct:TT_HoriHeader_
@@ -3040,19 +2920,17 @@ caret_offset	freetype/internal/tttypes.h	/^    FT_Char  caret_offset;$/;"	m	stru
 caret_slope_denominator	freetype/internal/tttypes.h	/^    FT_Char  caret_slope_denominator;$/;"	m	struct:TT_SBit_LineMetricsRec_
 caret_slope_numerator	freetype/internal/tttypes.h	/^    FT_Char  caret_slope_numerator;$/;"	m	struct:TT_SBit_LineMetricsRec_
 cdv_idx	freetype/internal/t1types.h	/^    FT_Int           cdv_idx;$/;"	m	struct:T1_FaceRec_
-cf	inc/pdf.h	/^	fz_obj *cf;$/;"	m	struct:pdf_crypt_s
 cf_2d_decode	src/filt_faxd.c	/^const cfd_node cf_2d_decode[] = {$/;"	v
 cf_black_decode	src/filt_faxd.c	/^const cfd_node cf_black_decode[] = {$/;"	v
 cf_uncompressed_decode	src/filt_faxd.c	/^const cfd_node cf_uncompressed_decode[] = {$/;"	v
 cf_white_decode	src/filt_faxd.c	/^const cfd_node cf_white_decode[] = {$/;"	v
-cfd_2d_initial_bits	src/filt_faxd.c	/^	cfd_2d_initial_bits = 7,$/;"	e	enum:__anon3	file:
-cfd_black_initial_bits	src/filt_faxd.c	/^	cfd_black_initial_bits = 7,$/;"	e	enum:__anon3	file:
+cfd_2d_initial_bits	src/filt_faxd.c	/^	cfd_2d_initial_bits = 7,$/;"	e	enum:__anon4	file:
+cfd_black_initial_bits	src/filt_faxd.c	/^	cfd_black_initial_bits = 7,$/;"	e	enum:__anon4	file:
 cfd_node	src/filt_faxd.c	/^typedef struct cfd_node_s cfd_node;$/;"	t	typeref:struct:cfd_node_s	file:
 cfd_node_s	src/filt_faxd.c	/^struct cfd_node_s$/;"	s	file:
-cfd_uncompressed_initial_bits	src/filt_faxd.c	/^	cfd_uncompressed_initial_bits = 6	\/* must be 6 *\/$/;"	e	enum:__anon3	file:
-cfd_white_initial_bits	src/filt_faxd.c	/^	cfd_white_initial_bits = 8,$/;"	e	enum:__anon3	file:
+cfd_uncompressed_initial_bits	src/filt_faxd.c	/^	cfd_uncompressed_initial_bits = 6	\/* must be 6 *\/$/;"	e	enum:__anon4	file:
+cfd_white_initial_bits	src/filt_faxd.c	/^	cfd_white_initial_bits = 8,$/;"	e	enum:__anon4	file:
 cff	freetype/internal/ftpic.h	/^    void*  cff;$/;"	m	struct:FT_PIC_Container_
-cff	src/pdf_fontfile.c	/^	const unsigned char *cff;$/;"	m	struct:__anon10	file:
 chain	src/filt_basic.c	/^	fz_stream *chain;$/;"	m	struct:fz_a85d_s	file:
 chain	src/filt_basic.c	/^	fz_stream *chain;$/;"	m	struct:fz_ahxd_s	file:
 chain	src/filt_basic.c	/^	fz_stream *chain;$/;"	m	struct:fz_rld_s	file:
@@ -3076,14 +2954,12 @@ charmaprecs	freetype/internal/t1types.h	/^    FT_CharMapRec   charmaprecs[2];$/;
 charmaps	freetype/freetype.h	/^    FT_CharMap*       charmaps;$/;"	m	struct:FT_FaceRec_
 charmaps	freetype/internal/t1types.h	/^    FT_CharMap      charmaps[2];$/;"	m	struct:T1_FaceRec_
 charset	freetype/ftwinfnt.h	/^    FT_Byte    charset;$/;"	m	struct:FT_WinFNT_HeaderRec_
-charspace	inc/pdf.h	/^	float charspace;$/;"	m	struct:pdf_gstate_s
 charstrings	freetype/internal/t1types.h	/^    FT_Byte**        charstrings;       \/* array of glyph charstrings *\/$/;"	m	struct:T1_FontRec_
 charstrings_block	freetype/internal/t1types.h	/^    FT_Byte*         charstrings_block;$/;"	m	struct:T1_FontRec_
 charstrings_len	freetype/internal/t1types.h	/^    FT_UInt*         charstrings_len;$/;"	m	struct:T1_FontRec_
 chartorune	src/base_string.c	/^chartorune(int *rune, char *str)$/;"	f
 charvariant_list	freetype/internal/ftobjs.h	/^    FT_CMap_CharVariantListFunc   charvariant_list;$/;"	m	struct:FT_CMap_ClassRec_
 check_points	freetype/internal/psaux.h	/^    T1_Builder_Check_Points_Func   check_points;$/;"	m	struct:T1_Builder_FuncsRec_
-child	inc/pdf.h	/^	pdf_outline *child;$/;"	m	struct:pdf_outline_s
 cid	freetype/internal/t1types.h	/^    CID_FaceInfoRec  cid;$/;"	m	struct:CID_FaceRec_
 cid_count	freetype/t1tables.h	/^    FT_ULong        cid_count;$/;"	m	struct:CID_FaceInfoRec_
 cid_font_name	freetype/t1tables.h	/^    FT_String*      cid_font_name;$/;"	m	struct:CID_FaceInfoRec_
@@ -3099,17 +2975,8 @@ clazz	freetype/internal/ftobjs.h	/^    FT_CMap_Class  clazz;$/;"	m	struct:FT_CMa
 clazz	freetype/internal/ftobjs.h	/^    FT_Driver_Class  clazz;$/;"	m	struct:FT_DriverRec_
 clazz	freetype/internal/ftobjs.h	/^    FT_Module_Class*  clazz;$/;"	m	struct:FT_ModuleRec_
 clazz	freetype/internal/ftobjs.h	/^    FT_Renderer_Class*      clazz;$/;"	m	struct:FT_RendererRec_
-cleanfontname	src/pdf_font.c	/^static char *cleanfontname(char *fontname)$/;"	f	file:
-clip	inc/fitz.h	/^	fz_bbox clip;$/;"	m	struct:fz_gel_s
-clip	inc/pdf.h	/^	int clip;$/;"	m	struct:pdf_csi_s
+clean	src/cmapdump.c	/^clean(char *p)$/;"	f	file:
 clip_box	freetype/ftimage.h	/^    FT_BBox                 clip_box;$/;"	m	struct:FT_Raster_Params_
-clipdepth	inc/pdf.h	/^	int clipdepth;$/;"	m	struct:pdf_gstate_s
-clipevenodd	inc/pdf.h	/^	int clipevenodd;$/;"	m	struct:pdf_csi_s
-clipimagemask	inc/fitz.h	/^	void (*clipimagemask)(void *, fz_pixmap *img, fz_matrix ctm);$/;"	m	struct:fz_device_s
-clippath	inc/fitz.h	/^	void (*clippath)(void *, fz_path *, int evenodd, fz_matrix);$/;"	m	struct:fz_device_s
-clipstrokepath	inc/fitz.h	/^	void (*clipstrokepath)(void *, fz_path *, fz_strokestate *, fz_matrix);$/;"	m	struct:fz_device_s
-clipstroketext	inc/fitz.h	/^	void (*clipstroketext)(void *, fz_text *, fz_strokestate *, fz_matrix);$/;"	m	struct:fz_device_s
-cliptext	inc/fitz.h	/^	void (*cliptext)(void *, fz_text *, fz_matrix, int accumulate);$/;"	m	struct:fz_device_s
 close	freetype/ftsystem.h	/^    FT_Stream_CloseFunc  close;$/;"	m	struct:FT_StreamRec_
 close	freetype/internal/pshints.h	/^    T1_Hints_CloseFunc     close;$/;"	m	struct:T1_Hints_FuncsRec_
 close	freetype/internal/pshints.h	/^    T2_Hints_CloseFunc    close;$/;"	m	struct:T2_Hints_FuncsRec_
@@ -3130,31 +2997,22 @@ cmap	freetype/internal/services/svpscmap.h	/^    FT_CMapRec  cmap;$/;"	m	struct:
 cmap_size	freetype/internal/tttypes.h	/^    FT_ULong              cmap_size;$/;"	m	struct:TT_FaceRec_
 cmap_table	freetype/internal/tttypes.h	/^    FT_Byte*              cmap_table;   \/* extracted `cmap' table *\/$/;"	m	struct:TT_FaceRec_
 cmapname	inc/pdf.h	/^	char cmapname[32];$/;"	m	struct:pdf_cmap_s
-cmd	inc/fitz.h	/^	fz_displaycommand cmd;$/;"	m	struct:fz_displaynode_s
-cmph	src/pdf_fontmtx.c	/^static int cmph(const void *a0, const void *b0)$/;"	f	file:
 cmprange	src/pdf_cmap.c	/^static int cmprange(const void *va, const void *vb)$/;"	f	file:
-cmpv	src/pdf_fontmtx.c	/^static int cmpv(const void *a0, const void *b0)$/;"	f	file:
 code	freetype/internal/t1types.h	/^    FT_Byte**  code;$/;"	m	struct:CID_SubrsRec_
 code	src/filt_lzwd.c	/^	int code;			\/* current code *\/$/;"	m	struct:fz_lzwd_s	file:
 code_first	freetype/internal/t1types.h	/^    FT_Int       code_first;$/;"	m	struct:T1_EncodingRecRec_
 code_last	freetype/internal/t1types.h	/^    FT_Int       code_last;$/;"	m	struct:T1_EncodingRecRec_
 codebits	src/filt_lzwd.c	/^	int codebits;			\/* num bits\/code *\/$/;"	m	struct:fz_lzwd_s	file:
 col	src/obj_print.c	/^	int col;$/;"	m	struct:fmt	file:
-color	inc/fitz.h	/^	float color[FZ_MAXCOLORS];$/;"	m	struct:fz_displaynode_s
 color_ref	freetype/internal/tttypes.h	/^    FT_ULong                color_ref;$/;"	m	struct:TT_SBit_StrikeRec_
 color_table_offset	freetype/ftwinfnt.h	/^    FT_UShort  color_table_offset;$/;"	m	struct:FT_WinFNT_HeaderRec_
 colors	src/filt_predict.c	/^	int colors;$/;"	m	struct:fz_predict_s	file:
-colorspace	inc/fitz.h	/^	fz_colorspace *colorspace;$/;"	m	struct:fz_displaynode_s
-colorspace	inc/fitz.h	/^	fz_colorspace *colorspace;$/;"	m	struct:fz_pixmap_s
-colorspace	inc/pdf.h	/^	fz_colorspace *colorspace;$/;"	m	struct:pdf_xobject_s
 columns	src/filt_faxd.c	/^	int columns;$/;"	m	struct:fz_faxd_s	file:
 columns	src/filt_predict.c	/^	int columns;$/;"	m	struct:fz_predict_s	file:
 compare	freetype/internal/fthash.h	/^    FT_Hash_CompareFunc  compare;$/;"	m	struct:FT_HashRec_
 composites	freetype/internal/tttypes.h	/^    FT_ListRec       composites;$/;"	m	struct:TT_LoaderRec_
 conic_to	freetype/ftimage.h	/^    FT_Outline_ConicToFunc  conic_to;$/;"	m	struct:FT_Outline_Funcs_
 contents	inc/pdf.h	/^	fz_buffer *contents;$/;"	m	struct:pdf_page_s
-contents	inc/pdf.h	/^	fz_buffer *contents;$/;"	m	struct:pdf_pattern_s
-contents	inc/pdf.h	/^	fz_buffer *contents;$/;"	m	struct:pdf_xobject_s
 contours	freetype/ftimage.h	/^    short*      contours;        \/* the contour end points             *\/$/;"	m	struct:FT_Outline_
 contours	freetype/internal/tttypes.h	/^    FT_UShort*  contours;    \/* contour end points          *\/$/;"	m	struct:TT_GlyphZoneRec_
 control_data	freetype/freetype.h	/^    void*             control_data;$/;"	m	struct:FT_GlyphSlotRec_
@@ -3164,19 +3022,13 @@ copyright	freetype/ftwinfnt.h	/^    FT_Byte    copyright[60];$/;"	m	struct:FT_Wi
 count	freetype/internal/tttypes.h	/^    FT_Long    count;$/;"	m	struct:TTC_HeaderRec_
 count	inc/fitz.h	/^	unsigned int count[2];$/;"	m	struct:fz_md5_s
 count	inc/fitz.h	/^	unsigned int count[2];$/;"	m	struct:fz_sha256_s
-count	inc/pdf.h	/^	int count;$/;"	m	struct:pdf_outline_s
 count_offset	freetype/internal/psaux.h	/^    FT_UInt             count_offset; \/* offset of element count for    *\/$/;"	m	struct:T1_FieldRec_
 counter	freetype/internal/pshints.h	/^    T2_Hints_CounterFunc  counter;$/;"	m	struct:T2_Hints_FuncsRec_
 coverage	freetype/ftimage.h	/^    unsigned char   coverage;$/;"	m	struct:FT_Span_
 cplusplus_typeof	freetype/internal/ftmemory.h	/^  cplusplus_typeof(        T*,$/;"	f
 create	freetype/internal/pshints.h	/^    PSH_Globals_NewFunc       create;$/;"	m	struct:PSH_Globals_FuncsRec_
-cropbox	src/pdf_pagetree.c	/^	fz_obj *cropbox;$/;"	m	struct:info	file:
-crypt	inc/pdf.h	/^	pdf_crypt *crypt;$/;"	m	struct:pdf_xref_s
-cs	inc/fitz.h	/^	fz_colorspace *cs;$/;"	m	struct:fz_shade_s
-cs	inc/pdf.h	/^	fz_colorspace *cs;$/;"	m	struct:pdf_material_s
-cspace	inc/pdf.h	/^	} cspace[40];$/;"	m	struct:pdf_cmap_s	typeref:struct:pdf_cmap_s::__anon31
-ctm	inc/fitz.h	/^	fz_matrix ctm;$/;"	m	struct:fz_displaynode_s
-ctm	inc/pdf.h	/^	fz_matrix ctm;$/;"	m	struct:pdf_gstate_s
+csize	src/cmapdump.c	/^int csize = 0;$/;"	v
+cspace	inc/pdf.h	/^	} cspace[40];$/;"	m	struct:pdf_cmap_s	typeref:struct:pdf_cmap_s::__anon16
 cubic_to	freetype/ftimage.h	/^    FT_Outline_CubicToFunc  cubic_to;$/;"	m	struct:FT_Outline_Funcs_
 cur	freetype/internal/tttypes.h	/^    FT_Vector*  cur;         \/* current point coordinates   *\/$/;"	m	struct:TT_GlyphZoneRec_
 cur_renderer	freetype/internal/ftobjs.h	/^    FT_Renderer        cur_renderer;     \/* current outline renderer *\/$/;"	m	struct:FT_LibraryRec_
@@ -3192,17 +3044,12 @@ cvt	freetype/internal/tttypes.h	/^    FT_Short*             cvt;$/;"	m	struct:TT
 cvt_program	freetype/internal/tttypes.h	/^    FT_Byte*              cvt_program;$/;"	m	struct:TT_FaceRec_
 cvt_program_size	freetype/internal/tttypes.h	/^    FT_ULong              cvt_program_size;$/;"	m	struct:TT_FaceRec_
 cvt_size	freetype/internal/tttypes.h	/^    FT_ULong              cvt_size;$/;"	m	struct:TT_FaceRec_
-d	inc/fitz.h	/^		} d;$/;"	m	union:fz_obj_s::__anon19	typeref:struct:fz_obj_s::__anon19::__anon22
-d	inc/fitz.h	/^	float a, b, c, d, e, f;$/;"	m	struct:fz_matrix_s
-dashlen	inc/fitz.h	/^	int dashlen;$/;"	m	struct:fz_strokestate_s
-dashlist	inc/fitz.h	/^	float dashlist[32];$/;"	m	struct:fz_strokestate_s
-dashphase	inc/fitz.h	/^	float dashphase;$/;"	m	struct:fz_strokestate_s
+d	inc/fitz.h	/^		} d;$/;"	m	union:fz_obj_s::__anon18	typeref:struct:fz_obj_s::__anon18::__anon21
 data	freetype/freetype.h	/^    FT_Pointer  data;$/;"	m	struct:FT_Parameter_
 data	freetype/fttypes.h	/^    void*                 data;$/;"	m	struct:FT_Generic_
 data	freetype/fttypes.h	/^    void*        data;$/;"	m	struct:FT_ListNodeRec_
 data	freetype/internal/fthash.h	/^    size_t      data;$/;"	m	struct:FT_HashnodeRec_
 data	inc/fitz.h	/^	unsigned char *data;$/;"	m	struct:fz_buffer_s
-data	inc/fitz.h	/^	void *data;$/;"	m	struct:fz_colorspace_s
 data_offset	freetype/t1tables.h	/^    FT_ULong        data_offset;$/;"	m	struct:CID_FaceInfoRec_
 dead	inc/fitz.h	/^	int dead;$/;"	m	struct:fz_stream_s
 debug_hooks	freetype/internal/ftobjs.h	/^    FT_DebugHook_Func  debug_hooks[4];$/;"	m	struct:FT_LibraryRec_
@@ -3217,18 +3064,13 @@ delta	freetype/ftimage.h	/^    FT_Pos                  delta;$/;"	m	struct:FT_Ou
 descender	freetype/freetype.h	/^    FT_Pos     descender;   \/* descender in 26.6 frac. pixels         *\/$/;"	m	struct:FT_Size_Metrics_
 descender	freetype/freetype.h	/^    FT_Short          descender;$/;"	m	struct:FT_FaceRec_
 descender	freetype/internal/tttypes.h	/^    FT_Char  descender;$/;"	m	struct:TT_SBit_LineMetricsRec_
-descent	inc/pdf.h	/^	float descent;$/;"	m	struct:pdf_fontdesc_s
 descriptor	freetype/ftsystem.h	/^    FT_StreamDesc        descriptor;$/;"	m	struct:FT_StreamRec_
 design_map	freetype/t1tables.h	/^    PS_DesignMapRec  design_map[T1_MAX_MM_AXIS];$/;"	m	struct:PS_BlendRec_
 design_points	freetype/t1tables.h	/^    FT_Long*   design_points;$/;"	m	struct:PS_DesignMap_
 design_pos	freetype/t1tables.h	/^    FT_Fixed*        design_pos[T1_MAX_MM_DESIGNS];$/;"	m	struct:PS_BlendRec_
-dest	inc/pdf.h	/^	fz_obj *dest;$/;"	m	struct:pdf_link_s
 destroy	freetype/internal/pshints.h	/^    PSH_Globals_DestroyFunc   destroy;$/;"	m	struct:PSH_Globals_FuncsRec_
-dev	inc/pdf.h	/^	fz_device *dev;$/;"	m	struct:pdf_csi_s
 device_offset	freetype/ftwinfnt.h	/^    FT_ULong   device_offset;$/;"	m	struct:FT_WinFNT_HeaderRec_
-dhmtx	inc/pdf.h	/^	pdf_hmtx dhmtx;$/;"	m	struct:pdf_fontdesc_s
 dict	freetype/internal/psaux.h	/^    FT_UInt             dict;         \/* where we expect it             *\/$/;"	m	struct:T1_FieldRec_
-die	src/pdfshow.c	/^void die(fz_error error)$/;"	f
 dim	src/filt_faxd.c	/^	int a, c, dim, eolc;$/;"	m	struct:fz_faxd_s	file:
 dir_tables	freetype/internal/tttypes.h	/^    TT_Table              dir_tables;$/;"	m	struct:TT_FaceRec_
 doblend	freetype/internal/tttypes.h	/^    FT_Bool               doblend;$/;"	m	struct:TT_FaceRec_
@@ -3249,18 +3091,11 @@ driver	freetype/freetype.h	/^    FT_Module       driver;$/;"	m	struct:FT_Open_Ar
 dropfunc	src/pdf_store.c	/^	void *dropfunc;$/;"	m	struct:pdf_item_s	file:
 dropfunc	src/pdf_store.c	/^	void *dropfunc;$/;"	m	struct:refkey	file:
 dst	src/filt_faxd.c	/^	unsigned char *dst;$/;"	m	struct:fz_faxd_s	file:
-dvmtx	inc/pdf.h	/^	pdf_vmtx dvmtx;$/;"	m	struct:pdf_fontdesc_s
-e	inc/fitz.h	/^	float a, b, c, d, e, f;$/;"	m	struct:fz_matrix_s
-e	inc/fitz.h	/^	int x, e, h, y;$/;"	m	struct:fz_edge_s
 earlychange	src/filt_lzwd.c	/^	int earlychange;$/;"	m	struct:fz_lzwd_s	file:
 eatbits	src/filt_faxd.c	/^eatbits(fz_faxd *fax, int nbits)$/;"	f	file:
 ebdt_size	freetype/internal/tttypes.h	/^    FT_ULong              ebdt_size;$/;"	m	struct:TT_FaceRec_
 ebdt_start	freetype/internal/tttypes.h	/^    FT_ULong              ebdt_start;  \/* either `CBDT', `EBDT', or `bdat' *\/$/;"	m	struct:TT_FaceRec_
-edges	inc/fitz.h	/^	fz_edge **edges;$/;"	m	struct:fz_ael_s
-edges	inc/fitz.h	/^	fz_edge *edges;$/;"	m	struct:fz_gel_s
 elements	freetype/internal/psaux.h	/^    FT_Byte**          elements;       \/* addresses of table elements *\/$/;"	m	struct:PS_TableRec_
-els	inc/fitz.h	/^	fz_pathel *els;$/;"	m	struct:fz_path_s
-els	inc/fitz.h	/^	fz_textel *els;$/;"	m	struct:fz_text_s
 encodedbytealign	src/filt_faxd.c	/^	int encodedbytealign;$/;"	m	struct:fz_faxd_s	file:
 encoding	freetype/freetype.h	/^    FT_Encoding  encoding;$/;"	m	struct:FT_CharMapRec_
 encoding	freetype/internal/t1types.h	/^    T1_EncodingRec   encoding;$/;"	m	struct:T1_FontRec_
@@ -3269,10 +3104,7 @@ encodingID	freetype/internal/tttypes.h	/^    FT_UShort  encodingID;$/;"	m	struct
 encoding_id	freetype/freetype.h	/^    FT_UShort    encoding_id;$/;"	m	struct:FT_CharMapRec_
 encoding_id	freetype/ftsnames.h	/^    FT_UShort  encoding_id;$/;"	m	struct:FT_SfntName_
 encoding_type	freetype/internal/t1types.h	/^    T1_EncodingType  encoding_type;$/;"	m	struct:T1_FontRec_
-encryptmetadata	inc/pdf.h	/^	int encryptmetadata;$/;"	m	struct:pdf_crypt_s
 end_glyph	freetype/internal/tttypes.h	/^    FT_UShort               end_glyph;$/;"	m	struct:TT_SBit_StrikeRec_
-endgroup	inc/fitz.h	/^	void (*endgroup)(void *);$/;"	m	struct:fz_device_s
-endmask	inc/fitz.h	/^	void (*endmask)(void *);$/;"	m	struct:fz_device_s
 endofblock	src/filt_faxd.c	/^	int endofblock;$/;"	m	struct:fz_faxd_s	file:
 endofline	src/filt_faxd.c	/^	int endofline;$/;"	m	struct:fz_faxd_s	file:
 entry	src/pdf_repair.c	/^struct entry$/;"	s	file:
@@ -3281,7 +3113,6 @@ ents	src/base_hash.c	/^	fz_hashentry *ents;$/;"	m	struct:fz_hashtable_s	file:
 eod	src/filt_basic.c	/^	int eod;$/;"	m	struct:fz_a85d_s	file:
 eod	src/filt_basic.c	/^	int eod;$/;"	m	struct:fz_ahxd_s	file:
 eod	src/filt_lzwd.c	/^	int eod;$/;"	m	struct:fz_lzwd_s	file:
-eol	inc/fitz.h	/^	int eol;$/;"	m	struct:fz_textspan_s
 eolc	src/filt_faxd.c	/^	int a, c, dim, eolc;$/;"	m	struct:fz_faxd_s	file:
 ep	inc/fitz.h	/^	unsigned char *bp, *rp, *wp, *ep;$/;"	m	struct:fz_stream_s
 err	src/res_font.c	/^	int err;$/;"	m	struct:ft_error	file:
@@ -3291,15 +3122,13 @@ exec	freetype/internal/tttypes.h	/^    TT_ExecContext   exec;$/;"	m	struct:TT_Lo
 expansion_factor	freetype/t1tables.h	/^    FT_Fixed       expansion_factor;$/;"	m	struct:CID_FaceDictRec_
 expansion_factor	freetype/t1tables.h	/^    FT_Fixed   expansion_factor;$/;"	m	struct:PS_PrivateRec_
 expert	freetype/internal/psaux.h	/^    FT_CMap_Class  expert;$/;"	m	struct:T1_CMap_ClassesRec_
-extend	inc/fitz.h	/^	int extend[2];$/;"	m	struct:fz_shade_s
 extensions	freetype/freetype.h	/^    void*             extensions; \/* unused                         *\/$/;"	m	struct:FT_FaceRec_
 extentflags	inc/pdf.h	/^	unsigned short extentflags;$/;"	m	struct:pdf_range_s
 external_leading	freetype/ftwinfnt.h	/^    FT_UShort  external_leading;$/;"	m	struct:FT_WinFNT_HeaderRec_
 extra	freetype/internal/tttypes.h	/^    FT_Generic            extra;$/;"	m	struct:TT_FaceRec_
 extra_points	freetype/internal/ftgloadr.h	/^    FT_Vector*   extra_points;  \/* extra points table        *\/$/;"	m	struct:FT_GlyphLoadRec_
 extra_points2	freetype/internal/ftgloadr.h	/^    FT_Vector*   extra_points2; \/* second extra points table *\/$/;"	m	struct:FT_GlyphLoadRec_
-f	inc/fitz.h	/^		float f;$/;"	m	union:fz_obj_s::__anon19
-f	inc/fitz.h	/^	float a, b, c, d, e, f;$/;"	m	struct:fz_matrix_s
+f	inc/fitz.h	/^		float f;$/;"	m	union:fz_obj_s::__anon18
 face	freetype/freetype.h	/^    FT_Face           face;      \/* parent face object              *\/$/;"	m	struct:FT_SizeRec_
 face	freetype/freetype.h	/^    FT_Face           face;$/;"	m	struct:FT_GlyphSlotRec_
 face	freetype/freetype.h	/^    FT_Face      face;$/;"	m	struct:FT_CharMapRec_
@@ -3334,22 +3163,14 @@ file_size	freetype/ftwinfnt.h	/^    FT_ULong   file_size;$/;"	m	struct:FT_WinFNT
 file_type	freetype/ftwinfnt.h	/^    FT_UShort  file_type;$/;"	m	struct:FT_WinFNT_HeaderRec_
 filename	src/main.c	/^static char *filename;$/;"	v	file:
 filesize	inc/pdf.h	/^	int filesize;$/;"	m	struct:pdf_xref_s
-fill	inc/pdf.h	/^	pdf_material fill;$/;"	m	struct:pdf_gstate_s
 fillbits	src/filt_faxd.c	/^fillbits(fz_faxd *fax)$/;"	f	file:
-fillimage	inc/fitz.h	/^	void (*fillimage)(void *, fz_pixmap *img, fz_matrix ctm, float alpha);$/;"	m	struct:fz_device_s
-fillimagemask	inc/fitz.h	/^	void (*fillimagemask)(void *, fz_pixmap *img, fz_matrix ctm, fz_colorspace *, float *color, float alpha);$/;"	m	struct:fz_device_s
-fillpath	inc/fitz.h	/^	void (*fillpath)(void *, fz_path *, int evenodd, fz_matrix, fz_colorspace *, float *color, float alpha);$/;"	m	struct:fz_device_s
-fillshade	inc/fitz.h	/^	void (*fillshade)(void *, fz_shade *shd, fz_matrix ctm, float alpha);$/;"	m	struct:fz_device_s
-filltext	inc/fitz.h	/^	void (*filltext)(void *, fz_text *, fz_matrix, fz_colorspace *, float *color, float alpha);$/;"	m	struct:fz_device_s
 finalizer	freetype/fttypes.h	/^    FT_Generic_Finalizer  finalizer;$/;"	m	struct:FT_Generic_
 findchanging	src/filt_faxd.c	/^findchanging(const unsigned char *line, int x, int w)$/;"	f	file:
 findchangingcolor	src/filt_faxd.c	/^findchangingcolor(const unsigned char *line, int x, int w, int color)$/;"	f	file:
-first	inc/fitz.h	/^	fz_displaynode *first;$/;"	m	struct:fz_displaylist_s
 first_char	freetype/ftwinfnt.h	/^    FT_Byte    first_char;$/;"	m	struct:FT_WinFNT_HeaderRec_
 first_glyph	freetype/internal/tttypes.h	/^    FT_UShort           first_glyph;$/;"	m	struct:TT_SBit_RangeRec_
 first_point	freetype/internal/tttypes.h	/^    FT_UShort   first_point; \/* offset of first (#0) point  *\/$/;"	m	struct:TT_GlyphZoneRec_
 firstchar	src/filt_lzwd.c	/^	unsigned char firstchar;	\/* first token of string *\/$/;"	m	struct:lzw_code_s	file:
-flag	inc/fitz.h	/^	int flag; \/* evenodd, accumulate, isolated\/knockout... *\/$/;"	m	struct:fz_displaynode_s
 flags	freetype/freetype.h	/^    FT_UInt         flags;$/;"	m	struct:FT_Open_Args_
 flags	freetype/ftcache.h	/^    FT_Int32    flags;$/;"	m	struct:FTC_ImageTypeRec_
 flags	freetype/ftimage.h	/^    int                     flags;$/;"	m	struct:FT_Raster_Params_
@@ -3358,7 +3179,6 @@ flags	freetype/ftwinfnt.h	/^    FT_ULong   flags;$/;"	m	struct:FT_WinFNT_HeaderR
 flags	freetype/internal/ftgloadr.h	/^    FT_UShort  flags;$/;"	m	struct:FT_SubGlyphRec_
 flags	freetype/internal/ftobjs.h	/^    FT_UInt         flags;$/;"	m	struct:FT_Slot_InternalRec_
 flags	freetype/internal/tttypes.h	/^    FT_Char                 flags;$/;"	m	struct:TT_SBit_StrikeRec_
-flags	inc/pdf.h	/^	int flags;$/;"	m	struct:pdf_fontdesc_s
 flavor	freetype/internal/tttypes.h	/^    FT_ULong   flavor;$/;"	m	struct:WOFF_HeaderRec_
 flex_state	freetype/internal/psaux.h	/^    FT_Int               flex_state;$/;"	m	struct:T1_DecoderRec_
 flex_vectors	freetype/internal/psaux.h	/^    FT_Vector            flex_vectors[7];$/;"	m	struct:T1_DecoderRec_
@@ -3373,8 +3193,6 @@ fmtputc	src/obj_print.c	/^static inline void fmtputc(struct fmt *fmt, int c)$/;"
 fmtputs	src/obj_print.c	/^static inline void fmtputs(struct fmt *fmt, char *s)$/;"	f	file:
 fmtsep	src/obj_print.c	/^static inline void fmtsep(struct fmt *fmt)$/;"	f	file:
 fmtstr	src/obj_print.c	/^static void fmtstr(struct fmt *fmt, fz_obj *obj)$/;"	f	file:
-font	inc/fitz.h	/^	fz_font *font;$/;"	m	struct:fz_text_s
-font	inc/fitz.h	/^	fz_font *font;$/;"	m	struct:fz_textspan_s
 font	inc/pdf.h	/^	fz_font *font;$/;"	m	struct:pdf_fontdesc_s
 font	inc/pdf.h	/^	pdf_fontdesc *font;$/;"	m	struct:pdf_gstate_s
 font_bbox	freetype/internal/t1types.h	/^    FT_BBox          font_bbox;$/;"	m	struct:T1_FontRec_
@@ -3405,8 +3223,8 @@ format	freetype/ftcache.h	/^    FT_Byte   format;$/;"	m	struct:FTC_SBitRec_
 format	freetype/ftglyph.h	/^    FT_Glyph_Format        format;$/;"	m	struct:FT_GlyphRec_
 format	freetype/internal/services/svttcmap.h	/^    FT_Long   format;$/;"	m	struct:TT_CMapInfo_
 format	freetype/internal/tttypes.h	/^    FT_UShort       format;$/;"	m	struct:TT_NameTableRec_
-format_20	freetype/internal/tttypes.h	/^      TT_Post_20Rec  format_20;$/;"	m	union:TT_Post_NamesRec_::__anon34
-format_25	freetype/internal/tttypes.h	/^      TT_Post_25Rec  format_25;$/;"	m	union:TT_Post_NamesRec_::__anon34
+format_20	freetype/internal/tttypes.h	/^      TT_Post_20Rec  format_20;$/;"	m	union:TT_Post_NamesRec_::__anon25
+format_25	freetype/internal/tttypes.h	/^      TT_Post_25Rec  format_25;$/;"	m	union:TT_Post_NamesRec_::__anon25
 format_tag	freetype/internal/tttypes.h	/^    FT_ULong              format_tag;$/;"	m	struct:TT_FaceRec_
 format_tag	freetype/internal/tttypes.h	/^    FT_ULong   format_tag;$/;"	m	struct:SFNT_HeaderRec_
 free	freetype/ftsystem.h	/^    FT_Free_Func     free;$/;"	m	struct:FT_MemoryRec_
@@ -3414,12 +3232,8 @@ free_eblc	freetype/internal/sfnt.h	/^    TT_Free_Table_Func           free_eblc;
 free_glyph_data	freetype/ftincrem.h	/^    FT_Incremental_FreeGlyphDataFunc    free_glyph_data;$/;"	m	struct:FT_Incremental_FuncsRec_
 free_name	freetype/internal/sfnt.h	/^    TT_Free_Table_Func           free_name;$/;"	m	struct:SFNT_Interface_
 free_psnames	freetype/internal/sfnt.h	/^    TT_Free_Table_Func           free_psnames;$/;"	m	struct:SFNT_Interface_
-freedata	inc/fitz.h	/^	void (*freedata)(fz_colorspace *);$/;"	m	struct:fz_colorspace_s
-freesamples	inc/fitz.h	/^	int freesamples;$/;"	m	struct:fz_pixmap_s
-freeuser	inc/fitz.h	/^	void (*freeuser)(void *);$/;"	m	struct:fz_device_s
 fromhex	src/filt_basic.c	/^static inline int fromhex(int a)$/;"	f	file:
 fromhex	src/pdf_lex.c	/^fromhex(int ch)$/;"	f	file:
-fromxyz	inc/fitz.h	/^	void (*fromxyz)(fz_colorspace *, float *xyz, float *dst);$/;"	m	struct:fz_colorspace_s
 fsSelection	freetype/tttables.h	/^    FT_UShort  fsSelection;$/;"	m	struct:TT_OS2_
 fsType	freetype/tttables.h	/^    FT_UShort  fsType;$/;"	m	struct:TT_OS2_
 fs_type	freetype/internal/t1types.h	/^    FT_UShort  fs_type;$/;"	m	struct:PS_FontExtraRec_
@@ -3549,16 +3363,12 @@ ft_strncpy	freetype/config/ftstdlib.h	90;"	d
 ft_strrchr	freetype/config/ftstdlib.h	91;"	d
 ft_strstr	freetype/config/ftstdlib.h	92;"	d
 ft_strtol	freetype/config/ftstdlib.h	145;"	d
-ftcharindex	src/pdf_font.c	/^static int ftcharindex(FT_Face face, int cid)$/;"	f	file:
-ftcidtogid	src/pdf_font.c	/^static inline int ftcidtogid(pdf_fontdesc *fontdesc, int cid)$/;"	f	file:
 ftdata	inc/fitz.h	/^	unsigned char *ftdata;$/;"	m	struct:fz_font_s
 ftface	inc/fitz.h	/^	void *ftface; \/* has an FT_Face if used *\/$/;"	m	struct:fz_font_s
 ftfile	inc/fitz.h	/^	char *ftfile;$/;"	m	struct:fz_font_s
 fthint	inc/fitz.h	/^	int fthint; \/* ... force hinting for DynaLab fonts *\/$/;"	m	struct:fz_font_s
-ftkind	src/pdf_font.c	/^static int ftkind(FT_Face face)$/;"	f	file:
 ftsize	inc/fitz.h	/^	int ftsize;$/;"	m	struct:fz_font_s
 ftsubstitute	inc/fitz.h	/^	int ftsubstitute; \/* ... substitute metrics *\/$/;"	m	struct:fz_font_s
-ftwidth	src/pdf_font.c	/^static int ftwidth(pdf_fontdesc *fontdesc, int cid)$/;"	f	file:
 full_name	freetype/t1tables.h	/^    FT_String*  full_name;$/;"	m	struct:PS_FontInfoRec_
 func	freetype/internal/ftrfork.h	/^    ft_raccess_guess_func  func;$/;"	m	struct:ft_raccess_guess_rec_
 funcs	freetype/ftincrem.h	/^    const FT_Incremental_FuncsRec*  funcs;$/;"	m	struct:FT_Incremental_InterfaceRec_
@@ -3566,13 +3376,12 @@ funcs	freetype/internal/psaux.h	/^    PS_Parser_FuncsRec  funcs;$/;"	m	struct:PS
 funcs	freetype/internal/psaux.h	/^    PS_Table_FuncsRec  funcs;$/;"	m	struct:PS_TableRec_
 funcs	freetype/internal/psaux.h	/^    T1_Builder_FuncsRec  funcs;$/;"	m	struct:T1_BuilderRec_
 funcs	freetype/internal/psaux.h	/^    T1_Decoder_FuncsRec  funcs;$/;"	m	struct:T1_DecoderRec_
-function	inc/fitz.h	/^	float function[256][FZ_MAXCOLORS];$/;"	m	struct:fz_shade_s
 fw	inc/pdf.h	/^    int fw;$/;"	m	struct:pdf_csi_s
 fw	inc/pdf.h	/^    int fw;$/;"	m	struct:pdf_page_s
+fw_code	inc/pdf.h	/^    int fw_code;$/;"	m	struct:pdf_csi_s
+fw_code	inc/pdf.h	/^    int fw_code;$/;"	m	struct:pdf_page_s
 fz_a85d	src/filt_basic.c	/^typedef struct fz_a85d_s fz_a85d;$/;"	t	typeref:struct:fz_a85d_s	file:
 fz_a85d_s	src/filt_basic.c	/^struct fz_a85d_s$/;"	s	file:
-fz_ael	inc/fitz.h	/^typedef struct fz_ael_s fz_ael;$/;"	t	typeref:struct:fz_ael_s
-fz_ael_s	inc/fitz.h	/^struct fz_ael_s$/;"	s
 fz_aes	inc/fitz.h	/^typedef struct fz_aes_s fz_aes;$/;"	t	typeref:struct:fz_aes_s
 fz_aes_s	inc/fitz.h	/^struct fz_aes_s$/;"	s
 fz_ahxd	src/filt_basic.c	/^typedef struct fz_ahxd_s fz_ahxd;$/;"	t	typeref:struct:fz_ahxd_s	file:
@@ -3585,30 +3394,21 @@ fz_arrayinsert	src/obj_array.c	/^fz_arrayinsert(fz_obj *obj, fz_obj *item)$/;"	f
 fz_arraylen	src/obj_array.c	/^fz_arraylen(fz_obj *obj)$/;"	f
 fz_arraypush	src/obj_array.c	/^fz_arraypush(fz_obj *obj, fz_obj *item)$/;"	f
 fz_arrayput	src/obj_array.c	/^fz_arrayput(fz_obj *obj, int i, fz_obj *item)$/;"	f
-fz_bbox	inc/fitz.h	/^typedef struct fz_bbox_s fz_bbox;$/;"	t	typeref:struct:fz_bbox_s
-fz_bbox_s	inc/fitz.h	/^struct fz_bbox_s$/;"	s
-fz_blendmode	inc/fitz.h	/^} fz_blendmode;$/;"	t	typeref:enum:fz_blendmode_e
-fz_blendmode_e	inc/fitz.h	/^typedef enum fz_blendmode_e$/;"	g
 fz_buffer	inc/fitz.h	/^typedef struct fz_buffer_s fz_buffer;$/;"	t	typeref:struct:fz_buffer_s
 fz_buffer_s	inc/fitz.h	/^struct fz_buffer_s$/;"	s
 fz_calloc	src/base_memory.c	/^fz_calloc(int count, int size)$/;"	f
-fz_catch	inc/fitz.h	68;"	d
-fz_catch	inc/fitz.h	76;"	d
-fz_catch	inc/fitz.h	84;"	d
-fz_catch	inc/fitz.h	92;"	d
+fz_catch	inc/fitz.h	62;"	d
+fz_catch	inc/fitz.h	70;"	d
+fz_catch	inc/fitz.h	78;"	d
+fz_catch	inc/fitz.h	86;"	d
 fz_catchimp	src/base_error.c	/^fz_catchimp(const char *file, int line, const char *func, fz_error cause, char *fmt, ...)$/;"	f
 fz_catchimpx	src/base_error.c	/^fz_catchimpx(fz_error cause, char *fmt, ...)$/;"	f
 fz_close	src/stm_open.c	/^fz_close(fz_stream *stm)$/;"	f
-fz_colorspace	inc/fitz.h	/^typedef struct fz_colorspace_s fz_colorspace;$/;"	t	typeref:struct:fz_colorspace_s
-fz_colorspace_s	inc/fitz.h	/^struct fz_colorspace_s$/;"	s
 fz_copyarray	src/obj_array.c	/^fz_copyarray(fz_obj *obj)$/;"	f
 fz_copydict	src/obj_dict.c	/^fz_copydict(fz_obj *obj)$/;"	f
-fz_debugfont	src/res_font.c	/^fz_debugfont(fz_font *font)$/;"	f
 fz_debughash	src/base_hash.c	/^fz_debughash(fz_hashtable *table)$/;"	f
 fz_debugobj	src/obj_print.c	/^fz_debugobj(fz_obj *obj)$/;"	f
 fz_debugref	src/obj_print.c	/^fz_debugref(fz_obj *ref)$/;"	f
-fz_device	inc/fitz.h	/^typedef struct fz_device_s fz_device;$/;"	t	typeref:struct:fz_device_s
-fz_device_s	inc/fitz.h	/^struct fz_device_s$/;"	s
 fz_dictdel	src/obj_dict.c	/^fz_dictdel(fz_obj *obj, fz_obj *key)$/;"	f
 fz_dictdels	src/obj_dict.c	/^fz_dictdels(fz_obj *obj, char *key)$/;"	f
 fz_dictfinds	src/obj_dict.c	/^fz_dictfinds(fz_obj *obj, char *key)$/;"	f	file:
@@ -3620,17 +3420,9 @@ fz_dictgetval	src/obj_dict.c	/^fz_dictgetval(fz_obj *obj, int i)$/;"	f
 fz_dictlen	src/obj_dict.c	/^fz_dictlen(fz_obj *obj)$/;"	f
 fz_dictput	src/obj_dict.c	/^fz_dictput(fz_obj *obj, fz_obj *key, fz_obj *val)$/;"	f
 fz_dictputs	src/obj_dict.c	/^fz_dictputs(fz_obj *obj, char *key, fz_obj *val)$/;"	f
-fz_displaycommand	inc/fitz.h	/^} fz_displaycommand;$/;"	t	typeref:enum:fz_displaycommand_e
-fz_displaycommand_e	inc/fitz.h	/^typedef enum fz_displaycommand_e$/;"	g
-fz_displaylist	inc/fitz.h	/^typedef struct fz_displaylist_s fz_displaylist;$/;"	t	typeref:struct:fz_displaylist_s
-fz_displaylist_s	inc/fitz.h	/^struct fz_displaylist_s$/;"	s
-fz_displaynode	inc/fitz.h	/^typedef struct fz_displaynode_s fz_displaynode;$/;"	t	typeref:struct:fz_displaynode_s
-fz_displaynode_s	inc/fitz.h	/^struct fz_displaynode_s$/;"	s
 fz_dropbuffer	src/stm_buffer.c	/^fz_dropbuffer(fz_buffer *buf)$/;"	f
 fz_dropfont	src/res_font.c	/^fz_dropfont(fz_font *font)$/;"	f
 fz_dropobj	src/obj_simple.c	/^fz_dropobj(fz_obj *o)$/;"	f
-fz_edge	inc/fitz.h	/^typedef struct fz_edge_s fz_edge;$/;"	t	typeref:struct:fz_edge_s
-fz_edge_s	inc/fitz.h	/^struct fz_edge_s$/;"	s
 fz_emptyhash	src/base_hash.c	/^fz_emptyhash(fz_hashtable *table)$/;"	f
 fz_error	inc/fitz.h	/^typedef int fz_error;$/;"	t
 fz_faxd	src/filt_faxd.c	/^typedef struct fz_faxd_s fz_faxd;$/;"	t	typeref:struct:fz_faxd_s	file:
@@ -3648,9 +3440,6 @@ fz_freedict	src/obj_dict.c	/^fz_freedict(fz_obj *obj)$/;"	f
 fz_freehash	src/base_hash.c	/^fz_freehash(fz_hashtable *table)$/;"	f
 fz_ftlib	src/res_font.c	/^static FT_Library fz_ftlib = nil;$/;"	v	file:
 fz_ftlib_refs	src/res_font.c	/^static int fz_ftlib_refs = 0;$/;"	v	file:
-fz_gel	inc/fitz.h	/^typedef struct fz_gel_s fz_gel;$/;"	t	typeref:struct:fz_gel_s
-fz_gel_s	inc/fitz.h	/^struct fz_gel_s$/;"	s
-fz_glyphcache	inc/fitz.h	/^typedef struct fz_glyphcache_s fz_glyphcache;$/;"	t	typeref:struct:fz_glyphcache_s
 fz_growbuffer	src/stm_buffer.c	/^fz_growbuffer(fz_buffer *buf)$/;"	f
 fz_hashentry	src/base_hash.c	/^typedef struct fz_hashentry_s fz_hashentry;$/;"	t	typeref:struct:fz_hashentry_s	file:
 fz_hashentry_s	src/base_hash.c	/^struct fz_hashentry_s$/;"	s	file:
@@ -3662,17 +3451,12 @@ fz_hashlen	src/base_hash.c	/^fz_hashlen(fz_hashtable *table)$/;"	f
 fz_hashremove	src/base_hash.c	/^fz_hashremove(fz_hashtable *table, void *key)$/;"	f
 fz_hashtable	inc/fitz.h	/^typedef struct fz_hashtable_s fz_hashtable;$/;"	t	typeref:struct:fz_hashtable_s
 fz_hashtable_s	src/base_hash.c	/^struct fz_hashtable_s$/;"	s	file:
-fz_identity	src/mypdf.c	/^const fz_matrix fz_identity = { 1, 0, 0, 1, 0, 0 };$/;"	v
 fz_initfreetype	src/res_font.c	/^fz_initfreetype(void)$/;"	f	file:
 fz_isarray	src/obj_simple.c	/^int fz_isarray(fz_obj *obj)$/;"	f
 fz_isbigendian	src/base_string.c	/^fz_isbigendian(void)$/;"	f
 fz_isbool	src/obj_simple.c	/^int fz_isbool(fz_obj *obj)$/;"	f
 fz_isdict	src/obj_simple.c	/^int fz_isdict(fz_obj *obj)$/;"	f
-fz_isemptybbox	inc/fitz.h	223;"	d
-fz_isemptyrect	inc/fitz.h	221;"	d
 fz_isindirect	src/obj_simple.c	/^int fz_isindirect(fz_obj *obj)$/;"	f
-fz_isinfinitebbox	inc/fitz.h	224;"	d
-fz_isinfiniterect	inc/fitz.h	222;"	d
 fz_isint	src/obj_simple.c	/^int fz_isint(fz_obj *obj)$/;"	f
 fz_isname	src/obj_simple.c	/^int fz_isname(fz_obj *obj)$/;"	f
 fz_isnull	src/obj_simple.c	/^int fz_isnull(fz_obj *obj)$/;"	f
@@ -3687,11 +3471,8 @@ fz_keyval_s	inc/fitz.h	/^struct fz_keyval_s$/;"	s
 fz_lzwd	src/filt_lzwd.c	/^typedef struct fz_lzwd_s fz_lzwd;$/;"	t	typeref:struct:fz_lzwd_s	file:
 fz_lzwd_s	src/filt_lzwd.c	/^struct fz_lzwd_s$/;"	s	file:
 fz_malloc	src/base_memory.c	/^fz_malloc(int size)$/;"	f
-fz_matrix	inc/fitz.h	/^typedef struct fz_matrix_s fz_matrix;$/;"	t	typeref:struct:fz_matrix_s
-fz_matrix_s	inc/fitz.h	/^struct fz_matrix_s$/;"	s
 fz_md5	inc/fitz.h	/^typedef struct fz_md5_s fz_md5;$/;"	t	typeref:struct:fz_md5_s
 fz_md5_s	inc/fitz.h	/^struct fz_md5_s$/;"	s
-fz_mul255	inc/fitz.h	/^static inline int fz_mul255(int a, int b)$/;"	f
 fz_newarray	src/obj_array.c	/^fz_newarray(int initialcap)$/;"	f
 fz_newbool	src/obj_simple.c	/^fz_newbool(int b)$/;"	f
 fz_newbuffer	src/stm_buffer.c	/^fz_newbuffer(int size)$/;"	f
@@ -3707,14 +3488,14 @@ fz_newnull	src/obj_simple.c	/^fz_newnull(void)$/;"	f
 fz_newreal	src/obj_simple.c	/^fz_newreal(float f)$/;"	f
 fz_newstream	src/stm_open.c	/^fz_newstream(void *state,$/;"	f
 fz_newstring	src/obj_simple.c	/^fz_newstring(char *str, int len)$/;"	f
-fz_newtype3font	src/res_font.c	/^fz_newtype3font(char *name, fz_matrix matrix)$/;"	f
+fz_newtype3font	src/res_font.c	/^fz_newtype3font(char *name)$/;"	f
 fz_obj	inc/fitz.h	/^typedef struct fz_obj_s fz_obj;$/;"	t	typeref:struct:fz_obj_s
 fz_obj_s	inc/fitz.h	/^struct fz_obj_s$/;"	s
 fz_objcmp	src/obj_simple.c	/^fz_objcmp(fz_obj *a, fz_obj *b)$/;"	f
 fz_objkind	inc/fitz.h	/^} fz_objkind;$/;"	t	typeref:enum:fz_objkind_e
 fz_objkind_e	inc/fitz.h	/^typedef enum fz_objkind_e$/;"	g
 fz_objkindstr	src/obj_simple.c	/^char *fz_objkindstr(fz_obj *obj)$/;"	f
-fz_okay	inc/fitz.h	125;"	d
+fz_okay	inc/fitz.h	119;"	d
 fz_opena85d	src/filt_basic.c	/^fz_opena85d(fz_stream *chain)$/;"	f
 fz_openahxd	src/filt_basic.c	/^fz_openahxd(fz_stream *chain)$/;"	f
 fz_openbuffer	src/stm_open.c	/^fz_openbuffer(fz_buffer *buf)$/;"	f
@@ -3726,17 +3507,7 @@ fz_openlzwd	src/filt_lzwd.c	/^fz_openlzwd(fz_stream *chain, fz_obj *params)$/;"	
 fz_opennull	src/filt_basic.c	/^fz_opennull(fz_stream *chain, int len)$/;"	f
 fz_openpredict	src/filt_predict.c	/^fz_openpredict(fz_stream *chain, fz_obj *params)$/;"	f
 fz_openrld	src/filt_basic.c	/^fz_openrld(fz_stream *chain)$/;"	f
-fz_path	inc/fitz.h	/^typedef struct fz_path_s fz_path;$/;"	t	typeref:struct:fz_path_s
-fz_path_s	inc/fitz.h	/^struct fz_path_s$/;"	s
-fz_pathel	inc/fitz.h	/^typedef union fz_pathel_s fz_pathel;$/;"	t	typeref:union:fz_pathel_s
-fz_pathel_s	inc/fitz.h	/^union fz_pathel_s$/;"	u
-fz_pathelkind	inc/fitz.h	/^} fz_pathelkind;$/;"	t	typeref:enum:fz_pathelkind_e
-fz_pathelkind_e	inc/fitz.h	/^typedef enum fz_pathelkind_e$/;"	g
 fz_peekbyte	inc/fitz.h	/^static inline int fz_peekbyte(fz_stream *stm)$/;"	f
-fz_pixmap	inc/fitz.h	/^typedef struct fz_pixmap_s fz_pixmap;$/;"	t	typeref:struct:fz_pixmap_s
-fz_pixmap_s	inc/fitz.h	/^struct fz_pixmap_s$/;"	s
-fz_point	inc/fitz.h	/^typedef struct fz_point_s fz_point;$/;"	t	typeref:struct:fz_point_s
-fz_point_s	inc/fitz.h	/^struct fz_point_s$/;"	s
 fz_predict	src/filt_predict.c	/^typedef struct fz_predict_s fz_predict;$/;"	t	typeref:struct:fz_predict_s	file:
 fz_predict_s	src/filt_predict.c	/^struct fz_predict_s$/;"	s	file:
 fz_predictpng	src/filt_predict.c	/^fz_predictpng(fz_predict *state, unsigned char *out, unsigned char *in, int len, int predictor)$/;"	f	file:
@@ -3747,26 +3518,21 @@ fz_readbits	inc/fitz.h	/^static inline unsigned int fz_readbits(fz_stream *stm, 
 fz_readbyte	inc/fitz.h	/^static inline int fz_readbyte(fz_stream *stm)$/;"	f
 fz_readline	src/stm_read.c	/^fz_readline(fz_stream *stm, char *mem, int n)$/;"	f
 fz_realloc	src/base_memory.c	/^fz_realloc(void *p, int count, int size)$/;"	f
-fz_rect	inc/fitz.h	/^typedef struct fz_rect_s fz_rect;$/;"	t	typeref:struct:fz_rect_s
-fz_rect_s	inc/fitz.h	/^struct fz_rect_s$/;"	s
 fz_repairobj	src/pdf_repair.c	/^fz_repairobj(fz_stream *file, char *buf, int cap, int *stmofsp, int *stmlenp, fz_obj **encrypt, fz_obj **id)$/;"	f	file:
 fz_resizebuffer	src/stm_buffer.c	/^fz_resizebuffer(fz_buffer *buf, int size)$/;"	f
 fz_resizehash	src/base_hash.c	/^fz_resizehash(fz_hashtable *table, int newsize)$/;"	f	file:
 fz_resolveindirect	src/obj_simple.c	/^fz_obj *fz_resolveindirect(fz_obj *ref)$/;"	f
-fz_rethrow	inc/fitz.h	67;"	d
-fz_rethrow	inc/fitz.h	75;"	d
-fz_rethrow	inc/fitz.h	83;"	d
-fz_rethrow	inc/fitz.h	91;"	d
+fz_rethrow	inc/fitz.h	61;"	d
+fz_rethrow	inc/fitz.h	69;"	d
+fz_rethrow	inc/fitz.h	77;"	d
+fz_rethrow	inc/fitz.h	85;"	d
 fz_rethrowimp	src/base_error.c	/^fz_rethrowimp(const char *file, int line, const char *func, fz_error cause, char *fmt, ...)$/;"	f
 fz_rethrowimpx	src/base_error.c	/^fz_rethrowimpx(fz_error cause, char *fmt, ...)$/;"	f
 fz_rld	src/filt_basic.c	/^typedef struct fz_rld_s fz_rld;$/;"	t	typeref:struct:fz_rld_s	file:
 fz_rld_s	src/filt_basic.c	/^struct fz_rld_s$/;"	s	file:
 fz_seek	src/stm_read.c	/^fz_seek(fz_stream *stm, int offset, int whence)$/;"	f
-fz_setfontbbox	src/res_font.c	/^fz_setfontbbox(fz_font *font, float xmin, float ymin, float xmax, float ymax)$/;"	f
 fz_sha256	inc/fitz.h	/^typedef struct fz_sha256_s fz_sha256;$/;"	t	typeref:struct:fz_sha256_s
 fz_sha256_s	inc/fitz.h	/^struct fz_sha256_s$/;"	s
-fz_shade	inc/fitz.h	/^typedef struct fz_shade_s fz_shade;$/;"	t	typeref:struct:fz_shade_s
-fz_shade_s	inc/fitz.h	/^struct fz_shade_s$/;"	s
 fz_sortdict	src/obj_dict.c	/^fz_sortdict(fz_obj *obj)$/;"	f
 fz_sprintobj	src/obj_print.c	/^fz_sprintobj(char *s, int n, fz_obj *obj, int tight)$/;"	f	file:
 fz_strdup	src/base_memory.c	/^fz_strdup(char *s)$/;"	f
@@ -3774,22 +3540,12 @@ fz_stream	inc/fitz.h	/^typedef struct fz_stream_s fz_stream;$/;"	t	typeref:struc
 fz_stream_s	inc/fitz.h	/^struct fz_stream_s$/;"	s
 fz_strlcat	src/base_string.c	/^fz_strlcat(char *dst, const char *src, int siz)$/;"	f
 fz_strlcpy	src/base_string.c	/^fz_strlcpy(char *dst, const char *src, int siz)$/;"	f
-fz_strokestate	inc/fitz.h	/^typedef struct fz_strokestate_s fz_strokestate;$/;"	t	typeref:struct:fz_strokestate_s
-fz_strokestate_s	inc/fitz.h	/^struct fz_strokestate_s$/;"	s
 fz_strsep	src/base_string.c	/^fz_strsep(char **stringp, const char *delim)$/;"	f
 fz_tell	src/stm_read.c	/^fz_tell(fz_stream *stm)$/;"	f
-fz_text	inc/fitz.h	/^typedef struct fz_text_s fz_text;$/;"	t	typeref:struct:fz_text_s
-fz_text_s	inc/fitz.h	/^struct fz_text_s$/;"	s
-fz_textchar	inc/fitz.h	/^typedef struct fz_textchar_s fz_textchar;$/;"	t	typeref:struct:fz_textchar_s
-fz_textchar_s	inc/fitz.h	/^struct fz_textchar_s$/;"	s
-fz_textel	inc/fitz.h	/^typedef struct fz_textel_s fz_textel;$/;"	t	typeref:struct:fz_textel_s
-fz_textel_s	inc/fitz.h	/^struct fz_textel_s$/;"	s
-fz_textspan	inc/fitz.h	/^typedef struct fz_textspan_s fz_textspan;$/;"	t	typeref:struct:fz_textspan_s
-fz_textspan_s	inc/fitz.h	/^struct fz_textspan_s$/;"	s
-fz_throw	inc/fitz.h	66;"	d
-fz_throw	inc/fitz.h	74;"	d
-fz_throw	inc/fitz.h	82;"	d
-fz_throw	inc/fitz.h	90;"	d
+fz_throw	inc/fitz.h	60;"	d
+fz_throw	inc/fitz.h	68;"	d
+fz_throw	inc/fitz.h	76;"	d
+fz_throw	inc/fitz.h	84;"	d
 fz_throwimp	src/base_error.c	/^fz_throwimp(const char *file, int line, const char *func, char *fmt, ...)$/;"	f
 fz_throwimpx	src/base_error.c	/^fz_throwimpx(char *fmt, ...)$/;"	f
 fz_tobool	src/obj_simple.c	/^int fz_tobool(fz_obj *obj)$/;"	f
@@ -3807,7 +3563,7 @@ gasp	freetype/internal/tttypes.h	/^    TT_GaspRec            gasp;              
 gaspFlag	freetype/internal/tttypes.h	/^    FT_UShort  gaspFlag;$/;"	m	struct:TT_GaspRangeRec_
 gaspRanges	freetype/internal/tttypes.h	/^    TT_GaspRange  gaspRanges;$/;"	m	struct:TT_Gasp_
 gd_bytes	freetype/t1tables.h	/^    FT_Int          gd_bytes;$/;"	m	struct:CID_FaceInfoRec_
-gen	inc/fitz.h	/^			int gen;$/;"	m	struct:fz_obj_s::__anon19::__anon23
+gen	inc/fitz.h	/^			int gen;$/;"	m	struct:fz_obj_s::__anon18::__anon22
 gen	inc/pdf.h	/^	int gen;	\/* generation \/ objstm index *\/$/;"	m	struct:pdf_xrefentry_s
 gen	src/pdf_repair.c	/^	int gen;$/;"	m	struct:entry	file:
 gen	src/pdf_store.c	/^	int gen;$/;"	m	struct:refkey	file:
@@ -3834,7 +3590,6 @@ get_t2_funcs	freetype/internal/pshints.h	/^    T2_Hints_Funcs     (*get_t2_funcs
 getbit	src/filt_faxd.c	/^getbit(const unsigned char *buf, int x)$/;"	f	file:
 getcode	src/filt_faxd.c	/^getcode(fz_faxd *fax, const cfd_node *table, int initialbits)$/;"	f	file:
 getcomponent	src/filt_predict.c	/^getcomponent(unsigned char *buf, int x, int bpc)$/;"	f	file:
-gid	inc/fitz.h	/^	int gid; \/* -1 for one gid to many ucs mappings *\/$/;"	m	struct:fz_textel_s
 gloader	freetype/internal/tttypes.h	/^    FT_GlyphLoader   gloader;$/;"	m	struct:TT_LoaderRec_
 glyf_len	freetype/internal/tttypes.h	/^    FT_ULong              glyf_len;$/;"	m	struct:TT_FaceRec_
 glyf_offset	freetype/internal/tttypes.h	/^    FT_ULong              glyf_offset;    \/* since 2.7.1 *\/$/;"	m	struct:TT_FaceRec_
@@ -3873,12 +3628,9 @@ glyph_transformed	freetype/internal/ftobjs.h	/^    FT_Bool         glyph_transfo
 goto_table	freetype/internal/sfnt.h	/^    TT_Loader_GotoTableFunc      goto_table;$/;"	m	struct:SFNT_Interface_
 goto_table	freetype/internal/tttypes.h	/^    TT_Loader_GotoTableFunc   goto_table;$/;"	m	struct:TT_FaceRec_
 gray_spans	freetype/ftimage.h	/^    FT_SpanFunc             gray_spans;$/;"	m	struct:FT_Raster_Params_
-grayscale	inc/mypdf.h	/^	int grayscale;$/;"	m	struct:mypdf_s
 gstate	inc/pdf.h	/^	pdf_gstate gstate[64];$/;"	m	struct:pdf_csi_s
 gtop	inc/pdf.h	/^	int gtop;$/;"	m	struct:pdf_csi_s
 gxv_validate_func	freetype/internal/services/svgxval.h	/^  (*gxv_validate_func)( FT_Face   face,$/;"	t
-h	inc/fitz.h	/^	int x, e, h, y;$/;"	m	struct:fz_edge_s
-h	inc/fitz.h	/^	int x, y, w, h, n;$/;"	m	struct:fz_pixmap_s
 hash	src/base_hash.c	/^static unsigned hash(unsigned char *s, int len)$/;"	f	file:
 hash	src/pdf_store.c	/^	fz_hashtable *hash;	\/* hash for num\/gen keys *\/$/;"	m	struct:pdf_store_s	file:
 hdmx_record_count	freetype/internal/tttypes.h	/^    FT_UInt               hdmx_record_count;$/;"	m	struct:TT_FaceRec_
@@ -3898,22 +3650,13 @@ height	freetype/ftcache.h	/^    FT_UInt     height;$/;"	m	struct:FTC_ImageTypeRe
 height	freetype/ftcache.h	/^    FT_UInt     height;$/;"	m	struct:FTC_ScalerRec_
 height	freetype/internal/tttypes.h	/^    FT_Byte  height;$/;"	m	struct:TT_SBit_Small_Metrics_
 height	freetype/internal/tttypes.h	/^    FT_UShort  height;$/;"	m	struct:TT_SBit_MetricsRec_
-hi	inc/pdf.h	/^	unsigned short hi;$/;"	m	struct:pdf_hmtx_s
-hi	inc/pdf.h	/^	unsigned short hi;$/;"	m	struct:pdf_vmtx_s
-high	inc/pdf.h	/^		unsigned short high;$/;"	m	struct:pdf_cmap_s::__anon31
+high	inc/pdf.h	/^		unsigned short high;$/;"	m	struct:pdf_cmap_s::__anon16
 hint_mode	freetype/internal/psaux.h	/^    FT_Render_Mode       hint_mode;$/;"	m	struct:T1_DecoderRec_
 hintmask	freetype/internal/pshints.h	/^    T2_Hints_MaskFunc     hintmask;$/;"	m	struct:T2_Hints_FuncsRec_
 hints	freetype/internal/pshints.h	/^    T1_Hints               hints;$/;"	m	struct:T1_Hints_FuncsRec_
 hints	freetype/internal/pshints.h	/^    T2_Hints              hints;$/;"	m	struct:T2_Hints_FuncsRec_
-hints	inc/fitz.h	/^	int hints;$/;"	m	struct:fz_device_s
 hints_funcs	freetype/internal/psaux.h	/^    void*           hints_funcs;    \/* hinter-specific *\/$/;"	m	struct:T1_BuilderRec_
 hints_globals	freetype/internal/psaux.h	/^    void*           hints_globals;  \/* hinter-specific *\/$/;"	m	struct:T1_BuilderRec_
-hist	inc/mypdf.h	/^	int hist[256];$/;"	m	struct:mypdf_s
-histlen	inc/mypdf.h	/^	int histlen;$/;"	m	struct:mypdf_s
-hit	inc/mypdf.h	/^	int hit;$/;"	m	struct:mypdf_s
-hitlen	inc/mypdf.h	/^	int hitlen;$/;"	m	struct:mypdf_s
-hmtx	inc/pdf.h	/^	pdf_hmtx *hmtx;$/;"	m	struct:pdf_fontdesc_s
-hmtxcap	inc/pdf.h	/^	int nhmtx, hmtxcap;$/;"	m	struct:pdf_fontdesc_s
 hori	freetype/internal/tttypes.h	/^    TT_SBit_LineMetricsRec  hori;$/;"	m	struct:TT_SBit_ScaleRec_
 hori	freetype/internal/tttypes.h	/^    TT_SBit_LineMetricsRec  hori;$/;"	m	struct:TT_SBit_StrikeRec_
 horiAdvance	freetype/freetype.h	/^    FT_Pos  horiAdvance;$/;"	m	struct:FT_Glyph_Metrics_
@@ -3927,14 +3670,9 @@ horizontal	freetype/internal/tttypes.h	/^    TT_HoriHeader         horizontal;  
 horizontal_resolution	freetype/ftwinfnt.h	/^    FT_UShort  horizontal_resolution;$/;"	m	struct:FT_WinFNT_HeaderRec_
 horz_metrics_offset	freetype/internal/tttypes.h	/^    FT_ULong              horz_metrics_offset;$/;"	m	struct:TT_FaceRec_
 horz_metrics_size	freetype/internal/tttypes.h	/^    FT_ULong              horz_metrics_size;$/;"	m	struct:TT_FaceRec_
-i	inc/fitz.h	/^		int i;$/;"	m	union:fz_obj_s::__anon19
+i	inc/fitz.h	/^		int i;$/;"	m	union:fz_obj_s::__anon18
 ident	freetype/internal/psaux.h	/^    const char*         ident;        \/* field identifier               *\/$/;"	m	struct:T1_FieldRec_
-idlength	inc/pdf.h	/^	int idlength;$/;"	m	struct:pdf_crypt_s
-idstring	inc/pdf.h	/^	unsigned char idstring[32];$/;"	m	struct:pdf_crypt_s
 idx	freetype/internal/ftdebug.h	/^  FT_Trace_Get_Name( FT_Int  idx );$/;"	v
-ignoretext	inc/fitz.h	/^	void (*ignoretext)(void *, fz_text *, fz_matrix);$/;"	m	struct:fz_device_s
-image	inc/fitz.h	/^		fz_pixmap *image;$/;"	m	union:fz_displaynode_s::__anon27
-image	inc/mypdf.h	/^	fz_pixmap *image;$/;"	m	struct:mypdf_s
 image_format	freetype/internal/tttypes.h	/^    FT_UShort           image_format;$/;"	m	struct:TT_SBit_RangeRec_
 image_offset	freetype/internal/tttypes.h	/^    FT_ULong            image_offset;$/;"	m	struct:TT_SBit_RangeRec_
 image_size	freetype/internal/tttypes.h	/^    FT_ULong            image_size;$/;"	m	struct:TT_SBit_RangeRec_
@@ -3957,31 +3695,24 @@ init_face	freetype/internal/ftdriver.h	/^    FT_Face_InitFunc         init_face;
 init_face	freetype/internal/sfnt.h	/^    TT_Init_Face_Func            init_face;$/;"	m	struct:SFNT_Interface_
 init_size	freetype/internal/ftdriver.h	/^    FT_Size_InitFunc         init_size;$/;"	m	struct:FT_Driver_ClassRec_
 init_slot	freetype/internal/ftdriver.h	/^    FT_Slot_InitFunc         init_slot;$/;"	m	struct:FT_Driver_ClassRec_
-inline	inc/fitz.h	72;"	d
-inline	inc/fitz.h	80;"	d
-inline	inc/fitz.h	88;"	d
+inline	inc/fitz.h	66;"	d
+inline	inc/fitz.h	74;"	d
+inline	inc/fitz.h	82;"	d
 ins_pos	freetype/internal/tttypes.h	/^    FT_ULong         ins_pos;$/;"	m	struct:TT_LoaderRec_
 instructions	freetype/internal/tttypes.h	/^    FT_Byte*         instructions;$/;"	m	struct:TT_LoaderRec_
-integer	freetype/ftbdf.h	/^      FT_Int32        integer;$/;"	m	union:BDF_PropertyRec_::__anon35
+integer	freetype/ftbdf.h	/^      FT_Int32        integer;$/;"	m	union:BDF_PropertyRec_::__anon24
 internal	freetype/freetype.h	/^    FT_Face_Internal  internal;$/;"	m	struct:FT_FaceRec_
 internal	freetype/freetype.h	/^    FT_Size_Internal  internal;$/;"	m	struct:FT_SizeRec_
 internal	freetype/freetype.h	/^    FT_Slot_Internal  internal;$/;"	m	struct:FT_GlyphSlotRec_
 internal_leading	freetype/ftwinfnt.h	/^    FT_UShort  internal_leading;$/;"	m	struct:FT_WinFNT_HeaderRec_
-interpolate	inc/fitz.h	/^	int interpolate;$/;"	m	struct:fz_pixmap_s
 interpreter	freetype/internal/tttypes.h	/^    TT_Interpreter        interpreter;$/;"	m	struct:TT_FaceRec_
 isFixedPitch	freetype/tttables.h	/^    FT_ULong  isFixedPitch;$/;"	m	struct:TT_Postscript_
 is_cff2	freetype/internal/tttypes.h	/^    FT_Bool               is_cff2;        \/* since 2.7.1 *\/$/;"	m	struct:TT_FaceRec_
 is_default_instance	freetype/internal/tttypes.h	/^    FT_Bool               is_default_instance;   \/* since 2.7.1 *\/$/;"	m	struct:TT_FaceRec_
 is_fixed_pitch	freetype/t1tables.h	/^    FT_Bool     is_fixed_pitch;$/;"	m	struct:PS_FontInfoRec_
-iscopying	inc/mypdf.h	/^	int iscopying;$/;"	m	struct:mypdf_s
 isdelim	src/obj_print.c	/^static inline int isdelim(int ch)$/;"	f	file:
-isdynalab	src/pdf_font.c	/^static int isdynalab(char *name)$/;"	f	file:
-isediting	inc/mypdf.h	/^	int isediting;$/;"	m	struct:mypdf_s
 isembedded	inc/pdf.h	/^	int isembedded;$/;"	m	struct:pdf_fontdesc_s
 ishex	src/filt_basic.c	/^static inline int ishex(int a)$/;"	f	file:
-ismask	inc/pdf.h	/^	int ismask;$/;"	m	struct:pdf_pattern_s
-isolated	inc/pdf.h	/^	int isolated;$/;"	m	struct:pdf_xobject_s
-ispanning	inc/mypdf.h	/^	int ispanning;$/;"	m	struct:mypdf_s
 iswhite	src/filt_basic.c	/^static inline int iswhite(int a)$/;"	f	file:
 iswhite	src/obj_print.c	/^static inline int iswhite(int ch)$/;"	f	file:
 iswhite	src/pdf_lex.c	/^iswhite(int ch)$/;"	f	file:
@@ -3989,35 +3720,27 @@ iswhite	src/pdf_xref.c	/^static inline int iswhite(int ch)$/;"	f	file:
 italic	freetype/ftwinfnt.h	/^    FT_Byte    italic;$/;"	m	struct:FT_WinFNT_HeaderRec_
 italicAngle	freetype/tttables.h	/^    FT_Fixed  italicAngle;$/;"	m	struct:TT_Postscript_
 italic_angle	freetype/t1tables.h	/^    FT_Long     italic_angle;$/;"	m	struct:PS_FontInfoRec_
-italicangle	inc/pdf.h	/^	float italicangle;$/;"	m	struct:pdf_fontdesc_s
-item	inc/fitz.h	/^	} item;$/;"	m	struct:fz_displaynode_s	typeref:union:fz_displaynode_s::__anon27
-items	inc/fitz.h	/^			fz_keyval *items;$/;"	m	struct:fz_obj_s::__anon19::__anon22
-items	inc/fitz.h	/^			fz_obj **items;$/;"	m	struct:fz_obj_s::__anon19::__anon21
+items	inc/fitz.h	/^			fz_keyval *items;$/;"	m	struct:fz_obj_s::__anon18::__anon21
+items	inc/fitz.h	/^			fz_obj **items;$/;"	m	struct:fz_obj_s::__anon18::__anon20
 jump_buffer	freetype/internal/ftvalid.h	/^    ft_jmp_buf          jump_buffer; \/* used for exception handling      *\/$/;"	m	struct:FT_ValidatorRec_
 k	inc/fitz.h	/^	fz_obj *k;$/;"	m	struct:fz_keyval_s
-k	inc/fitz.h	/^	fz_pathelkind k;$/;"	m	union:fz_pathel_s
 k	src/filt_faxd.c	/^	int k;$/;"	m	struct:fz_faxd_s	file:
 kern_avail_bits	freetype/internal/tttypes.h	/^    FT_UInt32             kern_avail_bits;$/;"	m	struct:TT_FaceRec_
 kern_order_bits	freetype/internal/tttypes.h	/^    FT_UInt32             kern_order_bits;$/;"	m	struct:TT_FaceRec_
 kern_table	freetype/internal/tttypes.h	/^    FT_Byte*              kern_table;$/;"	m	struct:TT_FaceRec_
 kern_table_size	freetype/internal/tttypes.h	/^    FT_ULong              kern_table_size;$/;"	m	struct:TT_FaceRec_
 key	freetype/internal/fthash.h	/^    FT_Hashkey  key;$/;"	m	struct:FT_HashnodeRec_
-key	inc/pdf.h	/^	unsigned char key[32]; \/* decryption key generated from password *\/$/;"	m	struct:pdf_crypt_s
 key	src/base_hash.c	/^	unsigned char key[MAXKEYLEN];$/;"	m	struct:fz_hashentry_s	file:
 key	src/pdf_store.c	/^	fz_obj *key;$/;"	m	struct:pdf_item_s	file:
 keylen	src/base_hash.c	/^	int keylen;$/;"	m	struct:fz_hashtable_s	file:
 keystrcmp	src/obj_dict.c	/^static inline int keystrcmp(fz_obj *key, char *s)$/;"	f	file:
 keyvalcmp	src/obj_dict.c	/^static int keyvalcmp(const void *ap, const void *bp)$/;"	f	file:
 kind	inc/fitz.h	/^	fz_objkind kind;$/;"	m	struct:fz_obj_s
-kind	inc/pdf.h	/^	int kind;$/;"	m	struct:pdf_material_s
-kind	inc/pdf.h	/^	pdf_linkkind kind;$/;"	m	struct:pdf_link_s
-knockout	inc/pdf.h	/^	int knockout;$/;"	m	struct:pdf_xobject_s
 langTags	freetype/internal/tttypes.h	/^    TT_LangTagRec*  langTags;$/;"	m	struct:TT_NameTableRec_
 language	freetype/internal/services/svttcmap.h	/^    FT_ULong  language;$/;"	m	struct:TT_CMapInfo_
 languageID	freetype/internal/tttypes.h	/^    FT_UShort  languageID;$/;"	m	struct:TT_NameRec_
 language_group	freetype/t1tables.h	/^    FT_Long    language_group;$/;"	m	struct:PS_PrivateRec_
 language_id	freetype/ftsnames.h	/^    FT_UShort  language_id;$/;"	m	struct:FT_SfntName_
-last	inc/fitz.h	/^	fz_displaynode *last;$/;"	m	struct:fz_displaylist_s
 last	src/obj_print.c	/^	int last;$/;"	m	struct:fmt	file:
 last_char	freetype/ftwinfnt.h	/^    FT_Byte    last_char;$/;"	m	struct:FT_WinFNT_HeaderRec_
 last_glyph	freetype/internal/tttypes.h	/^    FT_UShort           last_glyph;$/;"	m	struct:TT_SBit_RangeRec_
@@ -4026,24 +3749,17 @@ lcd_filter	freetype/internal/ftobjs.h	/^    FT_LcdFilter             lcd_filter;
 lcd_filter_func	freetype/internal/ftobjs.h	/^    FT_Bitmap_LcdFilterFunc  lcd_filter_func;  \/* filtering callback     *\/$/;"	m	struct:FT_LibraryRec_
 lcd_weights	freetype/internal/ftobjs.h	/^    FT_LcdFiveTapFilter      lcd_weights;      \/* filter weights, if any *\/$/;"	m	struct:FT_LibraryRec_
 lcd_weights	freetype/internal/ftobjs.h	/^    FT_LcdFiveTapFilter  lcd_weights;  \/* preset or custom filter weights *\/$/;"	m	struct:FT_Face_InternalRec_
-leading	inc/pdf.h	/^	float leading;$/;"	m	struct:pdf_gstate_s
 left	freetype/ftcache.h	/^    FT_Char   left;$/;"	m	struct:FTC_SBitRec_
 left	freetype/ftglyph.h	/^    FT_Int       left;$/;"	m	struct:FT_BitmapGlyphRec_
 left_bearing	freetype/internal/psaux.h	/^    FT_Vector       left_bearing;$/;"	m	struct:T1_BuilderRec_
 left_bearing	freetype/internal/tttypes.h	/^    FT_Int           left_bearing;$/;"	m	struct:TT_LoaderRec_
 len	freetype/ftimage.h	/^    unsigned short  len;$/;"	m	struct:FT_Span_
-len	inc/fitz.h	/^			int len;$/;"	m	struct:fz_obj_s::__anon19::__anon21
-len	inc/fitz.h	/^			int len;$/;"	m	struct:fz_obj_s::__anon19::__anon22
-len	inc/fitz.h	/^			unsigned short len;$/;"	m	struct:fz_obj_s::__anon19::__anon20
+len	inc/fitz.h	/^			int len;$/;"	m	struct:fz_obj_s::__anon18::__anon20
+len	inc/fitz.h	/^			int len;$/;"	m	struct:fz_obj_s::__anon18::__anon21
+len	inc/fitz.h	/^			unsigned short len;$/;"	m	struct:fz_obj_s::__anon18::__anon19
 len	inc/fitz.h	/^	int cap, len;$/;"	m	struct:fz_buffer_s
-len	inc/fitz.h	/^	int len, cap;$/;"	m	struct:fz_path_s
-len	inc/fitz.h	/^	int len, cap;$/;"	m	struct:fz_text_s
-len	inc/fitz.h	/^	int len, cap;$/;"	m	struct:fz_textspan_s
-len	inc/fitz.h	/^	int len;$/;"	m	struct:fz_ael_s
-len	inc/fitz.h	/^	int len;$/;"	m	struct:fz_gel_s
 len	inc/pdf.h	/^	int len;$/;"	m	struct:pdf_xref_s
 len	src/obj_print.c	/^	int len;$/;"	m	struct:fmt	file:
-len	src/pdf_fontfile.c	/^	const unsigned int *len;$/;"	m	struct:__anon10	file:
 lenIV	freetype/internal/psaux.h	/^    FT_Int               lenIV;        \/* internal for sub routine calls *\/$/;"	m	struct:T1_DecoderRec_
 lenIV	freetype/t1tables.h	/^    FT_Int     lenIV;$/;"	m	struct:PS_PrivateRec_
 len_buildchar	freetype/internal/psaux.h	/^    FT_UInt              len_buildchar;$/;"	m	struct:T1_DecoderRec_
@@ -4051,8 +3767,6 @@ len_buildchar	freetype/internal/t1types.h	/^    FT_UInt          len_buildchar;$
 len_buildchar	freetype/t1tables.h	/^    FT_UInt        len_buildchar;$/;"	m	struct:CID_FaceDictRec_
 length	freetype/fttypes.h	/^    FT_Int          length;$/;"	m	struct:FT_Data_
 length	freetype/internal/tttypes.h	/^    FT_ULong   length;$/;"	m	struct:WOFF_HeaderRec_
-length	inc/pdf.h	/^	int length;$/;"	m	struct:pdf_crypt_s
-length	inc/pdf.h	/^	int length;$/;"	m	struct:pdf_cryptfilter_s
 length	src/filt_lzwd.c	/^	unsigned short length;		\/* string len, including this token *\/$/;"	m	struct:lzw_code_s	file:
 lengths	freetype/internal/psaux.h	/^    FT_UInt*           lengths;        \/* lengths of table elements   *\/$/;"	m	struct:PS_TableRec_
 level	freetype/internal/ftvalid.h	/^    FT_ValidationLevel  level;       \/* validation level                 *\/$/;"	m	struct:FT_ValidatorRec_
@@ -4086,15 +3800,7 @@ linear	freetype/internal/tttypes.h	/^    FT_Int           linear;$/;"	m	struct:T
 linearHoriAdvance	freetype/freetype.h	/^    FT_Fixed          linearHoriAdvance;$/;"	m	struct:FT_GlyphSlotRec_
 linearVertAdvance	freetype/freetype.h	/^    FT_Fixed          linearVertAdvance;$/;"	m	struct:FT_GlyphSlotRec_
 linear_def	freetype/internal/tttypes.h	/^    FT_Bool          linear_def;$/;"	m	struct:TT_LoaderRec_
-linecap	inc/fitz.h	/^	int linecap;$/;"	m	struct:fz_strokestate_s
-linejoin	inc/fitz.h	/^	int linejoin;$/;"	m	struct:fz_strokestate_s
-linewidth	inc/fitz.h	/^	float linewidth;$/;"	m	struct:fz_strokestate_s
-link	inc/pdf.h	/^	pdf_link *link;$/;"	m	struct:pdf_outline_s
-links	inc/pdf.h	/^	pdf_link *links;$/;"	m	struct:pdf_page_s
-list	inc/pdf.h	/^	fz_displaylist *list;$/;"	m	struct:pdf_page_s
 lm	src/filt_faxd.c	/^static const unsigned char lm[8] = {$/;"	v	file:
-lo	inc/pdf.h	/^	unsigned short lo;$/;"	m	struct:pdf_hmtx_s
-lo	inc/pdf.h	/^	unsigned short lo;$/;"	m	struct:pdf_vmtx_s
 load	src/base_hash.c	/^	int load;$/;"	m	struct:fz_hashtable_s	file:
 load_any	freetype/internal/sfnt.h	/^    TT_Load_Any_Func             load_any;$/;"	m	struct:SFNT_Interface_
 load_bhed	freetype/internal/sfnt.h	/^    TT_Load_Table_Func           load_bhed;$/;"	m	struct:SFNT_Interface_
@@ -4132,16 +3838,14 @@ loader	freetype/internal/ftgloadr.h	/^  FT_GlyphLoader_Rewind( FT_GlyphLoader  l
 loader	freetype/internal/ftobjs.h	/^    FT_GlyphLoader  loader;$/;"	m	struct:FT_Slot_InternalRec_
 loader	freetype/internal/psaux.h	/^    FT_GlyphLoader  loader;$/;"	m	struct:T1_BuilderRec_
 loadsimplefont	src/pdf_font.c	/^loadsimplefont(pdf_fontdesc **fontdescp, pdf_xref *xref, fz_obj *dict)$/;"	f	file:
-loadsystemcidfont	src/pdf_fontfile.c	/^loadsystemcidfont(pdf_fontdesc *fontdesc, int ros, int kind)$/;"	f	file:
 loadtype0	src/pdf_font.c	/^loadtype0(pdf_fontdesc **fontdescp, pdf_xref *xref, fz_obj *dict)$/;"	f	file:
 location	freetype/internal/psaux.h	/^    T1_FieldLocation    location;$/;"	m	struct:T1_FieldRec_
 long_metrics	freetype/tttables.h	/^    void*      long_metrics;$/;"	m	struct:TT_HoriHeader_
 long_metrics	freetype/tttables.h	/^    void*      long_metrics;$/;"	m	struct:TT_VertHeader_
 lookup	freetype/internal/fthash.h	/^    FT_Hash_LookupFunc   lookup;$/;"	m	struct:FT_HashRec_
-low	inc/pdf.h	/^		unsigned short low;$/;"	m	struct:pdf_cmap_s::__anon31
+low	inc/pdf.h	/^		unsigned short low;$/;"	m	struct:pdf_cmap_s::__anon16
 low	inc/pdf.h	/^	unsigned short low;$/;"	m	struct:pdf_range_s
 lsb_delta	freetype/freetype.h	/^    FT_Pos            lsb_delta;$/;"	m	struct:FT_GlyphSlotRec_
-luminosity	inc/pdf.h	/^	int luminosity;$/;"	m	struct:pdf_gstate_s
 lzw_code	src/filt_lzwd.c	/^typedef struct lzw_code_s lzw_code;$/;"	t	typeref:struct:lzw_code_s	file:
 lzw_code_s	src/filt_lzwd.c	/^struct lzw_code_s$/;"	s	file:
 main	src/main.c	/^int main(int argc, char **argv)$/;"	f
@@ -4150,13 +3854,7 @@ manager	freetype/ftcache.h	/^  FTC_Manager_Done( FTC_Manager  manager );$/;"	v
 manager	freetype/ftcache.h	/^  FTC_Manager_Reset( FTC_Manager  manager );$/;"	v
 map	freetype/ftautoh.h	/^    FT_UShort*  map;$/;"	m	struct:FT_Prop_GlyphToScriptMap_
 maps	freetype/internal/services/svpscmap.h	/^    PS_UniMap*  maps;$/;"	m	struct:PS_UnicodesRec_
-marks	inc/mypdf.h	/^	int marks[10];$/;"	m	struct:mypdf_s
-mask	inc/fitz.h	/^	fz_pixmap *mask; \/* explicit soft\/image mask *\/$/;"	m	struct:fz_pixmap_s
 matrix	freetype/ftglyph.h	/^  FT_Matrix_Invert( FT_Matrix*  matrix );$/;"	v
-matrix	inc/fitz.h	/^	fz_matrix matrix;	\/* matrix from pattern dict *\/$/;"	m	struct:fz_shade_s
-matrix	inc/pdf.h	/^	fz_matrix matrix;$/;"	m	struct:pdf_annot_s
-matrix	inc/pdf.h	/^	fz_matrix matrix;$/;"	m	struct:pdf_pattern_s
-matrix	inc/pdf.h	/^	fz_matrix matrix;$/;"	m	struct:pdf_xobject_s
 maxComponentDepth	freetype/tttables.h	/^    FT_UShort  maxComponentDepth;$/;"	m	struct:TT_MaxProfile_
 maxComponentElements	freetype/tttables.h	/^    FT_UShort  maxComponentElements;$/;"	m	struct:TT_MaxProfile_
 maxCompositeContours	freetype/tttables.h	/^    FT_UShort  maxCompositeContours;$/;"	m	struct:TT_MaxProfile_
@@ -4191,8 +3889,6 @@ max_width	freetype/ftwinfnt.h	/^    FT_UShort  max_width;$/;"	m	struct:FT_WinFNT
 max_width	freetype/internal/tttypes.h	/^    FT_Byte  max_width;$/;"	m	struct:TT_SBit_LineMetricsRec_
 maximum	freetype/ftmm.h	/^    FT_Fixed    maximum;$/;"	m	struct:FT_Var_Axis_
 maximum	freetype/ftmm.h	/^    FT_Long     maximum;$/;"	m	struct:FT_MM_Axis_
-mediabox	inc/pdf.h	/^	fz_rect mediabox;$/;"	m	struct:pdf_page_s
-mediabox	src/pdf_pagetree.c	/^	fz_obj *mediabox;$/;"	m	struct:info	file:
 memory	freetype/freetype.h	/^    FT_Memory         memory;$/;"	m	struct:FT_FaceRec_
 memory	freetype/ftsystem.h	/^    FT_Memory            memory;$/;"	m	struct:FT_StreamRec_
 memory	freetype/internal/ftgloadr.h	/^    FT_Memory        memory;$/;"	m	struct:FT_GlyphLoaderRec_
@@ -4206,13 +3902,9 @@ memory	freetype/internal/psaux.h	/^    FT_Memory  memory;$/;"	m	struct:PS_Parser
 memory	freetype/internal/tttypes.h	/^    FT_Memory   memory;$/;"	m	struct:TT_GlyphZoneRec_
 memory_base	freetype/freetype.h	/^    const FT_Byte*  memory_base;$/;"	m	struct:FT_Open_Args_
 memory_size	freetype/freetype.h	/^    FT_Long         memory_size;$/;"	m	struct:FT_Open_Args_
-mesh	inc/fitz.h	/^	float *mesh; \/* [x y 0], [x y r], [x y t] or [x y c1 ... cn] *\/$/;"	m	struct:fz_shade_s
-meshcap	inc/fitz.h	/^	int meshcap;$/;"	m	struct:fz_shade_s
-meshlen	inc/fitz.h	/^	int meshlen;$/;"	m	struct:fz_shade_s
 metaLength	freetype/internal/tttypes.h	/^    FT_ULong   metaLength;$/;"	m	struct:WOFF_HeaderRec_
 metaOffset	freetype/internal/tttypes.h	/^    FT_ULong   metaOffset;$/;"	m	struct:WOFF_HeaderRec_
 metaOrigLength	freetype/internal/tttypes.h	/^    FT_ULong   metaOrigLength;$/;"	m	struct:WOFF_HeaderRec_
-method	inc/pdf.h	/^	int method;$/;"	m	struct:pdf_cryptfilter_s
 metric_Data_Format	freetype/tttables.h	/^    FT_Short   metric_Data_Format;$/;"	m	struct:TT_HoriHeader_
 metric_Data_Format	freetype/tttables.h	/^    FT_Short   metric_Data_Format;$/;"	m	struct:TT_VertHeader_
 metrics	freetype/freetype.h	/^    FT_Glyph_Metrics  metrics;$/;"	m	struct:FT_GlyphSlotRec_
@@ -4234,8 +3926,6 @@ min_ptsize	freetype/internal/t1types.h	/^    FT_Fixed  min_ptsize;$/;"	m	struct:
 minimum	freetype/ftmm.h	/^    FT_Fixed    minimum;$/;"	m	struct:FT_Var_Axis_
 minimum	freetype/ftmm.h	/^    FT_Long     minimum;$/;"	m	struct:FT_MM_Axis_
 minorVersion	freetype/internal/tttypes.h	/^    FT_UShort  minorVersion;$/;"	m	struct:WOFF_HeaderRec_
-missingwidth	inc/pdf.h	/^	float missingwidth;$/;"	m	struct:pdf_fontdesc_s
-miterlimit	inc/fitz.h	/^	float miterlimit;$/;"	m	struct:fz_strokestate_s
 mm	freetype/internal/tttypes.h	/^    void*                 mm;$/;"	m	struct:TT_FaceRec_
 module_data	freetype/internal/ftobjs.h	/^    void*  module_data;$/;"	m	struct:FT_Size_InternalRec_
 module_done	freetype/ftmodapi.h	/^    FT_Module_Destructor   module_done;$/;"	m	struct:FT_Module_Class_
@@ -4248,11 +3938,13 @@ module_size	freetype/ftmodapi.h	/^    FT_Long                module_size;$/;"	m	
 module_version	freetype/ftmodapi.h	/^    FT_Fixed               module_version;$/;"	m	struct:FT_Module_Class_
 modules	freetype/internal/ftobjs.h	/^    FT_Module          modules[FT_MAX_MODULES];  \/* module objects  *\/$/;"	m	struct:FT_LibraryRec_
 move_to	freetype/ftimage.h	/^    FT_Outline_MoveToFunc   move_to;$/;"	m	struct:FT_Outline_Funcs_
-mrecode	src/pdf_font.c	/^static int mrecode(char *name)$/;"	f	file:
-n	inc/fitz.h	/^		char n[1];$/;"	m	union:fz_obj_s::__anon19
-n	inc/fitz.h	/^	int n;$/;"	m	struct:fz_colorspace_s
-n	inc/fitz.h	/^	int x, y, w, h, n;$/;"	m	struct:fz_pixmap_s
-n	inc/pdf.h	/^		unsigned short n;$/;"	m	struct:pdf_cmap_s::__anon31
+mypdf_close	src/mypdf.c	/^void mypdf_close(mypdf_t *app)$/;"	f
+mypdf_init	src/mypdf.c	/^void mypdf_init(mypdf_t *mypdf)$/;"	f
+mypdf_open	src/mypdf.c	/^void mypdf_open(mypdf_t *mypdf, char *filename, int fd)$/;"	f
+mypdf_s	inc/mypdf.h	/^struct mypdf_s$/;"	s
+mypdf_t	inc/mypdf.h	/^typedef struct mypdf_s mypdf_t;$/;"	t	typeref:struct:mypdf_s
+n	inc/fitz.h	/^		char n[1];$/;"	m	union:fz_obj_s::__anon18
+n	inc/pdf.h	/^		unsigned short n;$/;"	m	struct:pdf_cmap_s::__anon16
 n	src/filt_basic.c	/^	int run, n, c;$/;"	m	struct:fz_rld_s	file:
 n_contours	freetype/ftimage.h	/^    short       n_contours;      \/* number of contours in glyph        *\/$/;"	m	struct:FT_Outline_
 n_contours	freetype/internal/tttypes.h	/^    FT_Short         n_contours;$/;"	m	struct:TT_LoaderRec_
@@ -4261,15 +3953,14 @@ n_points	freetype/ftimage.h	/^    short       n_points;        \/* number of poi
 n_points	freetype/internal/tttypes.h	/^    FT_UShort   n_points;    \/* number of points in zone    *\/$/;"	m	struct:TT_GlyphZoneRec_
 name	freetype/ftmm.h	/^    FT_String*  name;$/;"	m	struct:FT_MM_Axis_
 name	freetype/ftmm.h	/^    FT_String*  name;$/;"	m	struct:FT_Var_Axis_
-name	inc/fitz.h	/^	char name[16];$/;"	m	struct:fz_colorspace_s
 name	inc/fitz.h	/^	char name[32];$/;"	m	struct:fz_font_s
-name	src/pdf_fontfile.c	/^	const char *name;$/;"	m	struct:__anon10	file:
+name	src/pdf_fontagl.c	/^static const struct { char *name; int ucs; }$/;"	m	struct:__anon10	file:
 nameID	freetype/internal/tttypes.h	/^    FT_UShort  nameID;$/;"	m	struct:TT_NameRec_
 name_id	freetype/ftsnames.h	/^    FT_UShort  name_id;$/;"	m	struct:FT_SfntName_
 name_table	freetype/internal/tttypes.h	/^    TT_NameTableRec       name_table;   \/* name table              *\/$/;"	m	struct:TT_FaceRec_
 namedstyle	freetype/ftmm.h	/^    FT_Var_Named_Style*  namedstyle;$/;"	m	struct:FT_MM_Var_
 names	freetype/internal/tttypes.h	/^    TT_NameRec*     names;$/;"	m	struct:TT_NameTableRec_
-names	freetype/internal/tttypes.h	/^    } names;$/;"	m	struct:TT_Post_NamesRec_	typeref:union:TT_Post_NamesRec_::__anon34
+names	freetype/internal/tttypes.h	/^    } names;$/;"	m	struct:TT_Post_NamesRec_	typeref:union:TT_Post_NamesRec_::__anon25
 nbits	src/filt_faxd.c	/^	short nbits;$/;"	m	struct:cfd_node_s	file:
 ncidtogid	inc/pdf.h	/^	int ncidtogid;$/;"	m	struct:pdf_fontdesc_s
 ncidtoucs	inc/pdf.h	/^	int ncidtoucs;$/;"	m	struct:pdf_fontdesc_s
@@ -4278,14 +3969,8 @@ ndv_idx	freetype/internal/t1types.h	/^    FT_Int           ndv_idx;$/;"	m	struct
 nelem	inc/fitz.h	23;"	d
 next	freetype/freetype.h	/^    FT_GlyphSlot      next;$/;"	m	struct:FT_GlyphSlotRec_
 next	freetype/fttypes.h	/^    FT_ListNode  next;$/;"	m	struct:FT_ListNodeRec_
-next	inc/fitz.h	/^	fz_displaynode *next;$/;"	m	struct:fz_displaynode_s
-next	inc/fitz.h	/^	fz_textspan *next;$/;"	m	struct:fz_textspan_s
-next	inc/pdf.h	/^	pdf_annot *next;$/;"	m	struct:pdf_annot_s
-next	inc/pdf.h	/^	pdf_link *next;$/;"	m	struct:pdf_link_s
-next	inc/pdf.h	/^	pdf_outline *next;$/;"	m	struct:pdf_outline_s
 next	src/pdf_store.c	/^	pdf_item *next;$/;"	m	struct:pdf_item_s	file:
 nextcode	src/filt_lzwd.c	/^	int nextcode;			\/* next free entry *\/$/;"	m	struct:fz_lzwd_s	file:
-nhmtx	inc/pdf.h	/^	int nhmtx, hmtxcap;$/;"	m	struct:pdf_fontdesc_s
 nil	inc/fitz.h	21;"	d
 no_recurse	freetype/internal/psaux.h	/^    FT_Bool         no_recurse;$/;"	m	struct:T1_BuilderRec_
 no_stem_darkening	freetype/internal/ftobjs.h	/^    FT_Char              no_stem_darkening;$/;"	m	struct:FT_Face_InternalRec_
@@ -4294,7 +3979,7 @@ notice	freetype/t1tables.h	/^    FT_String*  notice;$/;"	m	struct:PS_FontInfoRec
 nr	inc/fitz.h	/^	int nr; \/* number of rounds *\/$/;"	m	struct:fz_aes_s
 nullfilter	src/filt_basic.c	/^struct nullfilter$/;"	s	file:
 num	freetype/internal/fthash.h	/^    FT_Int       num;$/;"	m	union:FT_Hashkey_
-num	inc/fitz.h	/^			int num;$/;"	m	struct:fz_obj_s::__anon19::__anon23
+num	inc/fitz.h	/^			int num;$/;"	m	struct:fz_obj_s::__anon18::__anon22
 num	src/pdf_repair.c	/^	int num;$/;"	m	struct:entry	file:
 num	src/pdf_store.c	/^	int num;$/;"	m	struct:refkey	file:
 numGlyphs	freetype/tttables.h	/^    FT_UShort  numGlyphs;$/;"	m	struct:TT_MaxProfile_
@@ -4350,16 +4035,10 @@ num_tables	freetype/internal/tttypes.h	/^    FT_UShort             num_tables;$/
 num_tables	freetype/internal/tttypes.h	/^    FT_UShort  num_tables;$/;"	m	struct:SFNT_HeaderRec_
 num_tables	freetype/internal/tttypes.h	/^    FT_UShort  num_tables;$/;"	m	struct:WOFF_HeaderRec_
 num_xuid	freetype/t1tables.h	/^    FT_Int          num_xuid;$/;"	m	struct:CID_FaceInfoRec_
-number	inc/mypdf.h	/^	char number[256];$/;"	m	struct:mypdf_s
 number_Of_HMetrics	freetype/tttables.h	/^    FT_UShort  number_Of_HMetrics;$/;"	m	struct:TT_HoriHeader_
 number_Of_VMetrics	freetype/tttables.h	/^    FT_UShort  number_Of_VMetrics;$/;"	m	struct:TT_VertHeader_
-numberlen	inc/mypdf.h	/^	int numberlen;$/;"	m	struct:mypdf_s
-nvmtx	inc/pdf.h	/^	int nvmtx, vmtxcap;$/;"	m	struct:pdf_fontdesc_s
-o	inc/pdf.h	/^	unsigned char o[48];$/;"	m	struct:pdf_crypt_s
 obj	inc/pdf.h	/^	fz_obj *obj;	\/* stored\/cached object *\/$/;"	m	struct:pdf_xrefentry_s
-obj	inc/pdf.h	/^	fz_obj *obj;$/;"	m	struct:pdf_annot_s
 object	freetype/ftincrem.h	/^    FT_Incremental                  object;$/;"	m	struct:FT_Incremental_InterfaceRec_
-oe	inc/pdf.h	/^	unsigned char oe[32];$/;"	m	struct:pdf_crypt_s
 offset	freetype/internal/ftrfork.h	/^    FT_Long   offset;$/;"	m	struct:FT_RFork_Ref_
 offset	freetype/internal/ftstream.h	/^    FT_UShort  offset;$/;"	m	struct:FT_Frame_Field_
 offset	freetype/internal/psaux.h	/^    FT_UInt             offset;       \/* offset of field in object      *\/$/;"	m	struct:T1_FieldRec_
@@ -4368,6 +4047,7 @@ offset	inc/pdf.h	/^	unsigned short offset;	\/* range-delta or table-index *\/$/;
 offsets	freetype/internal/tttypes.h	/^    FT_Char*   offsets;$/;"	m	struct:TT_Post_25_
 offsets	freetype/internal/tttypes.h	/^    FT_ULong*  offsets;$/;"	m	struct:TTC_HeaderRec_
 ofs	inc/pdf.h	/^	int ofs;	\/* file offset \/ objstm object number *\/$/;"	m	struct:pdf_xrefentry_s
+ofs	src/pdf_fontagl.c	/^static const struct { int ucs; int ofs; }$/;"	m	struct:__anon11	file:
 ofs	src/pdf_repair.c	/^	int ofs;$/;"	m	struct:entry	file:
 oldcode	src/filt_lzwd.c	/^	int oldcode;			\/* previously recognized code *\/$/;"	m	struct:fz_lzwd_s	file:
 open	freetype/internal/pshints.h	/^    T1_Hints_OpenFunc      open;$/;"	m	struct:T1_Hints_FuncsRec_
@@ -4390,8 +4070,6 @@ outline	freetype/ftoutln.h	/^  FT_Outline_Reverse( FT_Outline*  outline );$/;"	v
 outline	freetype/ftstroke.h	/^  FT_Outline_GetInsideBorder( FT_Outline*  outline );$/;"	v
 outline	freetype/ftstroke.h	/^  FT_Outline_GetOutsideBorder( FT_Outline*  outline );$/;"	v
 outline	freetype/internal/ftgloadr.h	/^    FT_Outline   outline;       \/* outline                   *\/$/;"	m	struct:FT_GlyphLoadRec_
-outline	inc/mypdf.h	/^	pdf_outline *outline;$/;"	m	struct:mypdf_s
-p	inc/pdf.h	/^	int p;$/;"	m	struct:pdf_crypt_s
 pads	freetype/internal/tttypes.h	/^    FT_Char  pads[2];$/;"	m	struct:TT_SBit_LineMetricsRec_
 paeth	src/filt_predict.c	/^paeth(int a, int b, int c)$/;"	f	file:
 page	inc/mypdf.h	/^	pdf_page *page;$/;"	m	struct:mypdf_s
@@ -4406,70 +4084,50 @@ paint_type	freetype/t1tables.h	/^    FT_Byte        paint_type;$/;"	m	struct:CID
 palette	freetype/ftimage.h	/^    void*           palette;$/;"	m	struct:FT_Bitmap_
 palette_mode	freetype/ftimage.h	/^    unsigned char   palette_mode;$/;"	m	struct:FT_Bitmap_
 panose	freetype/tttables.h	/^    FT_Byte    panose[10];$/;"	m	struct:TT_OS2_
-panx	inc/mypdf.h	/^	int panx, pany;$/;"	m	struct:mypdf_s
-pany	inc/mypdf.h	/^	int panx, pany;$/;"	m	struct:mypdf_s
 params	freetype/freetype.h	/^    FT_Parameter*   params;$/;"	m	struct:FT_Open_Args_
 parse	freetype/internal/psaux.h	/^    (*parse)( AFM_Parser  parser );$/;"	m	struct:AFM_Parser_FuncsRec_
 parse_callback	freetype/internal/psaux.h	/^    T1_Decoder_Callback  parse_callback;$/;"	m	struct:T1_DecoderRec_
 parse_charstrings	freetype/internal/psaux.h	/^    (*parse_charstrings)( T1_Decoder  decoder,$/;"	m	struct:T1_Decoder_FuncsRec_
+parse_cmap_prefile	src/cmapdump.c	/^static int parse_cmap_prefile(char *filename)$/;"	f	file:
 parse_state	freetype/internal/psaux.h	/^    T1_ParseState   parse_state;$/;"	m	struct:T1_BuilderRec_
 password	freetype/t1tables.h	/^    FT_Long    password;$/;"	m	struct:PS_PrivateRec_
-path	inc/fitz.h	/^		fz_path *path;$/;"	m	union:fz_displaynode_s::__anon27
-path	inc/pdf.h	/^	fz_path *path;$/;"	m	struct:pdf_csi_s
+path	src/cmapdump.c	/^char *path  = "cmaps";$/;"	v
 pathname	freetype/freetype.h	/^    FT_String*      pathname;$/;"	m	struct:FT_Open_Args_
 pathname	freetype/ftsystem.h	/^    FT_StreamDesc        pathname;$/;"	m	struct:FT_StreamRec_
-pattern	inc/pdf.h	/^	pdf_pattern *pattern;$/;"	m	struct:pdf_material_s
 pclt	freetype/internal/tttypes.h	/^    TT_PCLT               pclt;$/;"	m	struct:TT_FaceRec_
 pdf_addcodespace	src/pdf_cmap.c	/^pdf_addcodespace(pdf_cmap *cmap, int low, int high, int n)$/;"	f
-pdf_addhmtx	src/pdf_fontmtx.c	/^pdf_addhmtx(pdf_fontdesc *font, int lo, int hi, int w)$/;"	f
-pdf_addvmtx	src/pdf_fontmtx.c	/^pdf_addvmtx(pdf_fontdesc *font, int lo, int hi, int x, int y, int w)$/;"	f
 pdf_agestore	src/pdf_store.c	/^pdf_agestore(pdf_store *store, int maxage)$/;"	f
-pdf_annot	inc/pdf.h	/^typedef struct pdf_annot_s pdf_annot;$/;"	t	typeref:struct:pdf_annot_s
-pdf_annot_s	inc/pdf.h	/^struct pdf_annot_s$/;"	s
 pdf_cacheobject	src/pdf_xref.c	/^pdf_cacheobject(pdf_xref *xref, int num, int gen)$/;"	f
 pdf_clearstack	src/pdf_interpret.c	/^pdf_clearstack(pdf_csi *csi)$/;"	f	file:
 pdf_cmap	inc/pdf.h	/^typedef struct pdf_cmap_s pdf_cmap;$/;"	t	typeref:struct:pdf_cmap_s
 pdf_cmap_s	inc/pdf.h	/^struct pdf_cmap_s$/;"	s
+pdf_cmaptable	src/cmapdump.c	/^pdf_cmap *pdf_cmaptable[120]; \/\/注意超过限制$/;"	v
 pdf_cmaptokenfromkeyword	src/pdf_cmap_parse.c	/^pdf_cmaptokenfromkeyword(char *key)$/;"	f	file:
 pdf_codefromstring	src/pdf_cmap_parse.c	/^pdf_codefromstring(char *buf, int len)$/;"	f	file:
-pdf_crypt	inc/pdf.h	/^typedef struct pdf_crypt_s pdf_crypt;$/;"	t	typeref:struct:pdf_crypt_s
-pdf_crypt_s	inc/pdf.h	/^struct pdf_crypt_s$/;"	s
-pdf_cryptfilter	inc/pdf.h	/^typedef struct pdf_cryptfilter_s pdf_cryptfilter;$/;"	t	typeref:struct:pdf_cryptfilter_s
-pdf_cryptfilter_s	inc/pdf.h	/^struct pdf_cryptfilter_s$/;"	s
 pdf_csi	inc/pdf.h	/^typedef struct pdf_csi_s pdf_csi;$/;"	t	typeref:struct:pdf_csi_s
 pdf_csi_s	inc/pdf.h	/^struct pdf_csi_s$/;"	s
-pdf_debugcmap	src/pdf_cmap.c	/^pdf_debugcmap(pdf_cmap *cmap)$/;"	f
 pdf_debugfont	src/pdf_font.c	/^pdf_debugfont(pdf_fontdesc *fontdesc)$/;"	f
-pdf_debugstore	src/pdf_store.c	/^pdf_debugstore(pdf_store *store)$/;"	f
 pdf_debugxref	src/pdf_xref.c	/^pdf_debugxref(pdf_xref *xref)$/;"	f
 pdf_decodecmap	src/pdf_cmap.c	/^pdf_decodecmap(pdf_cmap *cmap, unsigned char *buf, int *cpt)$/;"	f
 pdf_docencoding	src/pdf_fontenc.c	/^const unsigned short pdf_docencoding[256] =$/;"	v
 pdf_dropcmap	src/pdf_cmap.c	/^pdf_dropcmap(pdf_cmap *cmap)$/;"	f
 pdf_dropfont	src/pdf_font.c	/^pdf_dropfont(pdf_fontdesc *fontdesc)$/;"	f
-pdf_endhmtx	src/pdf_fontmtx.c	/^pdf_endhmtx(pdf_fontdesc *font)$/;"	f
-pdf_endvmtx	src/pdf_fontmtx.c	/^pdf_endvmtx(pdf_fontdesc *font)$/;"	f
 pdf_finditem	src/pdf_store.c	/^pdf_finditem(pdf_store *store, void *dropfunc, fz_obj *key)$/;"	f
 pdf_findpageobject	src/pdf_pagetree.c	/^pdf_findpageobject(pdf_xref *xref, fz_obj *page)$/;"	f
-pdf_fontcidtogid	src/pdf_font.c	/^pdf_fontcidtogid(pdf_fontdesc *fontdesc, int cid)$/;"	f
 pdf_fontdesc	inc/pdf.h	/^typedef struct pdf_fontdesc_s pdf_fontdesc;$/;"	t	typeref:struct:pdf_fontdesc_s
 pdf_fontdesc_s	inc/pdf.h	/^struct pdf_fontdesc_s$/;"	s
 pdf_freecsi	src/pdf_interpret.c	/^pdf_freecsi(pdf_csi *csi)$/;"	f	file:
 pdf_freepage	src/pdf_page.c	/^pdf_freepage(pdf_page *page)$/;"	f
 pdf_freestore	src/pdf_store.c	/^pdf_freestore(pdf_store *store)$/;"	f
 pdf_freexref	src/pdf_xref.c	/^pdf_freexref(pdf_xref *xref)$/;"	f
-pdf_function	inc/pdf.h	/^typedef struct pdf_function_s pdf_function;$/;"	t	typeref:struct:pdf_function_s
-pdf_gethmtx	src/pdf_fontmtx.c	/^pdf_gethmtx(pdf_fontdesc *font, int cid)$/;"	f
 pdf_getpagecount	src/pdf_pagetree.c	/^pdf_getpagecount(pdf_xref *xref)$/;"	f
 pdf_getpageobject	src/pdf_pagetree.c	/^pdf_getpageobject(pdf_xref *xref, int number)$/;"	f
 pdf_getpageref	src/pdf_pagetree.c	/^pdf_getpageref(pdf_xref *xref, int number)$/;"	f
-pdf_getvmtx	src/pdf_fontmtx.c	/^pdf_getvmtx(pdf_fontdesc *font, int cid)$/;"	f
 pdf_getwmode	src/pdf_cmap.c	/^pdf_getwmode(pdf_cmap *cmap)$/;"	f
 pdf_gstate	inc/pdf.h	/^typedef struct pdf_gstate_s pdf_gstate;$/;"	t	typeref:struct:pdf_gstate_s
 pdf_gstate_s	inc/pdf.h	/^struct pdf_gstate_s$/;"	s
 pdf_guessfilterlength	src/pdf_stream.c	/^pdf_guessfilterlength(int len, char *filter)$/;"	f	file:
-pdf_hmtx	inc/pdf.h	/^typedef struct pdf_hmtx_s pdf_hmtx;$/;"	t	typeref:struct:pdf_hmtx_s
-pdf_hmtx_s	inc/pdf.h	/^struct pdf_hmtx_s$/;"	s
-pdf_initgstate	src/pdf_build.c	/^pdf_initgstate(pdf_gstate *gs, fz_matrix ctm)$/;"	f
+pdf_initgstate	src/pdf_build.c	/^pdf_initgstate(pdf_gstate *gs)$/;"	f
 pdf_isstream	src/pdf_stream.c	/^pdf_isstream(pdf_xref *xref, int num, int gen)$/;"	f
 pdf_item	src/pdf_store.c	/^typedef struct pdf_item_s pdf_item;$/;"	t	typeref:struct:pdf_item_s	file:
 pdf_item_s	src/pdf_store.c	/^struct pdf_item_s$/;"	s	file:
@@ -4477,16 +4135,9 @@ pdf_keepcmap	src/pdf_cmap.c	/^pdf_keepcmap(pdf_cmap *cmap)$/;"	f
 pdf_keepfont	src/pdf_font.c	/^pdf_keepfont(pdf_fontdesc *fontdesc)$/;"	f
 pdf_lex	src/pdf_lex.c	/^pdf_lex(int *tok, fz_stream *f, char *buf, int n, int *sl)$/;"	f
 pdf_lexcmap	src/pdf_cmap_parse.c	/^pdf_lexcmap(int *tok, fz_stream *file, char *buf, int n, int *sl)$/;"	f	file:
-pdf_link	inc/pdf.h	/^typedef struct pdf_link_s pdf_link;$/;"	t	typeref:struct:pdf_link_s
-pdf_link_s	inc/pdf.h	/^struct pdf_link_s$/;"	s
-pdf_linkkind	inc/pdf.h	/^} pdf_linkkind;$/;"	t	typeref:enum:pdf_linkkind_e
-pdf_linkkind_e	inc/pdf.h	/^typedef enum pdf_linkkind_e$/;"	g
-pdf_loadbuiltinfont	src/pdf_fontfile.c	/^pdf_loadbuiltinfont(pdf_fontdesc *fontdesc, char *fontname)$/;"	f
 pdf_loadembeddedcmap	src/pdf_cmap_load.c	/^pdf_loadembeddedcmap(pdf_cmap **cmapp, pdf_xref *xref, fz_obj *stmobj)$/;"	f
-pdf_loadembeddedfont	src/pdf_fontfile.c	/^pdf_loadembeddedfont(pdf_fontdesc *fontdesc, pdf_xref *xref, fz_obj *stmref)$/;"	f
 pdf_loadencoding	src/pdf_fontenc.c	/^void pdf_loadencoding(char **estrings, char *encoding)$/;"	f
 pdf_loadfont	src/pdf_font.c	/^pdf_loadfont(pdf_fontdesc **fontdescp, pdf_xref *xref, fz_obj *rdb, fz_obj *dict)$/;"	f
-pdf_loadfontdescriptor	src/pdf_font.c	/^pdf_loadfontdescriptor(pdf_fontdesc *fontdesc, pdf_xref *xref, fz_obj *dict, char *collection, char *basefont)$/;"	f
 pdf_loadobject	src/pdf_xref.c	/^pdf_loadobject(fz_obj **objp, pdf_xref *xref, int num, int gen)$/;"	f
 pdf_loadobjstm	src/pdf_xref.c	/^pdf_loadobjstm(pdf_xref *xref, int num, int gen, char *buf, int cap)$/;"	f	file:
 pdf_loadpage	src/pdf_page.c	/^pdf_loadpage(pdf_page **pagep, pdf_xref *xref, fz_obj *dict)$/;"	f
@@ -4496,6 +4147,7 @@ pdf_loadpagetree	src/pdf_pagetree.c	/^pdf_loadpagetree(pdf_xref *xref)$/;"	f
 pdf_loadpagetreenode	src/pdf_pagetree.c	/^pdf_loadpagetreenode(pdf_xref *xref, fz_obj *node, struct info info)$/;"	f	file:
 pdf_loadrawstream	src/pdf_stream.c	/^pdf_loadrawstream(fz_buffer **bufp, pdf_xref *xref, int num, int gen)$/;"	f
 pdf_loadstream	src/pdf_stream.c	/^pdf_loadstream(fz_buffer **bufp, pdf_xref *xref, int num, int gen)$/;"	f
+pdf_loadsystemcmap	src/pdf_cmap_load.c	/^pdf_loadsystemcmap(pdf_cmap **cmapp, char *cmapname)$/;"	f
 pdf_loadtounicode	src/pdf_unicode.c	/^pdf_loadtounicode(pdf_fontdesc *font, pdf_xref *xref,$/;"	f
 pdf_loadtype3font	src/pdf_type3.c	/^pdf_loadtype3font(pdf_fontdesc **fontdescp, pdf_xref *xref, fz_obj *rdb, fz_obj *dict)$/;"	f
 pdf_loadversion	src/pdf_xref.c	/^pdf_loadversion(pdf_xref *xref)$/;"	f	file:
@@ -4506,18 +4158,17 @@ pdf_logpage	src/pdf_debug.c	/^void pdf_logpage(char *fmt, ...)$/;"	f
 pdf_logrsrc	src/pdf_debug.c	/^void pdf_logrsrc(char *fmt, ...)$/;"	f
 pdf_logshade	src/pdf_debug.c	/^void pdf_logshade(char *fmt, ...)$/;"	f
 pdf_logxref	src/pdf_debug.c	/^void pdf_logxref(char *fmt, ...)$/;"	f
+pdf_lookupagl	src/pdf_fontagl.c	/^int pdf_lookupagl(char *name)$/;"	f
+pdf_lookupaglnames	src/pdf_fontagl.c	/^char **pdf_lookupaglnames(int ucs)$/;"	f
 pdf_lookupcmap	src/pdf_cmap.c	/^pdf_lookupcmap(pdf_cmap *cmap, int cpt)$/;"	f
 pdf_lookupcmapfull	src/pdf_cmap.c	/^pdf_lookupcmapfull(pdf_cmap *cmap, int cpt, int *out)$/;"	f
 pdf_macexpert	src/pdf_fontenc.c	/^const char * const pdf_macexpert[256] = { _notdef, _notdef,$/;"	v
 pdf_macroman	src/pdf_fontenc.c	/^const char * const pdf_macroman[256] = { _notdef, _notdef,$/;"	v
-pdf_makewidthtable	src/pdf_font.c	/^pdf_makewidthtable(pdf_fontdesc *fontdesc)$/;"	f	file:
 pdf_maponetomany	src/pdf_cmap.c	/^pdf_maponetomany(pdf_cmap *cmap, int low, int *values, int len)$/;"	f
 pdf_maprangetorange	src/pdf_cmap.c	/^pdf_maprangetorange(pdf_cmap *cmap, int low, int high, int offset)$/;"	f
 pdf_maprangetotable	src/pdf_cmap.c	/^pdf_maprangetotable(pdf_cmap *cmap, int low, int *table, int len)$/;"	f
-pdf_material	inc/pdf.h	/^typedef struct pdf_material_s pdf_material;$/;"	t	typeref:struct:pdf_material_s
-pdf_material_s	inc/pdf.h	/^struct pdf_material_s$/;"	s
 pdf_newcmap	src/pdf_cmap.c	/^pdf_newcmap(void)$/;"	f
-pdf_newcsi	src/pdf_interpret.c	/^pdf_newcsi(pdf_xref *xref, fz_matrix ctm)$/;"	f	file:
+pdf_newcsi	src/pdf_interpret.c	/^pdf_newcsi(pdf_xref *xref)$/;"	f	file:
 pdf_newfontdesc	src/pdf_font.c	/^pdf_newfontdesc(void)$/;"	f
 pdf_newidentitycmap	src/pdf_cmap_load.c	/^pdf_newidentitycmap(int wmode, int bytes)$/;"	f
 pdf_newstore	src/pdf_store.c	/^pdf_newstore(void)$/;"	f
@@ -4529,8 +4180,6 @@ pdf_openstream	src/pdf_stream.c	/^pdf_openstream(fz_stream **stmp, pdf_xref *xre
 pdf_openstreamat	src/pdf_stream.c	/^pdf_openstreamat(fz_stream **stmp, pdf_xref *xref, int num, int gen, fz_obj *dict, int stmofs)$/;"	f
 pdf_openxref	src/pdf_xref.c	/^pdf_openxref(pdf_xref **xrefp, char *filename, char *password)$/;"	f
 pdf_openxrefwithstream	src/pdf_xref.c	/^pdf_openxrefwithstream(pdf_xref **xrefp, fz_stream *file, char *password)$/;"	f
-pdf_outline	inc/pdf.h	/^typedef struct pdf_outline_s pdf_outline;$/;"	t	typeref:struct:pdf_outline_s
-pdf_outline_s	inc/pdf.h	/^struct pdf_outline_s$/;"	s
 pdf_page	inc/pdf.h	/^typedef struct pdf_page_s pdf_page;$/;"	t	typeref:struct:pdf_page_s
 pdf_page_s	inc/pdf.h	/^struct pdf_page_s$/;"	s
 pdf_parsearray	src/pdf_parse.c	/^pdf_parsearray(fz_obj **op, pdf_xref *xref, fz_stream *file, char *buf, int cap)$/;"	f
@@ -4546,8 +4195,6 @@ pdf_parsedict	src/pdf_parse.c	/^pdf_parsedict(fz_obj **op, pdf_xref *xref, fz_st
 pdf_parseindobj	src/pdf_parse.c	/^pdf_parseindobj(fz_obj **op, pdf_xref *xref,$/;"	f
 pdf_parsestmobj	src/pdf_parse.c	/^pdf_parsestmobj(fz_obj **op, pdf_xref *xref, fz_stream *file, char *buf, int cap)$/;"	f
 pdf_parsewmode	src/pdf_cmap_parse.c	/^pdf_parsewmode(pdf_cmap *cmap, fz_stream *file)$/;"	f	file:
-pdf_pattern	inc/pdf.h	/^typedef struct pdf_pattern_s pdf_pattern;$/;"	t	typeref:struct:pdf_pattern_s
-pdf_pattern_s	inc/pdf.h	/^struct pdf_pattern_s$/;"	s
 pdf_range	inc/pdf.h	/^typedef struct pdf_range_s pdf_range;$/;"	t	typeref:struct:pdf_range_s
 pdf_range_flags	src/pdf_cmap.c	23;"	d	file:
 pdf_range_high	src/pdf_cmap.c	22;"	d	file:
@@ -4571,37 +4218,25 @@ pdf_resizexref	src/pdf_xref.c	/^pdf_resizexref(pdf_xref *xref, int newlen)$/;"	f
 pdf_runcsibuffer	src/pdf_interpret.c	/^pdf_runcsibuffer(pdf_csi *csi, fz_obj *rdb, fz_buffer *contents)$/;"	f
 pdf_runcsifile	src/pdf_interpret.c	/^pdf_runcsifile(pdf_csi *csi, fz_obj *rdb, fz_stream *file, char *buf, int buflen)$/;"	f	file:
 pdf_runkeyword	src/pdf_interpret.c	/^pdf_runkeyword(pdf_csi *csi, fz_obj *rdb, char *buf)$/;"	f	file:
-pdf_runpage	src/pdf_interpret.c	/^pdf_runpage(pdf_xref *xref,pdf_page *page,fz_matrix ctm)$/;"	f
-pdf_setdefaulthmtx	src/pdf_fontmtx.c	/^pdf_setdefaulthmtx(pdf_fontdesc *font, int w)$/;"	f
-pdf_setdefaultvmtx	src/pdf_fontmtx.c	/^pdf_setdefaultvmtx(pdf_fontdesc *font, int y, int w)$/;"	f
-pdf_setfontwmode	src/pdf_fontmtx.c	/^pdf_setfontwmode(pdf_fontdesc *font, int wmode)$/;"	f
+pdf_runpage	src/pdf_interpret.c	/^pdf_runpage(pdf_xref *xref,pdf_page *page)$/;"	f
+pdf_setfontwmode	src/pdf_font.c	/^pdf_setfontwmode(pdf_fontdesc *font, int wmode)$/;"	f
 pdf_setusecmap	src/pdf_cmap.c	/^pdf_setusecmap(pdf_cmap *cmap, pdf_cmap *usecmap)$/;"	f
 pdf_setwmode	src/pdf_cmap.c	/^pdf_setwmode(pdf_cmap *cmap, int wmode)$/;"	f
-pdf_showpage	src/mypdf.c	/^static void pdf_showpage(mypdf_t *app)$/;"	f	file:
+pdf_showcontents	src/pdf_build.c	/^pdf_showcontents(pdf_csi *csi, int cid)$/;"	f	file:
+pdf_showpage	src/mypdf.c	/^static void pdf_showpage(mypdf_t *mypdf)$/;"	f	file:
 pdf_showtext	src/pdf_build.c	/^pdf_showtext(pdf_csi *csi, fz_obj *text)$/;"	f
 pdf_sortcmap	src/pdf_cmap.c	/^pdf_sortcmap(pdf_cmap *cmap)$/;"	f
 pdf_standard	src/pdf_fontenc.c	/^const char * const pdf_standard[256] = { _notdef, _notdef,$/;"	v
 pdf_store	inc/pdf.h	/^typedef struct pdf_store_s pdf_store;$/;"	t	typeref:struct:pdf_store_s
 pdf_store_s	src/pdf_store.c	/^struct pdf_store_s$/;"	s	file:
 pdf_storeitem	src/pdf_store.c	/^pdf_storeitem(pdf_store *store, void *keepfunc, void *dropfunc, fz_obj *key, void *val)$/;"	f
-pdf_streamhascrypt	src/pdf_stream.c	/^pdf_streamhascrypt(fz_obj *stm)$/;"	f	file:
 pdf_tokenfromkeyword	src/pdf_lex.c	/^pdf_tokenfromkeyword(char *key)$/;"	f	file:
-pdf_tomatrix	src/pdf_parse.c	/^fz_matrix pdf_tomatrix(fz_obj *array)$/;"	f
-pdf_torect	src/pdf_parse.c	/^fz_rect pdf_torect(fz_obj *array)$/;"	f
 pdf_updateobject	src/pdf_xref.c	/^pdf_updateobject(pdf_xref *xref, int num, int gen, fz_obj *newobj)$/;"	f
-pdf_vmtx	inc/pdf.h	/^typedef struct pdf_vmtx_s pdf_vmtx;$/;"	t	typeref:struct:pdf_vmtx_s
-pdf_vmtx_s	inc/pdf.h	/^struct pdf_vmtx_s$/;"	s
 pdf_winansi	src/pdf_fontenc.c	/^const char * const pdf_winansi[256] = { _notdef, _notdef, _notdef,$/;"	v
-pdf_xobject	inc/pdf.h	/^typedef struct pdf_xobject_s pdf_xobject;$/;"	t	typeref:struct:pdf_xobject_s
-pdf_xobject_s	inc/pdf.h	/^struct pdf_xobject_s$/;"	s
 pdf_xref	inc/pdf.h	/^typedef struct pdf_xref_s pdf_xref;$/;"	t	typeref:struct:pdf_xref_s
 pdf_xref_s	inc/pdf.h	/^struct pdf_xref_s$/;"	s
 pdf_xrefentry	inc/pdf.h	/^typedef struct pdf_xrefentry_s pdf_xrefentry;$/;"	t	typeref:struct:pdf_xrefentry_s
 pdf_xrefentry_s	inc/pdf.h	/^struct pdf_xrefentry_s$/;"	s
-mypdf_init	src/mypdf.c	/^void mypdf_init(mypdf_t *app)$/;"	f
-mypdf_open	src/mypdf.c	/^void mypdf_open(mypdf_t *app, char *filename, int fd)$/;"	f
-mypdf_s	inc/mypdf.h	/^struct mypdf_s$/;"	s
-mypdf_t	inc/mypdf.h	/^typedef struct mypdf_s mypdf_t;$/;"	t	typeref:struct:mypdf_s
 pdflog	src/pdf_debug.c	/^static inline void pdflog(int tag, char *name, char *fmt, va_list ap)$/;"	f	file:
 pic_container	freetype/internal/ftobjs.h	/^    FT_PIC_Container   pic_container;$/;"	m	struct:FT_LibraryRec_
 pitch	freetype/ftcache.h	/^    FT_Short  pitch;$/;"	m	struct:FTC_SBitRec_
@@ -4617,7 +4252,6 @@ platform_id	freetype/ftsnames.h	/^    FT_UShort  platform_id;$/;"	m	struct:FT_Sf
 pointer	freetype/ftsystem.h	/^    void*  pointer;$/;"	m	union:FT_StreamDesc_
 pointer	freetype/fttypes.h	/^    const FT_Byte*  pointer;$/;"	m	struct:FT_Data_
 points	freetype/ftimage.h	/^    FT_Vector*  points;          \/* the outline's points               *\/$/;"	m	struct:FT_Outline_
-popclip	inc/fitz.h	/^	void (*popclip)(void *);$/;"	m	struct:fz_device_s
 pos	freetype/ftsystem.h	/^    unsigned long        pos;$/;"	m	struct:FT_StreamRec_
 pos	inc/fitz.h	/^	int pos;$/;"	m	struct:fz_stream_s
 pos_x	freetype/internal/psaux.h	/^    FT_Pos          pos_x;$/;"	m	struct:T1_BuilderRec_
@@ -4629,6 +4263,7 @@ pp1	freetype/internal/tttypes.h	/^    FT_Vector        pp1;$/;"	m	struct:TT_Load
 pp2	freetype/internal/tttypes.h	/^    FT_Vector        pp2;$/;"	m	struct:TT_LoaderRec_
 pp3	freetype/internal/tttypes.h	/^    FT_Vector        pp3;$/;"	m	struct:TT_LoaderRec_
 pp4	freetype/internal/tttypes.h	/^    FT_Vector        pp4;$/;"	m	struct:TT_LoaderRec_
+precmap_init	src/cmapdump.c	/^int precmap_init()$/;"	f
 predictor	src/filt_predict.c	/^	int predictor;$/;"	m	struct:fz_predict_s	file:
 prev	freetype/fttypes.h	/^    FT_ListNode  prev;$/;"	m	struct:FT_ListNodeRec_
 prev	src/filt_lzwd.c	/^	int prev;			\/* prev code (in string) *\/$/;"	m	struct:lzw_code_s	file:
@@ -4653,8 +4288,7 @@ psnames	freetype/internal/t1types.h	/^    const void*     psnames;$/;"	m	struct:
 psnames	freetype/internal/t1types.h	/^    void*            psnames;$/;"	m	struct:CID_FaceRec_
 psnames	freetype/internal/tttypes.h	/^    void*                 psnames;$/;"	m	struct:TT_FaceRec_
 putcomponent	src/filt_predict.c	/^putcomponent(unsigned char *buf, int x, int bpc, int value)$/;"	f	file:
-r	inc/fitz.h	/^		} r;$/;"	m	union:fz_obj_s::__anon19	typeref:struct:fz_obj_s::__anon19::__anon23
-r	inc/pdf.h	/^	int r;$/;"	m	struct:pdf_crypt_s
+r	inc/fitz.h	/^		} r;$/;"	m	union:fz_obj_s::__anon18	typeref:struct:fz_obj_s::__anon18::__anon22
 random_seed	freetype/internal/ftobjs.h	/^    FT_Int32             random_seed;$/;"	m	struct:FT_Face_InternalRec_
 range_shift	freetype/internal/tttypes.h	/^    FT_UShort  range_shift;$/;"	m	struct:SFNT_HeaderRec_
 ranges	inc/pdf.h	/^	pdf_range *ranges;$/;"	m	struct:pdf_cmap_s
@@ -4688,30 +4322,21 @@ readnull	src/filt_basic.c	/^readnull(fz_stream *stm, unsigned char *buf, int len
 readpredict	src/filt_predict.c	/^readpredict(fz_stream *stm, unsigned char *buf, int len)$/;"	f	file:
 readrld	src/filt_basic.c	/^readrld(fz_stream *stm, unsigned char *buf, int len)$/;"	f	file:
 realloc	freetype/ftsystem.h	/^    FT_Realloc_Func  realloc;$/;"	m	struct:FT_MemoryRec_
-rect	inc/fitz.h	/^	fz_rect rect;$/;"	m	struct:fz_displaynode_s
-rect	inc/pdf.h	/^	fz_rect rect;$/;"	m	struct:pdf_annot_s
-rect	inc/pdf.h	/^	fz_rect rect;$/;"	m	struct:pdf_link_s
 ref	src/filt_faxd.c	/^	unsigned char *ref;$/;"	m	struct:fz_faxd_s	file:
 ref	src/filt_predict.c	/^	unsigned char *ref;$/;"	m	struct:fz_predict_s	file:
 refcount	freetype/internal/ftobjs.h	/^    FT_Int             refcount;$/;"	m	struct:FT_LibraryRec_
 refcount	freetype/internal/ftobjs.h	/^    FT_Int  refcount;$/;"	m	struct:FT_Face_InternalRec_
 refkey	src/pdf_store.c	/^struct refkey$/;"	s	file:
 refs	inc/fitz.h	/^	int refs;$/;"	m	struct:fz_buffer_s
-refs	inc/fitz.h	/^	int refs;$/;"	m	struct:fz_colorspace_s
 refs	inc/fitz.h	/^	int refs;$/;"	m	struct:fz_font_s
 refs	inc/fitz.h	/^	int refs;$/;"	m	struct:fz_obj_s
-refs	inc/fitz.h	/^	int refs;$/;"	m	struct:fz_pixmap_s
-refs	inc/fitz.h	/^	int refs;$/;"	m	struct:fz_shade_s
 refs	inc/fitz.h	/^	int refs;$/;"	m	struct:fz_stream_s
 refs	inc/pdf.h	/^	int refs;$/;"	m	struct:pdf_cmap_s
 refs	inc/pdf.h	/^	int refs;$/;"	m	struct:pdf_fontdesc_s
-refs	inc/pdf.h	/^	int refs;$/;"	m	struct:pdf_pattern_s
-refs	inc/pdf.h	/^	int refs;$/;"	m	struct:pdf_xobject_s
 registry	freetype/t1tables.h	/^    FT_String*      registry;$/;"	m	struct:CID_FaceInfoRec_
 release	freetype/internal/psaux.h	/^    (*release)( PS_Table  table );$/;"	m	struct:PS_Table_FuncsRec_
 remain	src/filt_basic.c	/^	int remain;$/;"	m	struct:nullfilter	file:
 render	freetype/internal/ftobjs.h	/^    FT_Renderer_RenderFunc  render;$/;"	m	struct:FT_RendererRec_
-render	inc/pdf.h	/^	int render;$/;"	m	struct:pdf_gstate_s
 render_glyph	freetype/ftrender.h	/^    FT_Renderer_RenderFunc     render_glyph;$/;"	m	struct:FT_Renderer_Class_
 renderers	freetype/internal/ftobjs.h	/^    FT_ListRec         renderers;        \/* list of renderers        *\/$/;"	m	struct:FT_LibraryRec_
 request_size	freetype/internal/ftdriver.h	/^    FT_Size_RequestFunc      request_size;$/;"	m	struct:FT_Driver_ClassRec_
@@ -4722,16 +4347,12 @@ reserved	freetype/internal/tttypes.h	/^    FT_UShort  reserved;$/;"	m	struct:WOF
 reserved1	freetype/ftwinfnt.h	/^    FT_ULong   reserved1[4];$/;"	m	struct:FT_WinFNT_HeaderRec_
 reset	freetype/internal/pshints.h	/^    T1_Hints_ResetFunc     reset;$/;"	m	struct:T1_Hints_FuncsRec_
 reset_face	freetype/internal/autohint.h	/^    FT_AutoHinter_GlobalResetFunc  reset_face;$/;"	m	struct:FT_AutoHinter_InterfaceRec_
-resolution	inc/mypdf.h	/^	int resolution;$/;"	m	struct:mypdf_s
 resources	inc/pdf.h	/^	fz_obj *resources;$/;"	m	struct:pdf_page_s
-resources	inc/pdf.h	/^	fz_obj *resources;$/;"	m	struct:pdf_pattern_s
-resources	inc/pdf.h	/^	fz_obj *resources;$/;"	m	struct:pdf_xobject_s
 resources	src/pdf_pagetree.c	/^	fz_obj *resources;$/;"	m	struct:info	file:
-restrict	inc/fitz.h	73;"	d
-restrict	inc/fitz.h	81;"	d
-restrict	inc/fitz.h	89;"	d
+restrict	inc/fitz.h	67;"	d
+restrict	inc/fitz.h	75;"	d
+restrict	inc/fitz.h	83;"	d
 ridx	src/filt_faxd.c	/^	int ridx;$/;"	m	struct:fz_faxd_s	file:
-rise	inc/pdf.h	/^	float rise;$/;"	m	struct:pdf_gstate_s
 rk	inc/fitz.h	/^	unsigned long *rk; \/* AES round keys *\/$/;"	m	struct:fz_aes_s
 rlen	inc/pdf.h	/^	int rlen, rcap;$/;"	m	struct:pdf_cmap_s
 rm	src/filt_faxd.c	/^static const unsigned char rm[8] = {$/;"	v	file:
@@ -4745,9 +4366,6 @@ root	freetype/internal/t1types.h	/^    FT_FaceRec       root;$/;"	m	struct:CID_F
 root	freetype/internal/t1types.h	/^    FT_FaceRec      root;$/;"	m	struct:T1_FaceRec_
 root	freetype/internal/tttypes.h	/^    FT_FaceRec            root;$/;"	m	struct:TT_FaceRec_
 root	src/pdf_store.c	/^	pdf_item *root;		\/* linked list for everything else *\/$/;"	m	struct:pdf_store_s	file:
-rotate	inc/pdf.h	/^	int rotate;$/;"	m	struct:pdf_page_s
-rotate	inc/mypdf.h	/^	int rotate;$/;"	m	struct:mypdf_s
-rotate	src/pdf_pagetree.c	/^	fz_obj *rotate;$/;"	m	struct:info	file:
 round_stem_up	freetype/t1tables.h	/^    FT_Bool    round_stem_up;$/;"	m	struct:PS_PrivateRec_
 rows	freetype/ftimage.h	/^    unsigned int    rows;$/;"	m	struct:FT_Bitmap_
 rows	src/filt_faxd.c	/^	int rows;$/;"	m	struct:fz_faxd_s	file:
@@ -4760,13 +4378,12 @@ rsb_delta	freetype/freetype.h	/^    FT_Pos            rsb_delta;$/;"	m	struct:FT
 run	src/filt_basic.c	/^	int run, n, c;$/;"	m	struct:fz_rld_s	file:
 runelen	src/base_string.c	/^runelen(int c)$/;"	f
 runetochar	src/base_string.c	/^runetochar(char *str, int *rune)$/;"	f
-s	inc/fitz.h	/^		} s;$/;"	m	union:fz_obj_s::__anon19	typeref:struct:fz_obj_s::__anon19::__anon20
+s	inc/fitz.h	/^		} s;$/;"	m	union:fz_obj_s::__anon18	typeref:struct:fz_obj_s::__anon18::__anon19
 sCapHeight	freetype/tttables.h	/^    FT_Short   sCapHeight;$/;"	m	struct:TT_OS2_
 sFamilyClass	freetype/tttables.h	/^    FT_Short   sFamilyClass;$/;"	m	struct:TT_OS2_
 sTypoAscender	freetype/tttables.h	/^    FT_Short   sTypoAscender;$/;"	m	struct:TT_OS2_
 sTypoDescender	freetype/tttables.h	/^    FT_Short   sTypoDescender;$/;"	m	struct:TT_OS2_
 sTypoLineGap	freetype/tttables.h	/^    FT_Short   sTypoLineGap;$/;"	m	struct:TT_OS2_
-samples	inc/fitz.h	/^	unsigned char *samples;$/;"	m	struct:fz_pixmap_s
 sbit_num_strikes	freetype/internal/tttypes.h	/^    FT_UInt               sbit_num_strikes;$/;"	m	struct:TT_FaceRec_
 sbit_ranges	freetype/internal/tttypes.h	/^    TT_SBit_Range           sbit_ranges;$/;"	m	struct:TT_SBit_StrikeRec_
 sbit_scales	freetype/internal/tttypes.h	/^    TT_SBit_Scale         sbit_scales;$/;"	m	struct:TT_FaceRec_
@@ -4774,21 +4391,14 @@ sbit_strike_map	freetype/internal/tttypes.h	/^    FT_UInt*              sbit_str
 sbit_table	freetype/internal/tttypes.h	/^    FT_Byte*              sbit_table;$/;"	m	struct:TT_FaceRec_
 sbit_table_size	freetype/internal/tttypes.h	/^    FT_ULong              sbit_table_size;$/;"	m	struct:TT_FaceRec_
 sbit_table_type	freetype/internal/tttypes.h	/^    TT_SbitTableType      sbit_table_type;$/;"	m	struct:TT_FaceRec_
-scale	inc/pdf.h	/^	float scale;$/;"	m	struct:pdf_gstate_s
 scratch	inc/pdf.h	/^	char scratch[65536];$/;"	m	struct:pdf_xref_s
-scrh	inc/mypdf.h	/^	int scrw, scrh;$/;"	m	struct:mypdf_s
-scrw	inc/mypdf.h	/^	int scrw, scrh;$/;"	m	struct:mypdf_s
 sd_bytes	freetype/t1tables.h	/^    FT_Int         sd_bytes;$/;"	m	struct:CID_FaceDictRec_
 seac	freetype/internal/psaux.h	/^    FT_Bool              seac;$/;"	m	struct:T1_DecoderRec_
-search	inc/mypdf.h	/^	char search[512];$/;"	m	struct:mypdf_s
 search_range	freetype/internal/tttypes.h	/^    FT_UShort  search_range;$/;"	m	struct:SFNT_HeaderRec_
 seek	inc/fitz.h	/^	void (*seek)(fz_stream *stm, int offset, int whence);$/;"	m	struct:fz_stream_s
 seekbuffer	src/stm_open.c	/^static void seekbuffer(fz_stream *stm, int offset, int whence)$/;"	f	file:
 seekfile	src/stm_open.c	/^static void seekfile(fz_stream *stm, int offset, int whence)$/;"	f	file:
 select_size	freetype/internal/ftdriver.h	/^    FT_Size_SelectFunc       select_size;$/;"	m	struct:FT_Driver_ClassRec_
-selr	inc/mypdf.h	/^	fz_bbox selr;$/;"	m	struct:mypdf_s
-selx	inc/mypdf.h	/^	int selx, sely;$/;"	m	struct:mypdf_s
-sely	inc/mypdf.h	/^	int selx, sely;$/;"	m	struct:mypdf_s
 sep	src/obj_print.c	/^	int sep;$/;"	m	struct:fmt	file:
 serv_data	freetype/internal/ftserv.h	/^    const void*  serv_data;   \/* service pointer\/data *\/$/;"	m	struct:FT_ServiceDescRec_
 serv_id	freetype/internal/ftserv.h	/^    const char*  serv_id;     \/* service name         *\/$/;"	m	struct:FT_ServiceDescRec_
@@ -4805,22 +4415,9 @@ set_scale	freetype/internal/pshints.h	/^    PSH_Globals_SetScaleFunc  set_scale;
 setbits	src/filt_faxd.c	/^setbits(unsigned char *line, int x0, int x1)$/;"	f	file:
 sfnt	freetype/internal/ftpic.h	/^    void*  sfnt;$/;"	m	struct:FT_PIC_Container_
 sfnt	freetype/internal/tttypes.h	/^    void*                 sfnt;$/;"	m	struct:TT_FaceRec_
-shade	inc/fitz.h	/^		fz_shade *shade;$/;"	m	union:fz_displaynode_s::__anon27
-shade	inc/pdf.h	/^	fz_shade *shade;$/;"	m	struct:pdf_material_s
 shift	freetype/ftimage.h	/^    int                     shift;$/;"	m	struct:FT_Outline_Funcs_
 short_metrics	freetype/tttables.h	/^    void*      short_metrics;$/;"	m	struct:TT_HoriHeader_
 short_metrics	freetype/tttables.h	/^    void*      short_metrics;$/;"	m	struct:TT_VertHeader_
-showbinary	src/pdfshow.c	/^static int showbinary = 0;$/;"	v	file:
-showcolumn	src/pdfshow.c	/^static int showcolumn;$/;"	v	file:
-showdecode	src/pdfshow.c	/^static int showdecode = 1;$/;"	v	file:
-showgrep	src/pdfshow.c	/^static void showgrep(char *filename)$/;"	f	file:
-showobject	src/pdfshow.c	/^static void showobject(int num, int gen)$/;"	f	file:
-showpagetree	src/pdfshow.c	/^static void showpagetree(void)$/;"	f	file:
-showsafe	src/pdfshow.c	/^static void showsafe(unsigned char *buf, int n)$/;"	f	file:
-showstream	src/pdfshow.c	/^static void showstream(int num, int gen)$/;"	f	file:
-showtrailer	src/pdfshow.c	/^static void showtrailer(void)$/;"	f	file:
-showxref	src/pdfshow.c	/^static void showxref(void)$/;"	f	file:
-shrinkwrap	inc/mypdf.h	/^	int shrinkwrap;$/;"	m	struct:mypdf_s
 signature	freetype/internal/tttypes.h	/^    FT_ULong   signature;$/;"	m	struct:WOFF_HeaderRec_
 size	freetype/freetype.h	/^    FT_Pos    size;$/;"	m	struct:FT_Bitmap_Size_
 size	freetype/freetype.h	/^    FT_Size           size;$/;"	m	struct:FT_FaceRec_
@@ -4832,7 +4429,6 @@ size	freetype/internal/ftobjs.h	/^    FT_ULong               size;$/;"	m	struct:
 size	freetype/internal/ftstream.h	/^    FT_Byte    size;$/;"	m	struct:FT_Frame_Field_
 size	freetype/internal/psaux.h	/^    FT_Byte             size;         \/* size of field in bytes         *\/$/;"	m	struct:T1_FieldRec_
 size	freetype/internal/tttypes.h	/^    TT_Size          size;$/;"	m	struct:TT_LoaderRec_
-size	inc/fitz.h	/^	float size;$/;"	m	struct:fz_textspan_s
 size	inc/pdf.h	/^	float size;$/;"	m	struct:pdf_gstate_s
 size	src/base_hash.c	/^	int size;$/;"	m	struct:fz_hashtable_s	file:
 size_object_size	freetype/internal/ftdriver.h	/^    FT_Long                  size_object_size;$/;"	m	struct:FT_Driver_ClassRec_
@@ -4849,10 +4445,7 @@ smooth	freetype/internal/ftpic.h	/^    void*  smooth;$/;"	m	struct:FT_PIC_Contai
 snap_heights	freetype/t1tables.h	/^    FT_Short   snap_heights[13];  \/* including std height *\/$/;"	m	struct:PS_PrivateRec_
 snap_widths	freetype/t1tables.h	/^    FT_Short   snap_widths [13];  \/* including std width  *\/$/;"	m	struct:PS_PrivateRec_
 snprintf	inc/fitz.h	39;"	d
-softmask	inc/pdf.h	/^	pdf_xobject *softmask;$/;"	m	struct:pdf_gstate_s
-softmaskbc	inc/pdf.h	/^	float softmaskbc[FZ_MAXCOLORS];$/;"	m	struct:pdf_gstate_s
-softmaskctm	inc/pdf.h	/^	fz_matrix softmaskctm;$/;"	m	struct:pdf_gstate_s
-sorted	inc/fitz.h	/^			char sorted;$/;"	m	struct:fz_obj_s::__anon19::__anon22
+sorted	inc/fitz.h	/^			char sorted;$/;"	m	struct:fz_obj_s::__anon18::__anon21
 source	freetype/ftimage.h	/^    const void*             source;$/;"	m	struct:FT_Raster_Params_
 sph_compatibility_mode	freetype/internal/tttypes.h	/^    FT_Bool               sph_compatibility_mode;$/;"	m	struct:TT_FaceRec_
 sph_found_func_flags	freetype/internal/tttypes.h	/^    FT_ULong              sph_found_func_flags; \/* special functions found *\/$/;"	m	struct:TT_FaceRec_
@@ -4873,7 +4466,6 @@ state	inc/fitz.h	/^	void *state;$/;"	m	struct:fz_stream_s
 stem	freetype/internal/pshints.h	/^    T1_Hints_SetStemFunc   stem;$/;"	m	struct:T1_Hints_FuncsRec_
 stem3	freetype/internal/pshints.h	/^    T1_Hints_SetStem3Func  stem3;$/;"	m	struct:T1_Hints_FuncsRec_
 stems	freetype/internal/pshints.h	/^    T2_Hints_StemsFunc    stems;$/;"	m	struct:T2_Hints_FuncsRec_
-stmf	inc/pdf.h	/^	pdf_cryptfilter stmf;$/;"	m	struct:pdf_crypt_s
 stmlen	src/pdf_repair.c	/^	int stmlen;$/;"	m	struct:entry	file:
 stmofs	inc/pdf.h	/^	int stmofs;	\/* on-disk stream *\/$/;"	m	struct:pdf_xrefentry_s
 stmofs	src/pdf_repair.c	/^	int stmofs;$/;"	m	struct:entry	file:
@@ -4881,7 +4473,6 @@ storageOffset	freetype/internal/tttypes.h	/^    FT_UInt         storageOffset;$/
 store	inc/pdf.h	/^	struct pdf_store_s *store;$/;"	m	struct:pdf_xref_s	typeref:struct:pdf_xref_s::pdf_store_s
 str	freetype/internal/fthash.h	/^    const char*  str;$/;"	m	union:FT_Hashkey_
 str	src/res_font.c	/^	char *str;$/;"	m	struct:ft_error	file:
-strcmpignorespace	src/pdf_font.c	/^static int strcmpignorespace(char *a, char *b)$/;"	f	file:
 stream	freetype/freetype.h	/^    FT_Stream         stream;$/;"	m	struct:FT_FaceRec_
 stream	freetype/freetype.h	/^    FT_Stream       stream;$/;"	m	struct:FT_Open_Args_
 stream	freetype/internal/ftstream.h	/^  FT_Stream_Close( FT_Stream  stream );$/;"	v
@@ -4896,7 +4487,6 @@ stream	freetype/internal/ftstream.h	/^  FT_Stream_Pos( FT_Stream  stream );$/;"	
 stream	freetype/internal/psaux.h	/^    AFM_Stream    stream;$/;"	m	struct:AFM_ParserRec_
 stream	freetype/internal/tttypes.h	/^    FT_Stream        stream;$/;"	m	struct:TT_LoaderRec_
 stream	freetype/internal/tttypes.h	/^    FT_Stream       stream;$/;"	m	struct:TT_NameTableRec_
-strf	inc/pdf.h	/^	pdf_cryptfilter strf;$/;"	m	struct:pdf_crypt_s
 strid	freetype/ftmm.h	/^    FT_UInt     strid;$/;"	m	struct:FT_Var_Axis_
 strid	freetype/ftmm.h	/^    FT_UInt    strid;$/;"	m	struct:FT_Var_Named_Style_
 stride	src/filt_faxd.c	/^	int stride;$/;"	m	struct:fz_faxd_s	file:
@@ -4914,16 +4504,11 @@ string_len	freetype/ftsnames.h	/^    FT_UInt    string_len;  \/* in bytes       
 string_len	freetype/ftsnames.h	/^    FT_UInt   string_len;  \/* in bytes                              *\/$/;"	m	struct:FT_SfntLangTag_
 strings	freetype/internal/tttypes.h	/^    FT_Byte*   strings;$/;"	m	struct:TT_BDFRec_
 strings_size	freetype/internal/tttypes.h	/^    FT_ULong   strings_size;$/;"	m	struct:TT_BDFRec_
-stroke	inc/fitz.h	/^	fz_strokestate *stroke;$/;"	m	struct:fz_displaynode_s
-stroke	inc/pdf.h	/^	pdf_material stroke;$/;"	m	struct:pdf_gstate_s
 stroke_width	freetype/internal/t1types.h	/^    FT_Fixed         stroke_width;$/;"	m	struct:T1_FontRec_
 stroke_width	freetype/t1tables.h	/^    FT_Pos         stroke_width;$/;"	m	struct:CID_FaceDictRec_
-strokepath	inc/fitz.h	/^	void (*strokepath)(void *, fz_path *, fz_strokestate *, fz_matrix, fz_colorspace *, float *color, float alpha);$/;"	m	struct:fz_device_s
 stroker	freetype/ftstroke.h	/^  FT_Stroker_Done( FT_Stroker  stroker );$/;"	v
 stroker	freetype/ftstroke.h	/^  FT_Stroker_EndSubPath( FT_Stroker  stroker );$/;"	v
 stroker	freetype/ftstroke.h	/^  FT_Stroker_Rewind( FT_Stroker  stroker );$/;"	v
-strokestate	inc/pdf.h	/^	fz_strokestate strokestate;$/;"	m	struct:pdf_gstate_s
-stroketext	inc/fitz.h	/^	void (*stroketext)(void *, fz_text *, fz_strokestate *, fz_matrix, fz_colorspace *, float *color, float alpha);$/;"	m	struct:fz_device_s
 strtoll	inc/fitz.h	40;"	d
 style_flags	freetype/freetype.h	/^    FT_Long           style_flags;$/;"	m	struct:FT_FaceRec_
 style_name	freetype/freetype.h	/^    FT_String*        style_name;$/;"	m	struct:FT_FaceRec_
@@ -4959,10 +4544,8 @@ t1_builder_funcs	freetype/internal/psaux.h	/^    const T1_Builder_FuncsRec*  t1_
 t1_cmap_classes	freetype/internal/psaux.h	/^    T1_CMap_Classes  t1_cmap_classes;$/;"	m	struct:PSAux_ServiceRec_
 t1_decoder_funcs	freetype/internal/psaux.h	/^    const T1_Decoder_FuncsRec*  t1_decoder_funcs;$/;"	m	struct:PSAux_ServiceRec_
 t1_decrypt	freetype/internal/psaux.h	/^    (*t1_decrypt)( FT_Byte*   buffer,$/;"	m	struct:PSAux_ServiceRec_
-t3matrix	inc/fitz.h	/^	fz_matrix t3matrix;$/;"	m	struct:fz_font_s
 t3procs	inc/fitz.h	/^	fz_buffer **t3procs; \/* has 256 entries if used *\/$/;"	m	struct:fz_font_s
 t3resources	inc/fitz.h	/^	fz_obj *t3resources;$/;"	m	struct:fz_font_s
-t3run	inc/fitz.h	/^	fz_error (*t3run)(struct pdf_xref_s *xref, fz_obj *resources, fz_buffer *contents,$/;"	m	struct:fz_font_s
 t3widths	inc/fitz.h	/^	float *t3widths; \/* has 256 entries if used *\/$/;"	m	struct:fz_font_s
 t3xref	inc/fitz.h	/^	void *t3xref; \/* a pdf_xref for the callback *\/$/;"	m	struct:fz_font_s
 table	freetype/internal/fthash.h	/^    FT_Hashnode*  table;$/;"	m	struct:FT_HashRec_
@@ -4980,16 +4563,8 @@ tags	freetype/internal/tttypes.h	/^    FT_Byte*    tags;        \/* current touc
 tail	freetype/fttypes.h	/^    FT_ListNode  tail;$/;"	m	struct:FT_ListRec_
 target	freetype/ftimage.h	/^    const FT_Bitmap*        target;$/;"	m	struct:FT_Raster_Params_
 tcap	inc/pdf.h	/^	int tlen, tcap;$/;"	m	struct:pdf_cmap_s
-text	inc/fitz.h	/^		fz_text *text;$/;"	m	union:fz_displaynode_s::__anon27
-text	inc/fitz.h	/^	fz_textchar *text;$/;"	m	struct:fz_textspan_s
-text	inc/pdf.h	/^	fz_text *text;$/;"	m	struct:pdf_csi_s
-text	inc/pdf.h	/^	fz_textspan *text;$/;"	m	struct:pdf_page_s
-textmode	inc/pdf.h	/^	int textmode;$/;"	m	struct:pdf_csi_s
 tight	src/obj_print.c	/^	int tight;$/;"	m	struct:fmt	file:
-title	inc/pdf.h	/^	char *title;$/;"	m	struct:pdf_outline_s
 tlen	inc/pdf.h	/^	int tlen, tcap;$/;"	m	struct:pdf_cmap_s
-tlm	inc/pdf.h	/^	fz_matrix tlm;$/;"	m	struct:pdf_csi_s
-tm	inc/pdf.h	/^	fz_matrix tm;$/;"	m	struct:pdf_csi_s
 to_bytes	freetype/internal/psaux.h	/^    (*to_bytes)( PS_Parser  parser,$/;"	m	struct:PS_Parser_FuncsRec_
 to_coord_array	freetype/internal/psaux.h	/^    (*to_coord_array)( PS_Parser  parser,$/;"	m	struct:PS_Parser_FuncsRec_
 to_fixed	freetype/internal/psaux.h	/^    (*to_fixed)( PS_Parser  parser,$/;"	m	struct:PS_Parser_FuncsRec_
@@ -5002,11 +4577,9 @@ top	freetype/ftglyph.h	/^    FT_Int       top;$/;"	m	struct:FT_BitmapGlyphRec_
 top	freetype/internal/psaux.h	/^    FT_Long*             top;$/;"	m	struct:T1_DecoderRec_
 top	inc/pdf.h	/^	int top;$/;"	m	struct:pdf_csi_s
 top_bearing	freetype/internal/tttypes.h	/^    FT_Int           top_bearing;$/;"	m	struct:TT_LoaderRec_
-topctm	inc/pdf.h	/^	fz_matrix topctm;$/;"	m	struct:pdf_csi_s
 totalSfntSize	freetype/internal/tttypes.h	/^    FT_ULong   totalSfntSize;$/;"	m	struct:WOFF_HeaderRec_
 tottfcmap	inc/pdf.h	/^	pdf_cmap *tottfcmap;$/;"	m	struct:pdf_fontdesc_s
 tounicode	inc/pdf.h	/^	pdf_cmap *tounicode;$/;"	m	struct:pdf_fontdesc_s
-toxyz	inc/fitz.h	/^	void (*toxyz)(fz_colorspace *, float *src, float *xyz);$/;"	m	struct:fz_colorspace_s
 trace_count	freetype/internal/ftdebug.h	/^    trace_count$/;"	e	enum:FT_Trace_
 trailer	inc/pdf.h	/^	fz_obj *trailer;$/;"	m	struct:pdf_xref_s
 transform	freetype/internal/ftgloadr.h	/^    FT_Matrix  transform;$/;"	m	struct:FT_SubGlyphRec_
@@ -5014,9 +4587,6 @@ transform_delta	freetype/internal/ftobjs.h	/^    FT_Vector  transform_delta;$/;"
 transform_flags	freetype/internal/ftobjs.h	/^    FT_Int     transform_flags;$/;"	m	struct:FT_Face_InternalRec_
 transform_glyph	freetype/ftrender.h	/^    FT_Renderer_TransformFunc  transform_glyph;$/;"	m	struct:FT_Renderer_Class_
 transform_matrix	freetype/internal/ftobjs.h	/^    FT_Matrix  transform_matrix;$/;"	m	struct:FT_Face_InternalRec_
-transparency	inc/pdf.h	/^	int transparency;$/;"	m	struct:pdf_page_s
-transparency	inc/pdf.h	/^	int transparency;$/;"	m	struct:pdf_xobject_s
-trm	inc/fitz.h	/^	fz_matrix trm;$/;"	m	struct:fz_text_s
 truetype	freetype/internal/ftpic.h	/^    void*  truetype;$/;"	m	struct:FT_PIC_Container_
 ttc_header	freetype/internal/tttypes.h	/^    TTC_HeaderRec         ttc_header;$/;"	m	struct:TT_FaceRec_
 type	freetype/freetype.h	/^    FT_Size_Request_Type  type;$/;"	m	struct:FT_Size_RequestRec_
@@ -5024,16 +4594,14 @@ type	freetype/ftbdf.h	/^    BDF_PropertyType  type;$/;"	m	struct:BDF_PropertyRec
 type	freetype/internal/ftrfork.h	/^    FT_RFork_Rule          type;$/;"	m	struct:ft_raccess_guess_rec_
 type	freetype/internal/psaux.h	/^    T1_FieldType        type;         \/* type of field                  *\/$/;"	m	struct:T1_FieldRec_
 type	freetype/internal/psaux.h	/^    T1_TokenType  type;    \/* type of token                            *\/$/;"	m	struct:T1_TokenRec_
-type	inc/fitz.h	/^	int type; \/* linear, radial, mesh *\/$/;"	m	struct:fz_shade_s
 type	inc/pdf.h	/^	int type;	\/* 0=unset (f)ree i(n)use (o)bjstm *\/$/;"	m	struct:pdf_xrefentry_s
 type1	freetype/internal/t1types.h	/^    T1_FontRec      type1;$/;"	m	struct:T1_FaceRec_
-u	freetype/ftbdf.h	/^    } u;$/;"	m	struct:BDF_PropertyRec_	typeref:union:BDF_PropertyRec_::__anon35
-u	inc/fitz.h	/^	} u;$/;"	m	struct:fz_obj_s	typeref:union:fz_obj_s::__anon19
-u	inc/pdf.h	/^	unsigned char u[48];$/;"	m	struct:pdf_crypt_s
-u32	inc/fitz.h	/^		unsigned int u32[16];$/;"	m	union:fz_sha256_s::__anon18
-u8	inc/fitz.h	/^		unsigned char u8[64];$/;"	m	union:fz_sha256_s::__anon18
-ucs	inc/fitz.h	/^	int ucs; \/* -1 for one ucs to many gid mappings *\/$/;"	m	struct:fz_textel_s
-ue	inc/pdf.h	/^	unsigned char ue[32];$/;"	m	struct:pdf_crypt_s
+u	freetype/ftbdf.h	/^    } u;$/;"	m	struct:BDF_PropertyRec_	typeref:union:BDF_PropertyRec_::__anon24
+u	inc/fitz.h	/^	} u;$/;"	m	struct:fz_obj_s	typeref:union:fz_obj_s::__anon18
+u32	inc/fitz.h	/^		unsigned int u32[16];$/;"	m	union:fz_sha256_s::__anon17
+u8	inc/fitz.h	/^		unsigned char u8[64];$/;"	m	union:fz_sha256_s::__anon17
+ucs	src/pdf_fontagl.c	/^static const struct { char *name; int ucs; }$/;"	m	struct:__anon10	file:
+ucs	src/pdf_fontagl.c	/^static const struct { int ucs; int ofs; }$/;"	m	struct:__anon11	file:
 uid_base	freetype/t1tables.h	/^    FT_ULong        uid_base;$/;"	m	struct:CID_FaceInfoRec_
 ulCodePageRange1	freetype/tttables.h	/^    FT_ULong   ulCodePageRange1;       \/* Bits 0-31   *\/$/;"	m	struct:TT_OS2_
 ulCodePageRange2	freetype/tttables.h	/^    FT_ULong   ulCodePageRange2;       \/* Bits 32-63  *\/$/;"	m	struct:TT_OS2_
@@ -5048,6 +4616,7 @@ underline_position	freetype/freetype.h	/^    FT_Short          underline_positio
 underline_position	freetype/t1tables.h	/^    FT_Short    underline_position;$/;"	m	struct:PS_FontInfoRec_
 underline_thickness	freetype/freetype.h	/^    FT_Short          underline_thickness;$/;"	m	struct:FT_FaceRec_
 underline_thickness	freetype/t1tables.h	/^    FT_UShort   underline_thickness;$/;"	m	struct:PS_FontInfoRec_
+unic2utf	src/map.c	/^char* unic2utf(char *inbuf, size_t inbuf_len)$/;"	f
 unicode	freetype/internal/psaux.h	/^    FT_CMap_Class  unicode;$/;"	m	struct:T1_CMap_ClassesRec_
 unicode	freetype/internal/services/svpscmap.h	/^    FT_UInt32  unicode;      \/* bit 31 set: is glyph variant *\/$/;"	m	struct:PS_UniMap_
 unique_id	freetype/t1tables.h	/^    FT_Int     unique_id;$/;"	m	struct:PS_PrivateRec_
@@ -5064,20 +4633,13 @@ usWidthClass	freetype/tttables.h	/^    FT_UShort  usWidthClass;$/;"	m	struct:TT_
 usWinAscent	freetype/tttables.h	/^    FT_UShort  usWinAscent;$/;"	m	struct:TT_OS2_
 usWinDescent	freetype/tttables.h	/^    FT_UShort  usWinDescent;$/;"	m	struct:TT_OS2_
 use_extra	freetype/internal/ftgloadr.h	/^    FT_Bool          use_extra;$/;"	m	struct:FT_GlyphLoaderRec_
-usebackground	inc/fitz.h	/^	int usebackground;	\/* background color for fills but not 'sh' *\/$/;"	m	struct:fz_shade_s
 usecmap	inc/pdf.h	/^	pdf_cmap *usecmap;$/;"	m	struct:pdf_cmap_s
 usecmapname	inc/pdf.h	/^	char usecmapname[32];$/;"	m	struct:pdf_cmap_s
 used	freetype/internal/fthash.h	/^    FT_UInt  used;$/;"	m	struct:FT_HashRec_
-usefunction	inc/fitz.h	/^	int usefunction;$/;"	m	struct:fz_shade_s
 user	freetype/ftimage.h	/^    void*                   user;$/;"	m	struct:FT_Raster_Params_
 user	freetype/ftsystem.h	/^    void*            user;$/;"	m	struct:FT_MemoryRec_
-user	inc/fitz.h	/^	void *user;$/;"	m	struct:fz_device_s
 user_data	freetype/internal/psaux.h	/^    void*         user_data;$/;"	m	struct:AFM_ParserRec_
-userdata	inc/mypdf.h	/^	void *userdata;$/;"	m	struct:mypdf_s
-v	inc/fitz.h	/^	float v;$/;"	m	union:fz_pathel_s
 v	inc/fitz.h	/^	fz_obj *v;$/;"	m	struct:fz_keyval_s
-v	inc/pdf.h	/^	float v[32];$/;"	m	struct:pdf_material_s
-v	inc/pdf.h	/^	int v;$/;"	m	struct:pdf_crypt_s
 vadvance	freetype/internal/tttypes.h	/^    FT_Int           vadvance;$/;"	m	struct:TT_LoaderRec_
 val	src/base_hash.c	/^	void *val;$/;"	m	struct:fz_hashentry_s	file:
 val	src/filt_faxd.c	/^	short val;$/;"	m	struct:cfd_node_s	file:
@@ -5118,11 +4680,6 @@ vert_metrics_size	freetype/internal/tttypes.h	/^    FT_ULong              vert_m
 vertical	freetype/internal/tttypes.h	/^    TT_VertHeader         vertical;     \/* TT Vertical header, if present *\/$/;"	m	struct:TT_FaceRec_
 vertical_info	freetype/internal/tttypes.h	/^    FT_Bool               vertical_info;$/;"	m	struct:TT_FaceRec_
 vertical_resolution	freetype/ftwinfnt.h	/^    FT_UShort  vertical_resolution;$/;"	m	struct:FT_WinFNT_HeaderRec_
-vmtx	inc/pdf.h	/^	pdf_vmtx *vmtx;$/;"	m	struct:pdf_fontdesc_s
-vmtxcap	inc/pdf.h	/^	int nvmtx, vmtxcap;$/;"	m	struct:pdf_fontdesc_s
-w	inc/fitz.h	/^	int x, y, w, h, n;$/;"	m	struct:fz_pixmap_s
-w	inc/pdf.h	/^	int w;	\/* type3 fonts can be big! *\/$/;"	m	struct:pdf_hmtx_s
-w	inc/pdf.h	/^	short w;$/;"	m	struct:pdf_vmtx_s
 weight	freetype/ftwinfnt.h	/^    FT_UShort  weight;$/;"	m	struct:FT_WinFNT_HeaderRec_
 weight	freetype/t1tables.h	/^    FT_String*  weight;$/;"	m	struct:PS_FontInfoRec_
 weight_vector	freetype/t1tables.h	/^    FT_Fixed*        weight_vector;$/;"	m	struct:PS_BlendRec_
@@ -5137,33 +4694,20 @@ width	freetype/internal/tttypes.h	/^    FT_Byte  width;$/;"	m	struct:TT_SBit_Sma
 width	freetype/internal/tttypes.h	/^    FT_UShort  width;$/;"	m	struct:TT_SBit_MetricsRec_
 widthcount	inc/fitz.h	/^	int widthcount;$/;"	m	struct:fz_font_s
 widthtable	inc/fitz.h	/^	int *widthtable;$/;"	m	struct:fz_font_s
-winh	inc/mypdf.h	/^	int winw, winh;$/;"	m	struct:mypdf_s
-winw	inc/mypdf.h	/^	int winw, winh;$/;"	m	struct:mypdf_s
-wmode	inc/fitz.h	/^	int wmode;$/;"	m	struct:fz_text_s
-wmode	inc/fitz.h	/^	int wmode;$/;"	m	struct:fz_textspan_s
 wmode	inc/pdf.h	/^	int wmode;$/;"	m	struct:pdf_cmap_s
 wmode	inc/pdf.h	/^	int wmode;$/;"	m	struct:pdf_fontdesc_s
 word	src/filt_faxd.c	/^	unsigned int word;$/;"	m	struct:fz_faxd_s	file:
-wordspace	inc/pdf.h	/^	float wordspace;$/;"	m	struct:pdf_gstate_s
 wp	inc/fitz.h	/^	unsigned char *bp, *rp, *wp, *ep;$/;"	m	struct:fz_stream_s
 wp	src/filt_basic.c	/^	unsigned char *rp, *wp;$/;"	m	struct:fz_a85d_s	file:
 wp	src/filt_faxd.c	/^	unsigned char *rp, *wp;$/;"	m	struct:fz_faxd_s	file:
 wp	src/filt_lzwd.c	/^	unsigned char *rp, *wp;$/;"	m	struct:fz_lzwd_s	file:
 wp	src/filt_predict.c	/^	unsigned char *rp, *wp;$/;"	m	struct:fz_predict_s	file:
+write_map_file	src/map.c	/^int write_map_file(char *buf,int size,int fw)$/;"	f
 x	freetype/ftimage.h	/^    FT_Pos  x;$/;"	m	struct:FT_Vector_
 x	freetype/ftimage.h	/^    short           x;$/;"	m	struct:FT_Span_
 x	freetype/fttypes.h	/^    FT_F2Dot14  x;$/;"	m	struct:FT_UnitVector_
 x	freetype/internal/t1types.h	/^    FT_Int   x;$/;"	m	struct:AFM_KernPairRec_
-x	inc/fitz.h	/^	float x, y;$/;"	m	struct:fz_point_s
-x	inc/fitz.h	/^	float x, y;$/;"	m	struct:fz_textel_s
-x	inc/fitz.h	/^	int x, e, h, y;$/;"	m	struct:fz_edge_s
-x	inc/fitz.h	/^	int x, y, w, h, n;$/;"	m	struct:fz_pixmap_s
 x	inc/fitz.h	/^	unsigned x;$/;"	m	struct:fz_arc4_s
-x	inc/pdf.h	/^	short x;$/;"	m	struct:pdf_vmtx_s
-x0	inc/fitz.h	/^	float x0, y0;$/;"	m	struct:fz_rect_s
-x0	inc/fitz.h	/^	int x0, y0;$/;"	m	struct:fz_bbox_s
-x1	inc/fitz.h	/^	float x1, y1;$/;"	m	struct:fz_rect_s
-x1	inc/fitz.h	/^	int x1, y1;$/;"	m	struct:fz_bbox_s
 xAvgCharWidth	freetype/tttables.h	/^    FT_Short   xAvgCharWidth;$/;"	m	struct:TT_OS2_
 xHeight	freetype/tttables.h	/^    FT_UShort  xHeight;$/;"	m	struct:TT_PCLT_
 xMax	freetype/ftimage.h	/^    FT_Pos  xMax, yMax;$/;"	m	struct:FT_BBox_
@@ -5180,31 +4724,16 @@ x_ppem_substitute	freetype/internal/tttypes.h	/^    FT_Byte                 x_pp
 x_res	freetype/ftcache.h	/^    FT_UInt     x_res;$/;"	m	struct:FTC_ScalerRec_
 x_scale	freetype/freetype.h	/^    FT_Fixed   x_scale;     \/* scaling values used to convert font    *\/$/;"	m	struct:FT_Size_Metrics_
 xadvance	freetype/ftcache.h	/^    FT_Char   xadvance;$/;"	m	struct:FTC_SBitRec_
-xbalance	inc/pdf.h	/^	int xbalance;$/;"	m	struct:pdf_csi_s
-xdir	inc/fitz.h	/^	int xdir, ydir; \/* -1 or +1 *\/$/;"	m	struct:fz_edge_s
-xheight	inc/pdf.h	/^	float xheight;$/;"	m	struct:pdf_fontdesc_s
-xmove	inc/fitz.h	/^	int xmove;$/;"	m	struct:fz_edge_s
-xref	inc/fitz.h	/^			struct pdf_xref_s *xref;$/;"	m	struct:fz_obj_s::__anon19::__anon23	typeref:struct:fz_obj_s::__anon19::__anon23::pdf_xref_s
-xref	inc/pdf.h	/^	pdf_xref *xref;$/;"	m	struct:pdf_csi_s
+xref	inc/fitz.h	/^			struct pdf_xref_s *xref;$/;"	m	struct:fz_obj_s::__anon18::__anon22	typeref:struct:fz_obj_s::__anon18::__anon22::pdf_xref_s
 xref	inc/mypdf.h	/^	pdf_xref *xref;$/;"	m	struct:mypdf_s
-xref	src/pdfshow.c	/^static pdf_xref *xref = nil;$/;"	v	file:
-xstep	inc/pdf.h	/^	float xstep;$/;"	m	struct:pdf_pattern_s
+xref	inc/pdf.h	/^	pdf_xref *xref;$/;"	m	struct:pdf_csi_s
 xuid	freetype/t1tables.h	/^    FT_ULong        xuid[16];$/;"	m	struct:CID_FaceInfoRec_
 xx	freetype/fttypes.h	/^    FT_Fixed  xx, xy;$/;"	m	struct:FT_Matrix_
 xy	freetype/fttypes.h	/^    FT_Fixed  xx, xy;$/;"	m	struct:FT_Matrix_
 y	freetype/ftimage.h	/^    FT_Pos  y;$/;"	m	struct:FT_Vector_
 y	freetype/fttypes.h	/^    FT_F2Dot14  y;$/;"	m	struct:FT_UnitVector_
 y	freetype/internal/t1types.h	/^    FT_Int   y;$/;"	m	struct:AFM_KernPairRec_
-y	inc/fitz.h	/^	float x, y;$/;"	m	struct:fz_point_s
-y	inc/fitz.h	/^	float x, y;$/;"	m	struct:fz_textel_s
-y	inc/fitz.h	/^	int x, e, h, y;$/;"	m	struct:fz_edge_s
-y	inc/fitz.h	/^	int x, y, w, h, n;$/;"	m	struct:fz_pixmap_s
 y	inc/fitz.h	/^	unsigned y;$/;"	m	struct:fz_arc4_s
-y	inc/pdf.h	/^	short y;$/;"	m	struct:pdf_vmtx_s
-y0	inc/fitz.h	/^	float x0, y0;$/;"	m	struct:fz_rect_s
-y0	inc/fitz.h	/^	int x0, y0;$/;"	m	struct:fz_bbox_s
-y1	inc/fitz.h	/^	float x1, y1;$/;"	m	struct:fz_rect_s
-y1	inc/fitz.h	/^	int x1, y1;$/;"	m	struct:fz_bbox_s
 yMax	freetype/ftimage.h	/^    FT_Pos  xMax, yMax;$/;"	m	struct:FT_BBox_
 yMax	freetype/tttables.h	/^    FT_Short   yMax;$/;"	m	struct:TT_Header_
 yMax_Extent	freetype/tttables.h	/^    FT_Short   yMax_Extent;             \/* ymax extents            *\/$/;"	m	struct:TT_VertHeader_
@@ -5229,8 +4758,6 @@ y_ppem_substitute	freetype/internal/tttypes.h	/^    FT_Byte                 y_pp
 y_res	freetype/ftcache.h	/^    FT_UInt     y_res;$/;"	m	struct:FTC_ScalerRec_
 y_scale	freetype/freetype.h	/^    FT_Fixed   y_scale;     \/* units to 26.6 fractional pixels        *\/$/;"	m	struct:FT_Size_Metrics_
 yadvance	freetype/ftcache.h	/^    FT_Char   yadvance;$/;"	m	struct:FTC_SBitRec_
-ydir	inc/fitz.h	/^	int xdir, ydir; \/* -1 or +1 *\/$/;"	m	struct:fz_edge_s
-ystep	inc/pdf.h	/^	float ystep;$/;"	m	struct:pdf_pattern_s
 yx	freetype/fttypes.h	/^    FT_Fixed  yx, yy;$/;"	m	struct:FT_Matrix_
 yy	freetype/fttypes.h	/^    FT_Fixed  yx, yy;$/;"	m	struct:FT_Matrix_
 z	freetype/internal/ftcalc.h	/^  FT_MSB( FT_UInt32  z );$/;"	v

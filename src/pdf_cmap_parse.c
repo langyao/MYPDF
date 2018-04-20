@@ -438,6 +438,7 @@ pdf_parsecmap(pdf_cmap **cmapp, fz_stream *file)
 
 		else if (tok == TBEGINBFCHAR)
 		{
+			//两种情况1对1 1对多
 			error = pdf_parsebfchar(cmap, file);
 			if (error)
 			{
@@ -458,6 +459,10 @@ pdf_parsecmap(pdf_cmap **cmapp, fz_stream *file)
 
 		else if (tok == TBEGINBFRANGE)
 		{
+			//处理三种情况
+			//src dst
+			//src1 srcn dst
+			//src1 srcn [dst1 dst2 ... dstn]
 			error = pdf_parsebfrange(cmap, file);
 			if (error)
 			{

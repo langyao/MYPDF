@@ -1,15 +1,3 @@
-/*
-# Name: Adobe Glyph List
-# Table version: 2.0
-# Date: September 20, 2002
-#
-# See http://partners.adobe.com/asn/developer/typeforum/unicodegn.html
-#
-# Format: Semicolon-delimited fields:
-#	(1) glyph name
-#	(2) Unicode scalar value
-#--end
-*/
 
 static const struct { char *name; int ucs; }
 aglcodes[] = {

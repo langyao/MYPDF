@@ -17,10 +17,15 @@ int main(int argc, char **argv)
 	int fd;
 
 
+	//预定义的cmap初始化
+	if(precmap_init() < 0)
+	{
+		fz_warn("pre defined cmap loadding error");
+	}
+	printf("cmap name:%s\n",pdf_cmaptable[0]->cmapname);
+
+	
 	filename = argv[1];
-
-
-
 
 	mypdf_init(&gapp);
 	gapp.pageno = pageno;
@@ -31,6 +36,7 @@ int main(int argc, char **argv)
 
 	mypdf_open(&gapp, filename, fd);
 
+	mypdf_close(&gapp);
     return 0;
 }
 

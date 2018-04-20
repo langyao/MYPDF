@@ -61,6 +61,9 @@ pdf_loadpagecontents(fz_buffer **bufp, pdf_xref *xref, fz_obj *obj)
 		*bufp = fz_newbuffer(0);
 	}
 
+#ifdef DEBUG
+	printf("----fz_buffer:%s\n",(*bufp)->data);
+#endif
 	return fz_okay;
 }
 
@@ -72,14 +75,6 @@ pdf_freepage(pdf_page *page)
 		fz_dropobj(page->resources);
 	if (page->contents)
 		fz_dropbuffer(page->contents);
-//	if (page->list)
-//		fz_freedisplaylist(page->list);
-//	if (page->text)
-//		fz_freetextspan(page->text);
-//	if (page->links)
-//		pdf_freelink(page->links);
-//	if (page->annots)
-//		pdf_freeannot(page->annots);
 	fz_free(page);
 }
 
@@ -99,10 +94,6 @@ pdf_loadpage(pdf_page **pagep, pdf_xref *xref, fz_obj *dict)
 	page = fz_malloc(sizeof(pdf_page));
 	page->resources = nil;
 	page->contents = nil;
-//	page->transparency = 0;
-//	page->list = nil;
-	page->text = nil;
-//	page->links = nil;
 
 	page->resources = fz_dictgets(dict, "Resources");
 
@@ -114,29 +105,30 @@ pdf_loadpage(pdf_page **pagep, pdf_xref *xref, fz_obj *dict)
     if(!fz_isdict(page->resources))
         return fz_throw("cannot open parse rescources");
 
-    //进行resource分析，如果含有字段procset并且无/text值，则该页无需分析
-    fz_obj *objProcSet = fz_dictgets(page->resources,"ProcSet");
-    if(!fz_isarray(objProcSet))
-    {
-        return fz_throw("expected array ProcSet type");
-    }
-
-    if(!objProcSet)
-    {
-        return fz_throw("expected ProcSet type");
-    }
-
-    int j;
-    for(j = 0; j < objProcSet->u.a.len; ++j)
-    {
-   //     DEBUG("ProcSet name:%s\n",objProcSet->u.a.items[j]->u.n);
-        if(strcmp(objProcSet->u.a.items[j]->u.n,"Text") == 0)
-            break;
-    }
-    if(j == objProcSet->u.a.len)
-    {
-        return fz_throw("this page need not parse");
-    }
+//    //进行resource分析，如果含有字段procset并且无/text值，则该页无需分析
+//    fz_obj *objProcSet = fz_dictgets(page->resources,"ProcSet");
+//    if(!fz_isarray(objProcSet))
+//    {
+//        return fz_throw("expected array ProcSet type");
+//    }
+//	else if(!fz_isname)
+//
+//    if(!objProcSet)
+//    {
+//        return fz_throw("expected ProcSet type");
+//    }
+//
+//    int j;
+//    for(j = 0; j < objProcSet->u.a.len; ++j)
+//    {
+//   //     DEBUG("ProcSet name:%s\n",objProcSet->u.a.items[j]->u.n);
+//        if(strcmp(objProcSet->u.a.items[j]->u.n,"Text") == 0)
+//            break;
+//    }
+//    if(j == objProcSet->u.a.len)
+//    {
+//        return fz_throw("this page need not parse");
+//    }
 
 	if (page->resources)
         fz_keepobj(page->resources);

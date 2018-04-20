@@ -106,52 +106,6 @@ pdf_setwmode(pdf_cmap *cmap, int wmode)
 	cmap->wmode = wmode;
 }
 
-void
-pdf_debugcmap(pdf_cmap *cmap)
-{
-	int i, k, n;
-
-	printf("cmap $%p /%s {\n", (void *) cmap, cmap->cmapname);
-
-	if (cmap->usecmapname[0])
-		printf("\tusecmap /%s\n", cmap->usecmapname);
-	if (cmap->usecmap)
-		printf("\tusecmap $%p\n", (void *) cmap->usecmap);
-
-	printf("\twmode %d\n", cmap->wmode);
-
-	printf("\tcodespaces {\n");
-	for (i = 0; i < cmap->ncspace; i++)
-	{
-		printf("\t\t<%x> <%x>\n", cmap->cspace[i].low, cmap->cspace[i].high);
-	}
-	printf("\t}\n");
-
-	printf("\tranges (%d,%d) {\n", cmap->rlen, cmap->tlen);
-	for (i = 0; i < cmap->rlen; i++)
-	{
-		pdf_range *r = &cmap->ranges[i];
-		printf("\t\t<%04x> <%04x> ", r->low, pdf_range_high(r));
-		if (pdf_range_flags(r) == PDF_CMAP_TABLE)
-		{
-			printf("[ ");
-			for (k = 0; k < pdf_range_high(r) - r->low + 1; k++)
-				printf("%d ", cmap->table[r->offset + k]);
-			printf("]\n");
-		}
-		else if (pdf_range_flags(r) == PDF_CMAP_MULTI)
-		{
-			printf("< ");
-			n = cmap->table[r->offset];
-			for (k = 0; k < n; k++)
-				printf("%04x ", cmap->table[r->offset + 1 + k]);
-			printf(">\n");
-		}
-		else
-			printf("%d\n", r->offset);
-	}
-	printf("\t}\n}\n");
-}
 
 /*
  * Add a codespacerange section.

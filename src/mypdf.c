@@ -13,9 +13,14 @@ static void pdf_showpage(mypdf_t *mypdf)
     int i,j;
     int error;
 
-    int fw = open("OutputEnglish.txt",O_CREAT | O_WRONLY,0777);
+     int fw = open("English.txt",O_CREAT | O_WRONLY | O_TRUNC,0777);
     if(fw < 0)
         fz_throw("OutputEnglish open failed");
+
+
+     int fw_code = open("Map.txt",O_CREAT | O_WRONLY | O_TRUNC,0777);
+    if(fw_code < 0)
+        fz_throw("OutputMap open failed");
 
     for(i = 0; i < mypdf->xref->pagelen; i++)
     {
@@ -24,7 +29,8 @@ static void pdf_showpage(mypdf_t *mypdf)
         if(error < 0)
             continue;
 
-        mypdf->page->fw = fw;
+		mypdf->page->fw = fw;
+		mypdf->page->fw_code = fw_code;
 
 
         error = pdf_runpage(mypdf->xref,mypdf->page);
@@ -71,4 +77,19 @@ void mypdf_open(mypdf_t *mypdf, char *filename, int fd)
 
 }
 
+void mypdf_close(mypdf_t *app)
+{
+	if(app->page)
+		pdf_freepage(app->page);
+	app->page = nil;
 
+	if(app->xref)
+	{
+		if(app->xref->store)
+			pdf_freestore(app->xref->store);
+		app->xref->store = nil;
+
+		pdf_freexref(app->xref);
+		app->xref = nil;
+	}
+}

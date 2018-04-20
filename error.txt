@@ -1,0 +1,453 @@
+cmapdump: could not open input file 'Adobe-CNS1-1'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Add-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'RKSJ-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'CNS1-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniHojo-UTF16-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GB-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-GB1-5'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '90pv-RKSJ-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Ext-RKSJ-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSC-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Korea1-1'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Japan1-UCS2'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'NWP-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSCms-UHC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Hojo-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBKp-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'ETHK-B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniJIS-UTF16-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSCms-UHC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-CNS1-5'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBpc-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'ETen-B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '78-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKdlb-B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Hojo-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniJIS-UCS2-HW-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-GB1-0'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '90msp-RKSJ-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniJIS-UCS2-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBKp-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Add-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Japan1-4'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'WP-Symbol'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKm471-B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'README'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '83pv-RKSJ-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKscs-B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-GB1-2'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Japan2-0'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSCpc-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'ETen-B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '90ms-RKSJ-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniJISPro-UCS2-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKm314-B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-GB1-3'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKscs-B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniGB-UCS2-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSC-Johab-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-GB1-4'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniKS-UCS2-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBT-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKdlb-B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GB-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-CNS1-2'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '78-RKSJ-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Hojo-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBpc-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-GB1-UCS2'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Korea1-0'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Hankaku'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Hiragana'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBTpc-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GB-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Add-RKSJ-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBT-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniHojo-UTF16-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniCNS-UTF16-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSCms-UHC-HW-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniHojo-UCS2-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Roman'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniGB-UTF16-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniKS-UCS2-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'B5pc-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBT-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniJIS-UCS2-HW-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '78-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Katakana'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '90ms-RKSJ-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '78-RKSJ-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '90msp-RKSJ-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Ext-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKdla-B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-CNS1-UCS2'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Hojo-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Ext-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'RKSJ-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniCNS-UCS2-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniGB-UCS2-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniGB-UTF16-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniKS-UTF16-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Add-RKSJ-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Japan1-6'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKgccs-B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Japan1-2'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'CNS2-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-GB1-1'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Japan1-0'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'CNS2-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKgccs-B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '78ms-RKSJ-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniCNS-UCS2-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniHojo-UCS2-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '78-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSC-Johab-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBTpc-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Japan1-3'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GB-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Korea1-2'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Japan1-1'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-CNS1-0'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'CNS1-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniJIS-UTF16-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBK-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniJIS-UCS2-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'CNS-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'B5pc-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniCNS-UTF16-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'ETenms-B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniKS-UTF16-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-CNS1-6'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBK2K-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Ext-RKSJ-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBT-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Japan1-5'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBK2K-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'UniJISPro-UCS2-HW-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'GBK-EUC-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'ETHK-B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSCms-UHC-HW-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-CNS1-4'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '90pv-RKSJ-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSCpc-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '78-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKdla-B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'KSC-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-Korea1-UCS2'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKm471-B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file '78ms-RKSJ-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'NWP-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'CNS-EUC-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'ETenms-B5-V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'V'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'HKm314-B5-H'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file
+cmapdump: could not open input file 'Adobe-CNS1-3'
++ src/stm_open.c:57: readfile(): read error: Bad file descriptor
+\ src/stm_read.c:75: fz_fillbuffer(): read error; treating as end of file

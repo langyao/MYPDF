@@ -49,13 +49,7 @@ int gettimeofday(struct timeval *tv, struct timezone *tz);
 
 #endif
 
-#ifndef M_PI
-#define M_PI 3.14159265358979323846
-#endif
 
-#ifndef M_SQRT2
-#define M_SQRT2 1.41421356237309504880
-#endif
 
 /*
  * Variadic macros, inline and restrict keywords
@@ -123,7 +117,6 @@ fz_error fz_rethrowimpx(fz_error cause, char *fmt, ...) __printflike(2, 3);
 void fz_catchimpx(fz_error cause, char *fmt, ...) __printflike(2, 3);
 
 #define fz_okay ((fz_error)0)
-
 /*
  * Basic runtime and utility functions
  */
@@ -153,10 +146,6 @@ int chartorune(int *rune, char *str);
 int runetochar(char *str, int *rune);
 int runelen(int c);
 
-/* getopt */
-extern int fz_getopt(int nargc, char * const *nargv, const char *ostr);
-extern int fz_optind;
-extern char *fz_optarg;
 
 /*
  * Generic hash-table with fixed-length keys.
@@ -176,93 +165,6 @@ void fz_hashremove(fz_hashtable *table, void *key);
 int fz_hashlen(fz_hashtable *table);
 void *fz_hashgetkey(fz_hashtable *table, int idx);
 void *fz_hashgetval(fz_hashtable *table, int idx);
-
-/*
- * Math and geometry
- */
-
-/* Multiply scaled two integers in the 0..255 range */
-static inline int fz_mul255(int a, int b)
-{
-	/* see Jim Blinn's book "Dirty Pixels" for how this works */
-	int x = a * b + 128;
-	x += x >> 8;
-	return x >> 8;
-}
-
-/* Expand a value A from the 0...255 range to the 0..256 range */
-#define FZ_EXPAND(A) ((A)+((A)>>7))
-
-/* Combine values A (in any range) and B (in the 0..256 range),
- * to give a single value in the same range as A was. */
-#define FZ_COMBINE(A,B) (((A)*(B))>>8)
-
-/* Combine values A and C (in the same (any) range) and B and D (in the
- * 0..256 range), to give a single value in the same range as A and C were.  */
-#define FZ_COMBINE2(A,B,C,D) (FZ_COMBINE((A), (B)) + FZ_COMBINE((C), (D)))
-
-/* Blend SRC and DST (in the same range) together according to
- * AMOUNT (in the 0...256 range). */
-#define FZ_BLEND(SRC, DST, AMOUNT) ((((SRC)-(DST))*(AMOUNT) + ((DST)<<8))>>8)
-
-typedef struct fz_matrix_s fz_matrix;
-typedef struct fz_point_s fz_point;
-typedef struct fz_rect_s fz_rect;
-typedef struct fz_bbox_s fz_bbox;
-
-extern const fz_rect fz_unitrect;
-extern const fz_rect fz_emptyrect;
-extern const fz_rect fz_infiniterect;
-
-extern const fz_bbox fz_unitbbox;
-extern const fz_bbox fz_emptybbox;
-extern const fz_bbox fz_infinitebbox;
-
-#define fz_isemptyrect(r) ((r).x0 == (r).x1)
-#define fz_isinfiniterect(r) ((r).x0 > (r).x1)
-#define fz_isemptybbox(b) ((b).x0 == (b).x1)
-#define fz_isinfinitebbox(b) ((b).x0 > (b).x1)
-
-struct fz_matrix_s
-{
-	float a, b, c, d, e, f;
-};
-
-struct fz_point_s
-{
-	float x, y;
-};
-
-struct fz_rect_s
-{
-	float x0, y0;
-	float x1, y1;
-};
-
-struct fz_bbox_s
-{
-	int x0, y0;
-	int x1, y1;
-};
-
-extern const fz_matrix fz_identity;
-
-fz_matrix fz_concat(fz_matrix one, fz_matrix two);
-fz_matrix fz_scale(float sx, float sy);
-fz_matrix fz_rotate(float theta);
-fz_matrix fz_translate(float tx, float ty);
-fz_matrix fz_invertmatrix(fz_matrix m);
-int fz_isrectilinear(fz_matrix m);
-float fz_matrixexpansion(fz_matrix m);
-
-fz_bbox fz_roundrect(fz_rect r);
-fz_bbox fz_intersectbbox(fz_bbox a, fz_bbox b);
-fz_bbox fz_unionbbox(fz_bbox a, fz_bbox b);
-
-fz_point fz_transformpoint(fz_matrix m, fz_point p);
-fz_point fz_transformvector(fz_matrix m, fz_point p);
-fz_rect fz_transformrect(fz_matrix m, fz_rect r);
-fz_bbox fz_transformbbox(fz_matrix m, fz_bbox b);
 
 /*
  * Basic crypto functions.
@@ -606,96 +508,8 @@ fz_stream *fz_openjbig2d(fz_stream *chain, fz_buffer *global);
 
 enum { FZ_MAXCOLORS = 32 };
 
-typedef enum fz_blendmode_e
-{
-	/* PDF 1.4 -- standard separable */
-	FZ_BNORMAL,
-	FZ_BMULTIPLY,
-	FZ_BSCREEN,
-	FZ_BOVERLAY,
-	FZ_BDARKEN,
-	FZ_BLIGHTEN,
-	FZ_BCOLORDODGE,
-	FZ_BCOLORBURN,
-	FZ_BHARDLIGHT,
-	FZ_BSOFTLIGHT,
-	FZ_BDIFFERENCE,
-	FZ_BEXCLUSION,
-
-	/* PDF 1.4 -- standard non-separable */
-	FZ_BHUE,
-	FZ_BSATURATION,
-	FZ_BCOLOR,
-	FZ_BLUMINOSITY,
-} fz_blendmode;
-
 extern const char *fz_blendnames[];
 
-/*
- * Pixmaps have n components per pixel. the last is always alpha.
- * premultiplied alpha when rendering, but non-premultiplied for colorspace
- * conversions and rescaling.
- */
-
-typedef struct fz_pixmap_s fz_pixmap;
-typedef struct fz_colorspace_s fz_colorspace;
-
-struct fz_pixmap_s
-{
-	int refs;
-	int x, y, w, h, n;
-	fz_pixmap *mask; /* explicit soft/image mask */
-	int interpolate;
-	fz_colorspace *colorspace;
-	unsigned char *samples;
-	int freesamples;
-};
-
-fz_pixmap *fz_newpixmapwithdata(fz_colorspace *colorspace, int x, int y, int w, int h, unsigned char *samples);
-fz_pixmap *fz_newpixmapwithrect(fz_colorspace *, fz_bbox bbox);
-fz_pixmap *fz_newpixmap(fz_colorspace *, int x, int y, int w, int h);
-fz_pixmap *fz_keeppixmap(fz_pixmap *pix);
-void fz_droppixmap(fz_pixmap *pix);
-void fz_clearpixmap(fz_pixmap *pix);
-void fz_clearpixmapwithcolor(fz_pixmap *pix, int value);
-fz_pixmap *fz_alphafromgray(fz_pixmap *gray, int luminosity);
-fz_bbox fz_boundpixmap(fz_pixmap *pix);
-
-fz_pixmap *fz_scalepixmap(fz_pixmap *src, int xdenom, int ydenom);
-fz_pixmap *fz_smoothscalepixmap(fz_pixmap *src, float x, float y, float w, float h);
-
-fz_error fz_writepnm(fz_pixmap *pixmap, char *filename);
-fz_error fz_writepam(fz_pixmap *pixmap, char *filename, int savealpha);
-fz_error fz_writepng(fz_pixmap *pixmap, char *filename, int savealpha);
-
-fz_error fz_loadjpximage(fz_pixmap **imgp, unsigned char *data, int size);
-
-/*
- * Colorspace resources.
- */
-
-extern fz_colorspace *fz_devicegray;
-extern fz_colorspace *fz_devicergb;
-extern fz_colorspace *fz_devicebgr;
-extern fz_colorspace *fz_devicecmyk;
-
-struct fz_colorspace_s
-{
-	int refs;
-	char name[16];
-	int n;
-	void (*toxyz)(fz_colorspace *, float *src, float *xyz);
-	void (*fromxyz)(fz_colorspace *, float *xyz, float *dst);
-	void (*freedata)(fz_colorspace *);
-	void *data;
-};
-
-fz_colorspace *fz_newcolorspace(char *name, int n);
-fz_colorspace *fz_keepcolorspace(fz_colorspace *cs);
-void fz_dropcolorspace(fz_colorspace *cs);
-
-void fz_convertcolor(fz_colorspace *srcs, float *srcv, fz_colorspace *dsts, float *dstv);
-void fz_convertpixmap(fz_pixmap *src, fz_pixmap *dst);
 
 /*
  * Fonts come in two variants:
@@ -703,7 +517,6 @@ void fz_convertpixmap(fz_pixmap *src, fz_pixmap *dst);
  *	Type 3 fonts have callbacks to the interpreter.
  */
 
-struct fz_device_s;
 
 typedef struct fz_font_s fz_font;
 char *ft_errorstring(int err);
@@ -722,22 +535,15 @@ struct fz_font_s
 	unsigned char *ftdata;
 	int ftsize;
 
-	fz_matrix t3matrix;
 	fz_obj *t3resources;
 	fz_buffer **t3procs; /* has 256 entries if used */
 	float *t3widths; /* has 256 entries if used */
 	void *t3xref; /* a pdf_xref for the callback */
-	fz_error (*t3run)(struct pdf_xref_s *xref, fz_obj *resources, fz_buffer *contents,
-		struct fz_device_s *dev, fz_matrix ctm);
-
-	fz_rect bbox;
-
-	/* substitute metrics */
 	int widthcount;
 	int *widthtable;
 };
 
-fz_font *fz_newtype3font(char *name, fz_matrix matrix);
+fz_font *fz_newtype3font(char *name);
 
 fz_error fz_newfontfrombuffer(fz_font **fontp, unsigned char *data, int len, int index);
 fz_error fz_newfontfromfile(fz_font **fontp, char *path, int index);
@@ -746,433 +552,9 @@ fz_font *fz_keepfont(fz_font *font);
 void fz_dropfont(fz_font *font);
 
 void fz_debugfont(fz_font *font);
-void fz_setfontbbox(fz_font *font, float xmin, float ymin, float xmax, float ymax);
 
-/*
- * Vector path buffer.
- * It can be stroked and dashed, or be filled.
- * It has a fill rule (nonzero or evenodd).
- *
- * When rendering, they are flattened, stroked and dashed straight
- * into the Global Edge List.
- */
 
-typedef struct fz_path_s fz_path;
-typedef struct fz_strokestate_s fz_strokestate;
 
-typedef union fz_pathel_s fz_pathel;
 
-typedef enum fz_pathelkind_e
-{
-	FZ_MOVETO,
-	FZ_LINETO,
-	FZ_CURVETO,
-	FZ_CLOSEPATH
-} fz_pathelkind;
-
-union fz_pathel_s
-{
-	fz_pathelkind k;
-	float v;
-};
-
-struct fz_path_s
-{
-	int len, cap;
-	fz_pathel *els;
-};
-
-struct fz_strokestate_s
-{
-	int linecap;
-	int linejoin;
-	float linewidth;
-	float miterlimit;
-	float dashphase;
-	int dashlen;
-	float dashlist[32];
-};
-
-fz_path *fz_newpath(void);
-void fz_moveto(fz_path*, float x, float y);
-void fz_lineto(fz_path*, float x, float y);
-void fz_curveto(fz_path*, float, float, float, float, float, float);
-void fz_curvetov(fz_path*, float, float, float, float);
-void fz_curvetoy(fz_path*, float, float, float, float);
-void fz_closepath(fz_path*);
-void fz_freepath(fz_path *path);
-
-fz_path *fz_clonepath(fz_path *old);
-
-fz_rect fz_boundpath(fz_path *path, fz_strokestate *stroke, fz_matrix ctm);
-void fz_debugpath(fz_path *, int indent);
-
-/*
- * Text buffer.
- *
- * The trm field contains the a, b, c and d coefficients.
- * The e and f coefficients come from the individual elements,
- * together they form the transform matrix for the glyph.
- *
- * Glyphs are referenced by glyph ID.
- * The Unicode text equivalent is kept in a separate array
- * with indexes into the glyph array.
- */
-
-typedef struct fz_text_s fz_text;
-typedef struct fz_textel_s fz_textel;
-
-struct fz_textel_s
-{
-	float x, y;
-	int gid; /* -1 for one gid to many ucs mappings */
-	int ucs; /* -1 for one ucs to many gid mappings */
-};
-
-struct fz_text_s
-{
-	fz_font *font;
-	fz_matrix trm;
-	int wmode;
-	int len, cap;
-	fz_textel *els;
-};
-
-fz_text *fz_newtext(fz_font *face, fz_matrix trm, int wmode);
-void fz_addtext(fz_text *text, int gid, int ucs, float x, float y);
-void fz_freetext(fz_text *text);
-void fz_debugtext(fz_text*, int indent);
-fz_rect fz_boundtext(fz_text *text, fz_matrix ctm);
-fz_text *fz_clonetext(fz_text *old);
-
-/*
- * The shading code uses gouraud shaded triangle meshes.
- */
-
-enum
-{
-	FZ_LINEAR,
-	FZ_RADIAL,
-	FZ_MESH,
-};
-
-typedef struct fz_shade_s fz_shade;
-
-struct fz_shade_s
-{
-	int refs;
-
-	fz_rect bbox;		/* can be fz_infiniterect */
-	fz_colorspace *cs;
-
-	fz_matrix matrix;	/* matrix from pattern dict */
-	int usebackground;	/* background color for fills but not 'sh' */
-	float background[FZ_MAXCOLORS];
-
-	int usefunction;
-	float function[256][FZ_MAXCOLORS];
-
-	int type; /* linear, radial, mesh */
-	int extend[2];
-
-	int meshlen;
-	int meshcap;
-	float *mesh; /* [x y 0], [x y r], [x y t] or [x y c1 ... cn] */
-};
-
-fz_shade *fz_keepshade(fz_shade *shade);
-void fz_dropshade(fz_shade *shade);
-void fz_debugshade(fz_shade *shade);
-
-fz_rect fz_boundshade(fz_shade *shade, fz_matrix ctm);
-void fz_paintshade(fz_shade *shade, fz_matrix ctm, fz_pixmap *dest, fz_bbox bbox);
-
-/*
- * Glyph cache
- */
-
-typedef struct fz_glyphcache_s fz_glyphcache;
-
-fz_glyphcache *fz_newglyphcache(void);
-fz_pixmap *fz_renderftglyph(fz_font *font, int cid, fz_matrix trm);
-fz_pixmap *fz_rendert3glyph(fz_font *font, int cid, fz_matrix trm);
-fz_pixmap *fz_renderftstrokedglyph(fz_font *font, int gid, fz_matrix trm, fz_matrix ctm, fz_strokestate *state);
-fz_pixmap *fz_renderglyph(fz_glyphcache*, fz_font*, int, fz_matrix);
-fz_pixmap *fz_renderstrokedglyph(fz_glyphcache*, fz_font*, int, fz_matrix, fz_matrix, fz_strokestate *stroke);
-void fz_freeglyphcache(fz_glyphcache *);
-
-/*
- * Scan converter
- */
-
-typedef struct fz_edge_s fz_edge;
-typedef struct fz_gel_s fz_gel;
-typedef struct fz_ael_s fz_ael;
-
-struct fz_edge_s
-{
-	int x, e, h, y;
-	int adjup, adjdown;
-	int xmove;
-	int xdir, ydir; /* -1 or +1 */
-};
-
-struct fz_gel_s
-{
-	fz_bbox clip;
-	fz_bbox bbox;
-	int cap;
-	int len;
-	fz_edge *edges;
-};
-
-struct fz_ael_s
-{
-	int cap;
-	int len;
-	fz_edge **edges;
-};
-
-fz_gel *fz_newgel(void);
-void fz_insertgel(fz_gel *gel, float x0, float y0, float x1, float y1);
-fz_bbox fz_boundgel(fz_gel *gel);
-void fz_resetgel(fz_gel *gel, fz_bbox clip);
-void fz_sortgel(fz_gel *gel);
-void fz_freegel(fz_gel *gel);
-int fz_isrectgel(fz_gel *gel);
-
-fz_ael *fz_newael(void);
-void fz_freeael(fz_ael *ael);
-
-fz_error fz_scanconvert(fz_gel *gel, fz_ael *ael, int eofill,
-	fz_bbox clip, fz_pixmap *pix, unsigned char *colorbv);
-
-void fz_fillpath(fz_gel *gel, fz_path *path, fz_matrix ctm, float flatness);
-void fz_strokepath(fz_gel *gel, fz_path *path, fz_strokestate *stroke, fz_matrix ctm, float flatness, float linewidth);
-void fz_dashpath(fz_gel *gel, fz_path *path, fz_strokestate *stroke, fz_matrix ctm, float flatness, float linewidth);
-
-/*
- * The device interface.
- */
-
-enum
-{
-	FZ_IGNOREIMAGE = 1,
-	FZ_IGNORESHADE = 2,
-};
-
-typedef struct fz_device_s fz_device;
-
-struct fz_device_s
-{
-	int hints;
-
-	void *user;
-	void (*freeuser)(void *);
-
-	void (*fillpath)(void *, fz_path *, int evenodd, fz_matrix, fz_colorspace *, float *color, float alpha);
-	void (*strokepath)(void *, fz_path *, fz_strokestate *, fz_matrix, fz_colorspace *, float *color, float alpha);
-	void (*clippath)(void *, fz_path *, int evenodd, fz_matrix);
-	void (*clipstrokepath)(void *, fz_path *, fz_strokestate *, fz_matrix);
-
-	void (*filltext)(void *, fz_text *, fz_matrix, fz_colorspace *, float *color, float alpha);
-	void (*stroketext)(void *, fz_text *, fz_strokestate *, fz_matrix, fz_colorspace *, float *color, float alpha);
-	void (*cliptext)(void *, fz_text *, fz_matrix, int accumulate);
-	void (*clipstroketext)(void *, fz_text *, fz_strokestate *, fz_matrix);
-	void (*ignoretext)(void *, fz_text *, fz_matrix);
-
-	void (*fillshade)(void *, fz_shade *shd, fz_matrix ctm, float alpha);
-	void (*fillimage)(void *, fz_pixmap *img, fz_matrix ctm, float alpha);
-	void (*fillimagemask)(void *, fz_pixmap *img, fz_matrix ctm, fz_colorspace *, float *color, float alpha);
-	void (*clipimagemask)(void *, fz_pixmap *img, fz_matrix ctm);
-
-	void (*popclip)(void *);
-
-	void (*beginmask)(void *, fz_rect, int luminosity, fz_colorspace *cs, float *bc);
-	void (*endmask)(void *);
-	void (*begingroup)(void *, fz_rect, int isolated, int knockout, fz_blendmode blendmode, float alpha);
-	void (*endgroup)(void *);
-};
-
-fz_device *fz_newdevice(void *user);
-void fz_freedevice(fz_device *dev);
-
-fz_device *fz_newtracedevice(void);
-
-fz_device *fz_newbboxdevice(fz_bbox *bboxp);
-
-fz_device *fz_newdrawdevice(fz_glyphcache *cache, fz_pixmap *dest);
-
-/*
- * Text extraction device
- */
-
-typedef struct fz_textspan_s fz_textspan;
-typedef struct fz_textchar_s fz_textchar;
-
-struct fz_textchar_s
-{
-	int c;
-	fz_bbox bbox;
-};
-
-struct fz_textspan_s
-{
-	fz_font *font;
-	float size;
-	int wmode;
-	int len, cap;
-	fz_textchar *text;
-	fz_textspan *next;
-	int eol;
-};
-
-fz_textspan *fz_newtextspan(void);
-void fz_freetextspan(fz_textspan *line);
-void fz_debugtextspan(fz_textspan *line);
-void fz_debugtextspanxml(fz_textspan *span);
-
-fz_device *fz_newtextdevice(fz_textspan *text);
-
-/*
- * Display list device -- record and play back device commands.
- */
-
-typedef struct fz_displaylist_s fz_displaylist;
-typedef struct fz_displaynode_s fz_displaynode;
-
-typedef enum fz_displaycommand_e
-{
-	FZ_CMDFILLPATH,
-	FZ_CMDSTROKEPATH,
-	FZ_CMDCLIPPATH,
-	FZ_CMDCLIPSTROKEPATH,
-	FZ_CMDFILLTEXT,
-	FZ_CMDSTROKETEXT,
-	FZ_CMDCLIPTEXT,
-	FZ_CMDCLIPSTROKETEXT,
-	FZ_CMDIGNORETEXT,
-	FZ_CMDFILLSHADE,
-	FZ_CMDFILLIMAGE,
-	FZ_CMDFILLIMAGEMASK,
-	FZ_CMDCLIPIMAGEMASK,
-	FZ_CMDPOPCLIP,
-	FZ_CMDBEGINMASK,
-	FZ_CMDENDMASK,
-	FZ_CMDBEGINGROUP,
-	FZ_CMDENDGROUP,
-} fz_displaycommand;
-
-struct fz_displaynode_s
-{
-	fz_displaycommand cmd;
-	fz_displaynode *next;
-	fz_rect rect;
-	union {
-		fz_path *path;
-		fz_text *text;
-		fz_shade *shade;
-		fz_pixmap *image;
-		fz_blendmode blendmode;
-	} item;
-	fz_strokestate *stroke;
-	int flag; /* evenodd, accumulate, isolated/knockout... */
-	fz_matrix ctm;
-	fz_colorspace *colorspace;
-	float alpha;
-	float color[FZ_MAXCOLORS];
-};
-
-struct fz_displaylist_s
-{
-	fz_displaynode *first;
-	fz_displaynode *last;
-};
-
-fz_displaylist *fz_newdisplaylist(void);
-void fz_freedisplaylist(fz_displaylist *list);
-fz_device *fz_newlistdevice(fz_displaylist *list);
-void fz_executedisplaylist(fz_displaylist *list, fz_device *dev, fz_matrix ctm);
-
-/*
- * Function pointers for plotting functions.
- * They can be replaced by cpu-optimized versions.
- */
-
-/*
-These are the blending primitives:
-
-span over span			(text and path drawing to clip mask)
-span in alpha over span
-span in span over span
-color in span over span		(text and path drawing)
-
-	fz_paintspan(dp, sp);
-		fz_paintspanalpha(dp, sp, alpha)
-	fz_paintspanmask(dp, sp, mask);
-	fz_paintspancolor(dp, color, mask);
-
-pixmap over pixmap		(shading with function lookup)
-pixmap in alpha over pixmap	(xobject/shading with ca)
-pixmap in pixmap over pixmap	(xobject with softmask / clip)
-
-	fz_paintpixmap()
-		fz_paintpixmapalpha()
-	fz_paintpixmapmask()
-
-affine over span
-affine in alpha over span
-color in affine over span
-
-	fz_paintaffine()
-		fz_paintaffinealpha()
-	fz_paintaffinecolor()
-
-image over pixmap		(image fill)
-image in alpha over pixmap	(image fill with ca)
-color in image over pixmap	(image mask fill)
-
-	fz_paintimage()
-		fz_paintimagealpha()
-	fz_paintimagecolor()
-
-pixmap BLEND pixmap
-pixmap in alpha BLEND pixmap
-
-	fz_blendpixmap()
-		fz_blendpixmapalpha()
-*/
-
-void fz_accelerate(void);
-void fz_acceleratearch(void);
-
-void fz_decodetile(fz_pixmap *pix, float *decode);
-void fz_decodeindexedtile(fz_pixmap *pix, float *decode, int maxval);
-void fz_unpacktile(fz_pixmap *dst, unsigned char * restrict src, int n, int depth, int stride, int scale);
-
-void fz_paintspan(unsigned char * restrict dp, unsigned char * restrict sp, int n, int w, int alpha);
-void fz_paintspancolor(unsigned char * restrict dp, unsigned char * restrict mp, int n, int w, unsigned char *color);
-
-void fz_paintaffinecolor(unsigned char *dp, unsigned char *sp, int sw, int sh, int u, int v, int fa, int fb, int w, int n, unsigned char *color);
-
-void fz_paintimage(fz_pixmap *dst, fz_bbox scissor, fz_pixmap *img, fz_matrix ctm, int alpha);
-void fz_paintimagecolor(fz_pixmap *dst, fz_bbox scissor, fz_pixmap *img, fz_matrix ctm, unsigned char *colorbv);
-
-void fz_paintpixmap(fz_pixmap *dst, fz_pixmap *src, int alpha);
-void fz_paintpixmapmask(fz_pixmap *dst, fz_pixmap *src, fz_pixmap *msk);
-
-void fz_blendpixmap(fz_pixmap *dst, fz_pixmap *src, int alpha, fz_blendmode blendmode);
-
-extern void (*fz_srown)(unsigned char *restrict, unsigned char *restrict, int w, int denom, int n);
-extern void (*fz_srow1)(unsigned char *restrict, unsigned char *restrict, int w, int denom);
-extern void (*fz_srow2)(unsigned char *restrict, unsigned char *restrict, int w, int denom);
-extern void (*fz_srow4)(unsigned char *restrict, unsigned char *restrict, int w, int denom);
-extern void (*fz_srow5)(unsigned char *restrict, unsigned char *restrict, int w, int denom);
-
-extern void (*fz_scoln)(unsigned char *restrict, unsigned char *restrict, int w, int denom, int n);
-extern void (*fz_scol1)(unsigned char *restrict, unsigned char *restrict, int w, int denom);
-extern void (*fz_scol2)(unsigned char *restrict, unsigned char *restrict, int w, int denom);
-extern void (*fz_scol4)(unsigned char *restrict, unsigned char *restrict, int w, int denom);
-extern void (*fz_scol5)(unsigned char *restrict, unsigned char *restrict, int w, int denom);
 
 #endif

@@ -48,17 +48,17 @@ pdf_loadtounicode(pdf_fontdesc *font, pdf_xref *xref,
 
 		error = fz_okay;
 
-	//	if (!strcmp(collection, "Adobe-CNS1"))
-	//		error = pdf_loadsystemcmap(&font->tounicode, "Adobe-CNS1-UCS2");
+		if (!strcmp(collection, "Adobe-CNS1"))
+			error = pdf_loadsystemcmap(&font->tounicode, "Adobe-CNS1-UCS2");
 
-	//	else if (!strcmp(collection, "Adobe-GB1"))
-	//		error = pdf_loadsystemcmap(&font->tounicode, "Adobe-GB1-UCS2");
-	//	else if (!strcmp(collection, "Adobe-Japan1"))
-	//		error = pdf_loadsystemcmap(&font->tounicode, "Adobe-Japan1-UCS2");
-	//	else if (!strcmp(collection, "Adobe-Japan2"))
-	//		error = pdf_loadsystemcmap(&font->tounicode, "Adobe-Japan2-UCS2"); /* where's this? */
-	//	else if (!strcmp(collection, "Adobe-Korea1"))
-	//		error = pdf_loadsystemcmap(&font->tounicode, "Adobe-Korea1-UCS2");
+		else if (!strcmp(collection, "Adobe-GB1"))
+			error = pdf_loadsystemcmap(&font->tounicode, "Adobe-GB1-UCS2");
+		else if (!strcmp(collection, "Adobe-Japan1"))
+			error = pdf_loadsystemcmap(&font->tounicode, "Adobe-Japan1-UCS2");
+		else if (!strcmp(collection, "Adobe-Japan2"))
+			error = pdf_loadsystemcmap(&font->tounicode, "Adobe-Japan2-UCS2"); /* where's this? */
+		else if (!strcmp(collection, "Adobe-Korea1"))
+			error = pdf_loadsystemcmap(&font->tounicode, "Adobe-Korea1-UCS2");
 
 		if (error)
 			return fz_rethrow(error, "cannot load tounicode system cmap %s-UCS2", collection);
@@ -85,8 +85,6 @@ pdf_loadtounicode(pdf_fontdesc *font, pdf_xref *xref,
 	if (!font->tounicode && !font->cidtoucs)
 	{
 		pdf_logfont("tounicode could not be loaded\n");
-		/* TODO: synthesize a ToUnicode if it's a freetype font with
-		* cmap and/or post tables or if it has glyph names. */
 	}
 
 	return fz_okay;

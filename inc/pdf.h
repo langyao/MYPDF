@@ -1,22 +1,16 @@
 #ifndef _MUPDF_H_
 #define _MUPDF_H_
 
-#ifndef _FITZ_H_
-#error "fitz.h must be included before pdf.h"
-#endif
+
+#include "fitz.h"
 
 typedef struct pdf_xref_s pdf_xref;
 
 void pdf_logxref(char *fmt, ...);
 void pdf_logrsrc(char *fmt, ...);
 void pdf_logfont(char *fmt, ...);
-void pdf_logimage(char *fmt, ...);
-void pdf_logshade(char *fmt, ...);
 void pdf_logpage(char *fmt, ...);
 
-/*
- * tokenizer and low-level object parser
- */
 
 enum
 {
@@ -32,6 +26,7 @@ enum
 	PDF_NTOKENS
 };
 
+
 /* lex.c */
 fz_error pdf_lex(int *tok, fz_stream *f, char *buf, int n, int *len);
 
@@ -41,26 +36,11 @@ fz_error pdf_parsedict(fz_obj **op, pdf_xref *xref, fz_stream *f, char *buf, int
 fz_error pdf_parsestmobj(fz_obj **op, pdf_xref *xref, fz_stream *f, char *buf, int cap);
 fz_error pdf_parseindobj(fz_obj **op, pdf_xref *xref, fz_stream *f, char *buf, int cap, int *num, int *gen, int *stmofs);
 
-fz_rect pdf_torect(fz_obj *array);
-fz_matrix pdf_tomatrix(fz_obj *array);
 char *pdf_toutf8(fz_obj *src);
 unsigned short *pdf_toucs2(fz_obj *src);
 fz_obj *pdf_toutf8name(fz_obj *src);
 
-/*
- * Encryption
- */
 
-/* Permission flag bits */
-#define PDF_PERM_PRINT (1<<2)
-#define PDF_PERM_CHANGE (1<<3)
-#define PDF_PERM_COPY (1<<4)
-#define PDF_PERM_NOTES (1<<5)
-#define PDF_PERM_FILL_FORM (1<<8)
-#define PDF_PERM_ACCESSIBILITY (1<<9)
-#define PDF_PERM_ASSEMBLE (1<<10)
-#define PDF_PERM_HIGH_RES_PRINT (1<<11)
-#define PDF_DEFAULT_PERM_FLAGS 0xfffc
 
 
 
@@ -131,76 +111,11 @@ typedef struct pdf_store_s pdf_store;
 
 pdf_store *pdf_newstore(void);
 void pdf_freestore(pdf_store *store);
-void pdf_debugstore(pdf_store *store);
 
 void pdf_storeitem(pdf_store *store, void *keepfn, void *dropfn, fz_obj *key, void *val);
 void *pdf_finditem(pdf_store *store, void *dropfn, fz_obj *key);
 void pdf_removeitem(pdf_store *store, void *dropfn, fz_obj *key);
 void pdf_agestore(pdf_store *store, int maxage);
-
-/*
- * Functions
- */
-
-typedef struct pdf_function_s pdf_function;
-
-fz_error pdf_loadfunction(pdf_function **func, pdf_xref *xref, fz_obj *ref);
-fz_error pdf_evalfunction(pdf_function *func, float *in, int inlen, float *out, int outlen);
-pdf_function *pdf_keepfunction(pdf_function *func);
-void pdf_dropfunction(pdf_function *func);
-
-
-
-/*
- * Pattern
- */
-
-typedef struct pdf_pattern_s pdf_pattern;
-
-struct pdf_pattern_s
-{
-	int refs;
-	int ismask;
-	float xstep;
-	float ystep;
-	fz_matrix matrix;
-	fz_rect bbox;
-	fz_obj *resources;
-	fz_buffer *contents;
-};
-
-fz_error pdf_loadpattern(pdf_pattern **patp, pdf_xref *xref, fz_obj *obj);
-pdf_pattern *pdf_keeppattern(pdf_pattern *pat);
-void pdf_droppattern(pdf_pattern *pat);
-
-/*
- * Shading
- */
-
-fz_error pdf_loadshading(fz_shade **shadep, pdf_xref *xref, fz_obj *obj);
-
-/*
- * XObject
- */
-
-typedef struct pdf_xobject_s pdf_xobject;
-
-struct pdf_xobject_s
-{
-	int refs;
-	fz_matrix matrix;
-	fz_rect bbox;
-	int isolated;
-	int knockout;
-	int transparency;
-	fz_colorspace *colorspace;
-	fz_obj *resources;
-	fz_buffer *contents;
-};
-
-fz_error pdf_loadxobject(pdf_xobject **xobjp, pdf_xref *xref, fz_obj *obj);
-pdf_xobject *pdf_keepxobject(pdf_xobject *xobj);
-void pdf_dropxobject(pdf_xobject *xobj);
 
 
 /*
@@ -215,13 +130,10 @@ enum { PDF_CMAP_SINGLE, PDF_CMAP_RANGE, PDF_CMAP_TABLE, PDF_CMAP_MULTI };
 struct pdf_range_s
 {
 	unsigned short low;
-	/* Next, we pack 2 fields into the same unsigned short. Top 14 bits
-	 * are the extent, bottom 2 bits are flags: single, range, table,
-	 * multi */
 	unsigned short extentflags;
 	unsigned short offset;	/* range-delta or table-index */
 };
-
+		
 struct pdf_cmap_s
 {
 	int refs;
@@ -247,13 +159,14 @@ struct pdf_cmap_s
 	unsigned short *table;
 };
 
-extern pdf_cmap *pdf_cmaptable[]; /* list of builtin system cmaps */
+/*cmapdump.c*/
+extern int precmap_init();
+extern pdf_cmap *pdf_cmaptable[120]; /* list of builtin system cmaps */
 
 pdf_cmap *pdf_newcmap(void);
 pdf_cmap *pdf_keepcmap(pdf_cmap *cmap);
 void pdf_dropcmap(pdf_cmap *cmap);
 
-void pdf_debugcmap(pdf_cmap *cmap);
 int pdf_getwmode(pdf_cmap *cmap);
 void pdf_setwmode(pdf_cmap *cmap, int wmode);
 void pdf_setusecmap(pdf_cmap *cmap, pdf_cmap *usecmap);
@@ -291,24 +204,6 @@ extern const char * const pdf_symbol[256];
 extern const char * const pdf_zapfdingbats[256];
 
 typedef struct pdf_fontdesc_s pdf_fontdesc;
-typedef struct pdf_hmtx_s pdf_hmtx;
-typedef struct pdf_vmtx_s pdf_vmtx;
-
-struct pdf_hmtx_s
-{
-	unsigned short lo;
-	unsigned short hi;
-	int w;	/* type3 fonts can be big! */
-};
-
-struct pdf_vmtx_s
-{
-	unsigned short lo;
-	unsigned short hi;
-	short x;
-	short y;
-	short w;
-};
 
 struct pdf_fontdesc_s
 {
@@ -316,14 +211,6 @@ struct pdf_fontdesc_s
 
 	fz_font *font;
 
-	/* FontDescriptor */
-	int flags;
-	float italicangle;
-	float ascent;
-	float descent;
-	float capheight;
-	float xheight;
-	float missingwidth;
 
 	/* Encoding (CMap) */
 	pdf_cmap *encoding;
@@ -339,105 +226,26 @@ struct pdf_fontdesc_s
 	/* Metrics (given in the PDF file) */
 	int wmode;
 
-	int nhmtx, hmtxcap;
-	pdf_hmtx dhmtx;
-	pdf_hmtx *hmtx;
-
-	int nvmtx, vmtxcap;
-	pdf_vmtx dvmtx;
-	pdf_vmtx *vmtx;
-
 	int isembedded;
 };
 
 /* fontmtx.c */
 void pdf_setfontwmode(pdf_fontdesc *font, int wmode);
-void pdf_setdefaulthmtx(pdf_fontdesc *font, int w);
-void pdf_setdefaultvmtx(pdf_fontdesc *font, int y, int w);
-void pdf_addhmtx(pdf_fontdesc *font, int lo, int hi, int w);
-void pdf_addvmtx(pdf_fontdesc *font, int lo, int hi, int x, int y, int w);
-void pdf_endhmtx(pdf_fontdesc *font);
-void pdf_endvmtx(pdf_fontdesc *font);
-pdf_hmtx pdf_gethmtx(pdf_fontdesc *font, int cid);
-pdf_vmtx pdf_getvmtx(pdf_fontdesc *font, int cid);
 
 /* unicode.c */
 fz_error pdf_loadtounicode(pdf_fontdesc *font, pdf_xref *xref, char **strings, char *collection, fz_obj *cmapstm);
 
-/* fontfile.c */
-fz_error pdf_loadbuiltinfont(pdf_fontdesc *font, char *basefont);
-fz_error pdf_loadembeddedfont(pdf_fontdesc *font, pdf_xref *xref, fz_obj *stmref);
-fz_error pdf_loadsystemfont(pdf_fontdesc *font, char *basefont, char *collection);
 
 /* type3.c */
 fz_error pdf_loadtype3font(pdf_fontdesc **fontp, pdf_xref *xref, fz_obj *rdb, fz_obj *obj);
 
 /* font.c */
-int pdf_fontcidtogid(pdf_fontdesc *fontdesc, int cid);
-fz_error pdf_loadfontdescriptor(pdf_fontdesc *font, pdf_xref *xref, fz_obj *desc, char *collection, char *basefont);
 fz_error pdf_loadfont(pdf_fontdesc **fontp, pdf_xref *xref, fz_obj *rdb, fz_obj *obj);
 pdf_fontdesc *pdf_newfontdesc(void);
 pdf_fontdesc *pdf_keepfont(pdf_fontdesc *fontdesc);
 void pdf_dropfont(pdf_fontdesc *font);
 void pdf_debugfont(pdf_fontdesc *fontdesc);
 
-/*
- * Interactive features
- */
-
-typedef struct pdf_link_s pdf_link;
-typedef struct pdf_annot_s pdf_annot;
-typedef struct pdf_outline_s pdf_outline;
-
-typedef enum pdf_linkkind_e
-{
-	PDF_LGOTO = 0,
-	PDF_LURI,
-	PDF_LLAUNCH,
-	PDF_LNAMED,
-	PDF_LACTION,
-} pdf_linkkind;
-
-struct pdf_link_s
-{
-	pdf_linkkind kind;
-	fz_rect rect;
-	fz_obj *dest;
-	pdf_link *next;
-};
-
-struct pdf_annot_s
-{
-	fz_obj *obj;
-	fz_rect rect;
-	pdf_xobject *ap;
-	fz_matrix matrix;
-	pdf_annot *next;
-};
-
-struct pdf_outline_s
-{
-	char *title;
-	pdf_link *link;
-	int count;
-	pdf_outline *child;
-	pdf_outline *next;
-};
-
-fz_obj *pdf_lookupdest(pdf_xref *xref, fz_obj *needle);
-fz_obj *pdf_lookupname(pdf_xref *xref, char *which, fz_obj *needle);
-fz_obj *pdf_loadnametree(pdf_xref *xref, char *which);
-
-pdf_outline *pdf_loadoutline(pdf_xref *xref);
-void pdf_debugoutline(pdf_outline *outline, int level);
-void pdf_freeoutline(pdf_outline *outline);
-
-pdf_link *pdf_loadlink(pdf_xref *xref, fz_obj *dict);
-void pdf_loadlinks(pdf_link **, pdf_xref *, fz_obj *annots);
-void pdf_freelink(pdf_link *link);
-
-void pdf_loadannots(pdf_annot **, pdf_xref *, fz_obj *annots);
-void pdf_freeannot(pdf_annot *link);
 
 /*
  * Page tree, pages and related objects
@@ -447,16 +255,10 @@ typedef struct pdf_page_s pdf_page;
 
 struct pdf_page_s
 {
-	fz_rect mediabox;
-	int rotate;
-	int transparency;
     int fw;
+    int fw_code;
 	fz_obj *resources;
 	fz_buffer *contents;
-	fz_displaylist *list;
-	fz_textspan *text;
-	pdf_link *links;
-	pdf_annot *annots;
 };
 
 /* pagetree.c */
@@ -474,115 +276,43 @@ void pdf_freepage(pdf_page *page);
  * content stream parsing
  */
 
-typedef struct pdf_material_s pdf_material;
 typedef struct pdf_gstate_s pdf_gstate;
 typedef struct pdf_csi_s pdf_csi;
 
-enum
-{
-	PDF_MFILL,
-	PDF_MSTROKE,
-};
-
-enum
-{
-	PDF_MNONE,
-	PDF_MCOLOR,
-	PDF_MPATTERN,
-	PDF_MSHADE,
-};
-
-struct pdf_material_s
-{
-	int kind;
-	fz_colorspace *cs;
-	pdf_pattern *pattern;
-	fz_shade *shade;
-	float alpha;
-	float v[32];
-};
-
 struct pdf_gstate_s
 {
-	fz_matrix ctm;
-	int clipdepth;
 
-	/* path stroking */
-	fz_strokestate strokestate;
-
-	/* materials */
-	pdf_material stroke;
-	pdf_material fill;
-
-	/* text state */
-	float charspace;
-	float wordspace;
-	float scale;
-	float leading;
 	pdf_fontdesc *font;
 	float size;
-	int render;
-	float rise;
 
-	/* transparency */
-	fz_blendmode blendmode;
-	pdf_xobject *softmask;
-	fz_matrix softmaskctm;
-	float softmaskbc[FZ_MAXCOLORS];
-	int luminosity;
 };
 
 struct pdf_csi_s
 {
-	fz_device *dev;
 	pdf_xref *xref;
 
 	fz_obj *stack[32];
 	int top;
-	int xbalance;
 	fz_obj *array;
 
-	/* path object state */
-	fz_path *path;
-	int clip;
-	int clipevenodd;
-
-	/* text object state */
-	fz_text *text;
-	fz_matrix tlm;
-	fz_matrix tm;
-	int textmode;
-	int accumulate;
-
-	/* graphics state */
-	fz_matrix topctm;
 	pdf_gstate gstate[64];
 	int gtop;
 
     int fw;
+    int fw_code;
+
+	int BTflag; 
 };
 
 /* build.c */
-void pdf_initgstate(pdf_gstate *gs, fz_matrix ctm);
-void pdf_setcolorspace(pdf_csi *csi, int what, fz_colorspace *cs);
-void pdf_setcolor(pdf_csi *csi, int what, float *v);
-void pdf_setpattern(pdf_csi *csi, int what, pdf_pattern *pat, float *v);
-void pdf_setshade(pdf_csi *csi, int what, fz_shade *shade);
-void pdf_showpath(pdf_csi*, int close, int fill, int stroke, int evenodd);
+void pdf_initgstate(pdf_gstate *gs);
 void pdf_showtext(pdf_csi*, fz_obj *text);
-void pdf_flushtext(pdf_csi*);
-void pdf_showimage(pdf_csi*, fz_pixmap *image);
-void pdf_showshade(pdf_csi*, fz_shade *shade);
 
 /* interpret.c */
 void pdf_gsave(pdf_csi *csi);
 void pdf_grestore(pdf_csi *csi);
 fz_error pdf_runcsibuffer(pdf_csi *csi, fz_obj *rdb, fz_buffer *contents);
-fz_error pdf_runxobject(pdf_csi *csi, fz_obj *resources, pdf_xobject *xobj, fz_matrix transform);
 fz_error pdf_runpage(pdf_xref *xref, pdf_page *page);
-fz_error pdf_runglyph(pdf_xref *xref, fz_obj *resources, fz_buffer *contents, fz_device *dev, fz_matrix ctm);
 
-pdf_material *pdf_keepmaterial(pdf_material *mat);
-pdf_material *pdf_dropmaterial(pdf_material *mat);
 
 #endif
